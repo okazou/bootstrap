@@ -11,23 +11,44 @@ redirect_from:
 toc: true
 ---
 
+<!--
 ## Quick start
 
 Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? [Head to the downloads page.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)
+-->
 
+## すぐにはじめる
+あたなのサイトにすぐに適用できます。 
+CDN , パケージマネージャー , ダウンロードソース など様々な方法で適用できます。
+
+
+<!--
 ### CSS
 
 Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
+
+-->
+## CSS
+`<link>`タグをページの`<head>`に 入れてください。
+他のstylesheetのタグよりも前に入れてください。
 
 {% highlight html %}
 <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 {% endhighlight %}
 
-### JS
 
+### JS
+多くのコンポーネントで、jQuery、Popper.jsなどの独自のJavaScriptプラグインが必要です。 
+<script>を</ body>タグの直前においてください。scriptの順番はそのままである必要上があります。
+
+スリム版とフルバージョン版がサポートされています。　　[jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)　　
+不明点がある場合はサンプルのテンプレートをみてください。
+
+<!--
 Many of our components require the use of JavaScript to function. Specifically, they require [jQuery](https://jquery.com), [Popper.js](https://popper.js.org/), and our own JavaScript plugins. Place the following `<script>`s near the end of your pages, right before the closing `</body>` tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.
 
 We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/), but the full version is also supported.
+-->
 
 {% highlight html %}
 <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
@@ -35,9 +56,15 @@ We use [jQuery's slim build](https://blog.jquery.com/2016/06/09/jquery-3-0-final
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
+<!--
 Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
 
 Our `bootstrap.bundle.js` and `bootstrap.bundle.min.js` include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/). For more information about what's included in Bootstrap, please see our [contents]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/contents/#precompiled-bootstrap) section.
+-->
+
+bootstrap.bundle.jsとbootstrap.bundle.min.jsにはPopperが含まれていますが、jQueryは含まれていません。 
+bootstrapに含まれているものの詳細については、コンテンツセクションを参照してください。
+
 
 <details>
 <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
@@ -56,8 +83,11 @@ Our `bootstrap.bundle.js` and `bootstrap.bundle.min.js` include [Popper](https:/
 </details>
 
 ## Starter template
-
+<!--
 Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
+-->
+最新のデザインと開発環境をお勧めします。
+HTML5 で viewportの記載をするなど、次のCodeをお勧めします。
 
 {% highlight html %}
 <!doctype html>
@@ -84,15 +114,29 @@ Be sure to have your pages set up with the latest design and development standar
 </html>
 {% endhighlight %}
 
+<!--
 That's all you need for overall page requirements. Visit the [Layout docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) or [our official examples]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/) to start laying out your site's content and components.
+-->
+
+ページ要件に必要なのはこれだけです。 
+レイアウトドキュメントまたは公式の例をご覧ください。
+[Layout docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/) or [our official examples]({{ site.baseurl }}/docs/{{ site.docs_version }}/examples/)
 
 ## Important globals
-
+<!--
 Bootstrap employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+-->
+Bootstrapはグローバル設定を使用しています。
+これらのスタイルや設定は、使用する際に注意する必要があります。
+クロスブラウザスタイルの正規化に向けられています。
+はじめましょう！
 
 ### HTML5 doctype
-
+<!--
 Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
+-->
+Bootstrapでは、HTML5 doctypeを使用する必要があります。 
+使用しない場合は、不完全なスタイリングがされます。大きな問題を引き起こるかもしれません。
 
 {% highlight html %}
 <!doctype html>
@@ -102,20 +146,38 @@ Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some fun
 {% endhighlight %}
 
 ### Responsive meta tag
-
+<!--
 Bootstrap is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
-
+-->
+Bootstrapは、
+・最初にモバイルデバイス用のコードを最適化し、
+・次にCSSメディアクエリを使用して
+・必要に応じてコンポーネントをスケールアップする
+という、モバイル向けに開発された戦略です。 
+適切なレンダリングとすべてのデバイスのズームのタッチを確実にするには、レスポンスビューポートのメタタグを`<head>`に追加します。
+  
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {% endhighlight %}
 
+<!--
 You can see an example of this in action in the [starter template](#starter-template).
+-->
+
+スターターテンプレートで実際に動作します。 [starter template](#starter-template)
 
 ### Box-sizing
-
+<!--
 For more straightforward sizing in CSS, we switch the global `box-sizing` value from `content-box` to `border-box`. This ensures `padding` does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.
 
 On the rare occasion you need to override it, use something like the following:
+-->
+
+CSSのサイズを簡単にするために、グローバルなボックスサイズの値をcontent-boxからborder-boxに変更します。 
+これにより、埋め込みが要素の最終的な計算幅に影響することはありませんが、GoogleマップやGoogleカスタム検索エンジンなどの
+サードパーティ製ソフトウェアで問題が発生する可能性があります。
+
+上書きする必要が有る場合は。次を使用してください：
 
 {% highlight css %}
 .selector-for-some-widget {
@@ -123,17 +185,31 @@ On the rare occasion you need to override it, use something like the following:
 }
 {% endhighlight %}
 
+<!--
 With the above snippet, nested elements—including generated content via `::before` and `::after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
 
 Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
+-->
+
+上記のスニペットでは、:: beforeと:: after で生成されたコンテンツを含むネストされた要素は、
+.selector-for-some-widget に対して指定されたボックスサイズを継承します。
+
+ボックスモデルとサイジングの詳細については、CSS Tricksをご覧ください。
+[box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
 
 ### Reboot
-
+<!--
 For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
+-->
+ブラウザー間でのレンダリングを改善するため、Rebootを使用してブラウザやデバイス間の齟齬を修正し、
+一般的なHTML要素のリセットを行います。
+
 
 ## Community
-
+<!--
 Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+-->
+Bootstrapの開発について最新の情報を入手し、これらの参考資料を使用してコミュニティに連絡してください。
 
 - Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
 - Read and subscribe to [The Official Bootstrap Blog]({{ site.blog }}).
@@ -142,4 +218,10 @@ Stay up to date on the development of Bootstrap and reach out to the community w
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
 - Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
 
+<!--
 You can also follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap) for the latest gossip and awesome music videos.
+-->
+
+あなたは最新の情報を[@getbootstrap on Twitter](https://twitter.com/getbootstrap)　より得ることができます。
+
+

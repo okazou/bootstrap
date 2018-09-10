@@ -7,8 +7,10 @@ toc: true
 ---
 
 ## Precompiled Bootstrap
-
+<!--
 Once downloaded, unzip the compressed folder and you'll see something like this:
+-->
+zipファイルを回答すると、次のように表示されます。
 
 <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
 
@@ -38,11 +40,20 @@ bootstrap/
     └── bootstrap.min.js.map
 {% endhighlight %}
 
+<!--
 This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/), but not [jQuery](https://jquery.com/).
+-->
+これはBootstrapの基本形式です。コンパイルされたCSSとJS（ `bootstrap。*`）、コンパイルされたCSSとJS（ `bootstrap.min。*`）も提供しています。
+[source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) は特定のブラウザの開発者ツールで使用できます。
+
+Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) は [Popper](https://popper.js.org/)　を含みます。
+[jQuery](https://jquery.com/) は含んでいません。
 
 ## CSS files
-
+<!--
 Bootstrap includes a handful of options for including some or all of our compiled CSS.
+-->
+様々なcssがあります。
 
 <table class="table table-bordered">
   <thead>
@@ -89,8 +100,10 @@ Bootstrap includes a handful of options for including some or all of our compile
 </table>
 
 ## JS files
-
+<!--
 Similarly, we have options for including some or all of our compiled JavaScript.
+-->
+様々なコンパイルされたJavaScriptがあります。
 
 <table class="table table-bordered">
   <thead>
@@ -121,8 +134,10 @@ Similarly, we have options for including some or all of our compiled JavaScript.
 </table>
 
 ## Bootstrap source code
-
+<!--
 The Bootstrap source code download includes the precompiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
+-->
+Bootstrapのソースをダウンロードすると、下記のような構成になっています。
 
 {% highlight plaintext %}
 bootstrap/
@@ -136,3 +151,4 @@ bootstrap/
 {% endhighlight %}
 
 The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the precompiled download section above. The `docs/` folder includes the source code for our documentation, and `examples/` of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.
+
