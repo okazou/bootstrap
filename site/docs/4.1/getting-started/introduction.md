@@ -17,7 +17,7 @@ toc: true
 Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? [Head to the downloads page.]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/download/)
 -->
 
-## すぐにはじめる
+## すぐに始める
 あたなのサイトにすぐに適用できます。 
 CDN , パケージマネージャー , ダウンロードソース など様々な方法で適用できます。
 
