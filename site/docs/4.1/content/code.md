@@ -46,8 +46,9 @@ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 {% include example.html content=example %}
 
 ## Sample output
+<!-- For indicating sample output from a program use the `<samp>` tag. -->
+codeのSampleを表示するには `<samp>` タグを使います。
 
-For indicating sample output from a program use the `<samp>` tag.
 
 {% capture example %}
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
