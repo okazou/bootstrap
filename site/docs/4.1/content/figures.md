@@ -25,7 +25,7 @@ figureの画像サイズはサンプルのように `.img-fluid` クラスを `<
 {% include example.html content=example %}
 
 <!-- Aligning the figure's caption is easy with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment). -->
-text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) を利用すると、位置の変更が簡単にできます。
+[text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) を利用すると、位置の変更が簡単にできます。
 
 
 {% capture example %}
