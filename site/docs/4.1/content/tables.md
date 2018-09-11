@@ -7,10 +7,18 @@ toc: true
 ---
 
 ## Examples
-
+<!--
 Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be **opt-in**. Just add the base class `.table` to any `<table>`, then extend with custom styles or our various included modifier classes.
+-->
+3rd Partyの拡張機能(カレンダーやデートピッカーなど)を適用しやすいように、
+**opt-in** を前提に構築しています。
+`<table>` に `.table` クラスを適用するだけでbootstrapのスタイルが適用されます。
 
+<!--
 Using the most basic table markup, here's how `.table`-based tables look in Bootstrap. **All table styles are inherited in Bootstrap 4**, meaning any nested tables will be styled in the same manner as the parent.
+-->
+テーブルのマークアップについて、`.table` を基本に解説します。
+テーブルスタイルは、bootstrap4で継承されます。ネストされたテーブルは、親テーブルと同じ方法でスタイルされます。
 
 {% capture example %}
 <table class="table">
@@ -46,7 +54,11 @@ Using the most basic table markup, here's how `.table`-based tables look in Boot
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-->
 You can also invert the colors—with light text on dark backgrounds—with `.table-dark`.
+-->
+`.table-dark` を適用すると、色を反転することもできます。
+サンプルのように背景に暗くして、テキストを明るく出来ます。
 
 {% capture example %}
 <table class="table table-dark">
@@ -82,9 +94,13 @@ You can also invert the colors—with light text on dark backgrounds—with `.ta
 {% endcapture %}
 {% include example.html content=example %}
 
-## Table head options
-
+<!-- ## Table head options-->
+## テーブル オプション
+<!-->
 Similar to tables and dark tables, use the modifier classes `.thead-light` or `.thead-dark` to make `<thead>`s appear light or dark gray.
+-->
+`<thead>` に `.thead-light` や `.thead-dark` クラスを適用すると
+`<thead>` の色を反転させたり、灰色にしたりすることができます。
 
 {% capture example %}
 <table class="table">
@@ -151,9 +167,12 @@ Similar to tables and dark tables, use the modifier classes `.thead-light` or `.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Striped rows
-
+<!--## Striped rows -->
+## ストライプ rows
+<!-->
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+-->
+`<tbody>` に `.table-striped` を適用すると、行の色を交互に変えることができます。
 
 {% capture example %}
 <table class="table table-striped">
@@ -223,9 +242,12 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 {% endcapture %}
 {% include example.html content=example %}
 
-## Bordered table
-
+<!-- ## Bordered table -->
+## ボーダー テーブル
+<!--
 Add `.table-bordered` for borders on all sides of the table and cells.
+-->
+`.table-bordered` を適用すると、各セルの境界線に罫線が適用されます。
 
 {% capture example %}
 <table class="table table-bordered">
@@ -293,9 +315,9 @@ Add `.table-bordered` for borders on all sides of the table and cells.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Borderless table
-
-Add `.table-borderless` for a table without borders.
+## ボーダーレス テーブル 
+<!-- Add `.table-borderless` for a table without borders. -->
+`.table-borderless` を適用すると、境界線の罫線をなくすことができます。
 
 {% capture example %}
 <table class="table table-borderless">
@@ -365,9 +387,10 @@ Add `.table-borderless` for a table without borders.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Hoverable rows
-
-Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
+<!-- ## Hoverable rows -->
+## ホバー 
+<!-- Add `.table-hover` to enable a hover state on table rows within a `<tbody>`. -->
+ `.table-hover` を適用すると、ホバー状態が有効になります。
 
 {% capture example %}
 <table class="table table-hover">
@@ -435,9 +458,10 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Small table
-
-Add `.table-sm` to make tables more compact by cutting cell padding in half.
+<!-- ## Small table -->
+## スモール テーブル
+<!-- Add `.table-sm` to make tables more compact by cutting cell padding in half. -->
+`.table-sm` を適用するとcellのpaddingが半分になります。
 
 {% capture example %}
 <table class="table table-sm">
@@ -505,9 +529,11 @@ Add `.table-sm` to make tables more compact by cutting cell padding in half.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Contextual classes
+<!-- ## Contextual classes -->
+## コンテキスト クラス
 
-Use contextual classes to color table rows or individual cells.
+<!--Use contextual classes to color table rows or individual cells. -->
+コンテキストを使用して、表の行またはセルに色を適用できます。
 
 <div class="bd-example">
   <table class="table">
@@ -554,7 +580,11 @@ Use contextual classes to color table rows or individual cells.
 </tr>
 {% endhighlight %}
 
+<!-- 
 Regular table background variants are not available with the dark table, however, you may use [text or background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) to achieve similar styles.
+-->
+ダークテーブルでは背景バリアントは使用できませんが、[テキストやバックグラウンドのユーティリティ]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) を使用して同様のスタイルを実現できます。
+
 
 <div class="bd-example">
   <table class="table table-dark">
@@ -635,13 +665,21 @@ Regular table background variants are not available with the dark table, however
 
 {% include callout-warning-color-assistive-technologies.md %}
 
+<!--
 Create responsive tables by wrapping any `.table` with `.table-responsive{-sm|-md|-lg|-xl}`, making the table scroll horizontally at each `max-width` breakpoint of up to (but not including) 576px, 768px, 992px, and 1120px, respectively.
+-->
+`.table` を `.table-responsive{-sm|-md|-lg|-xl}` でラップすることで
+`max-width` が576px、768px、992px、1120pxまでの各ブレークポイントでテーブルスクロールを水平できます。
 
 {% include callout-info-mediaqueries-breakpoints.md %}
 
-## Captions
-
+<!-- ## Captions -->
+## キャプション
+<!--
 A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
+-->
+`<caption>` を利用するとテーブルに見出しをつけることができます。
+ユーザーがそれを読むかどうかを決定するのに役立ちます。
 
 {% capture example %}
 <table class="table">
@@ -678,9 +716,14 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 {% endcapture %}
 {% include example.html content=example %}
 
-## Responsive tables
-
+<!-- ## Responsive tables -->
+## レスポンシブ テーブル
+<!--
 Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl}`.
+-->
+レスポンステーブルを使用すると、テーブルを水平方向にスクロールさせることができます。
+`.table` を `.table-responsive` でラップするか、
+`.table-responsive{-sm|-md|-lg|-xl}` でラップして、ブレークポイントを選択することができます。
 
 {% capture callout %}
 ##### Vertical clipping/truncation
@@ -689,10 +732,10 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-### Always responsive
-
-Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
-
+<!-- ### Always responsive -->
+### 常にレスポンシブ
+<!-- Across every breakpoint, use `.table-responsive` for horizontally scrolling tables. -->
+`.table-responsive` を適用すると常に水平スクロールを適用できます。
 <div class="bd-example">
   <div class="table-responsive">
     <table class="table">
@@ -760,11 +803,20 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 {% endhighlight %}
 
-### Breakpoint specific
-
+<!-- ### Breakpoint specific -->
+### 固有のブレークポイント
+<!--
 Use `.table-responsive{-sm|-md|-lg|-xl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
 **These tables may appear broken until their responsive styles apply at specific viewport widths.**
+
+-->
+
+`.table-responsive{-sm|-md|-lg|-xl}` は特定のブレークポイントのテーブルを作成します。
+指定したブレークポイント以降では、テーブルは正常に動作し、水平方向にスクロールしません。 
+**これらのテーブルはレスポンススタイルが特定のビューポートの幅に適用されるまで、破損しているように見える場合があります**
+
+
 
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
 <div class="bd-example">
