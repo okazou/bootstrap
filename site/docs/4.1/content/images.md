@@ -6,9 +6,14 @@ group: content
 toc: true
 ---
 
-## Responsive images
+<!-- ## Responsive images -->
+## レスポンシブ イメージ
 
+<!--
 Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` and `height: auto;` are applied to the image so that it scales with the parent element.
+-->
+画像をレスポンシブにするには `.img-fluid` を使用します。
+`max-width: 100%;` , `height: auto;` を適用すると親要素に比例するレスポンシブが実現出来ます。
 
 <div class="bd-example">
   <img data-src="holder.js/100px250" class="img-fluid" alt="Generic responsive image">
@@ -22,12 +27,19 @@ Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` an
 ##### SVG images and IE 10
 
 In Internet Explorer 10, SVG images with `.img-fluid` are disproportionately sized. To fix this, add `width: 100% \9;` where necessary. This fix improperly sizes other image formats, so Bootstrap doesn't apply it automatically.
+
+
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-## Image thumbnails
+<!-- ## Image thumbnails -->
+## サムネイル イメージ
 
+<!--
 In addition to our [border-radius utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/), you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
+-->
+
+[border-radius utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/) に加えて、 `.img-thumbnail` を適用すると境界線(1ピクセル分)に丸みを持たせることができます。
 
 <div class="bd-example bd-example-images">
   <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
@@ -40,6 +52,10 @@ In addition to our [border-radius utilities]({{ site.baseurl }}/docs/{{ site.doc
 ## Aligning images
 
 Align images with the [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float) or [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering).
+
+
+
+
 
 <div class="bd-example bd-example-images">
   <img data-src="holder.js/200x200" class="rounded float-left" alt="A generic square placeholder image with rounded corners">
@@ -73,8 +89,10 @@ Align images with the [helper float classes]({{ site.baseurl }}/docs/{{ site.doc
 
 
 ## Picture
-
+<!--
 If you are using the `<picture>` element to specify multiple `<source>` elements for a specific `<img>`, make sure to add the `.img-*` classes to the `<img>` and not to the `<picture>` tag.
+-->
+`<picture>` 要素を使用して、複数の `<source>` 要素を `<img>` タグの為に使用する際は、 `.img-*` クラスを `<picture>` タグではなく、 `<img>` タグに適用して下さい。
 
 {% highlight html %}
 ​<picture>
