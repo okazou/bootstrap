@@ -19,7 +19,11 @@
 
   <div class="bd-toc-item{% unless active == nil %} {{ active }}{% endunless %}">
       <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
-        {{ group.title }}
+        {%- if group.titleTranslate == null %}
+          {{ group.title }}
+        {% else %}
+          {{ group.titleTranslate }}
+        {% endif %}
       </a>
 
       <ul class="nav bd-sidenav">
@@ -33,7 +37,11 @@
 
           <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
             <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ doc_slug }}/">
-              {{ doc.title }}
+              {%- if doc.titleTranslate == null %}
+                {{ doc.title }}
+              {% else %}
+                {{ doc.titleTranslate }}
+              {% endif %}
             </a>
 
             {%- comment -%}
@@ -42,8 +50,12 @@
                 {% for section in doc.sections %}
                   <li>
                     <a href="#{{ section.title | downcase | replace: ' ', '-' }}">
-                      {{ section.title }}
-                    </a>
+                      {%- if section.titleTranslate == null %}
+                        {{ section.title }}
+                      {% else %}
+                        {{ section.titleTranslate }}
+                      {% endif %}
+                            </a>
                   </li>
                 {% endfor %}
               </ul>

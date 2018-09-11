@@ -1,33 +1,53 @@
 - title: Getting started
+  titleTranslate: Bootstrap 入門
   pages:
     - title: Introduction
+      titleTranslate: はじめに
     - title: Download
+      titleTranslate: ダウンロード
     - title: Contents
+      titleTranslate: コンテンツ
     - title: Browsers & devices
+      titleTranslate: ブラウザとデバイス
     - title: JavaScript
     - title: Theming
+      titleTranslate: テーマ
     - title: Build tools
-    # - title: Best practices # TODO: Write this content
+      titleTranslate: ビルドツール
     - title: Webpack
     - title: Accessibility
+      titleTranslate: アクセシビリティ
 
 - title: Layout
+  titleTranslate: レイアウト
   pages:
     - title: Overview
+      titleTranslate: 概要
     - title: Grid
+      titleTranslate: グリッド
     - title: Media object
+      titleTranslate: メディアオブジェクト
     - title: Utilities for layout
+      titleTranslate: レイアウト用ユーティリティ
 
 - title: Content
+  titleTranslate: コンテンツ
   pages:
     - title: Reboot
+      titleTranslate: リブート
     - title: Typography
+      titleTranslate: タイポグラフィ
     - title: Code
+      titleTranslate: コード
     - title: Images
+      titleTranslate: 画像
     - title: Tables
+      titleTranslate: テーブル
     - title: Figures
+      titleTranslate: 図形
 
 - title: Components
+  titleTranslate: コンポーネント
   pages:
     - title: Alerts
     - title: Badge
@@ -52,6 +72,7 @@
     - title: Tooltips
 
 - title: Utilities
+  titleTranslate: ユーティリティ
   pages:
     - title: Borders
     - title: Clearfix
@@ -72,15 +93,24 @@
     - title: Visibility
 
 - title: Extend
+  titleTranslate: オプション
   pages:
     - title: Approach
+      titleTranslate: アプローチ
     - title: Icons
+      titleTranslate: アイコン
 
 - title: Migration
+  titleTranslate: マイグレーション
 
 - title: About
+  titleTranslate: Bootstrap について
   pages:
     - title: Overview
+      titleTranslate: 概要
     - title: Brand
+      titleTranslate: ブランド
     - title: License
+      titleTranslate: ライセンス
     - title: Translations
+      titleTranslate: 翻訳
