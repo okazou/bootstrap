@@ -223,20 +223,26 @@ For improved cross-browser rendering, we use [Reboot]({{ site.baseurl }}/docs/{{
 ## Community
 
 Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
--->
-## コミュニティ
 
-Bootstrap 開発について最新の情報を入手し、これらの参考資料を使用してコミュニティに連絡してください。
-
-- Twitter アカウント [@getbootstrap](https://twitter.com/getbootstrap) をフォロー
-- [The Official Bootstrap Blog]({{ site.blog }}) を読む/登録する
-- [the official Slack room]({{ site.slack }}) に参加する
+- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
+- Read and subscribe to [The Official Bootstrap Blog]({{ site.blog }}).
+- Join [the official Slack room]({{ site.slack }}).
 - Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
 - Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
 - Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
+-->
+## コミュニティ
 
+Bootstrap 開発について最新の情報を入手しコミュニティに参加することができます。
+
+- Twitter アカウント [@getbootstrap](https://twitter.com/getbootstrap) をフォロー
+- [The Official Bootstrap Blog]({{ site.blog }}) を読む/登録
+- [the official Slack room]({{ site.slack }}) に参加
+- IRC なら `irc.freenode.net` サーバの `##bootstrap` チャンネルで Bootstrap 仲間とチャット
+- Stack Overflow ([`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4) タグ) は開発の手助けになるでしょう。
+- 開発者は [npm](https://www.npmjs.com/browse/keyword/bootstrap) や類似の仕組みを使って配布する際に `bootstrap` というキーワードを使って, パッケージが容易に検出されるようにしましょう。
 <!--
 You can also follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap) for the latest gossip and awesome music videos.
 -->
 
-あなたは最新の情報を[@getbootstrap](https://twitter.com/getbootstrap) より得ることができます。
+あなたは最新の情報を [@getbootstrap](https://twitter.com/getbootstrap) より得ることができます。
