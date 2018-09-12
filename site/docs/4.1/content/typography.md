@@ -5,7 +5,7 @@ description: Documentation and examples for Bootstrap typography, including glob
 group: content
 toc: true
 ---
-
+<!--
 ## Global settings
 
 Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/).
@@ -17,10 +17,30 @@ Bootstrap sets basic global display, typography, and link styles. When more cont
 - Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
 
 These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
+-->
 
+## グルーバル設定(Global settings)
+Bootstrapは文字に関するスタイル(文字の大きさや、リンクスタイル)を設定しています。
+よりカスタマイズが必要な場合は  [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/). を参照できます。
+
+- OSやデバイスに最適な  `font-family` を適用します。 [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack)
+- For a more inclusive and accessible type scale, ブラウザの基本 `font-size` は 16px で想定しています。  
+so visitors can customize their browser defaults as needed.
+- `<body>` には `$font-family-base`, `$font-size-base`, `$line-height-base` 属性を適用しています。
+- `$link-color` で色を設定して `:hover` すると下線がで起用されます。
+- `<body>` の `background-color` は `$body-bg` (初期設定 `#fff` ) が適用されます。
+
+`_reboot.scss` にて設定されていて, グローバル変数は `_variables.scss` で定義されている。
+
+<!-- 
 ## Headings
 
 All HTML headings, `<h1>` through `<h6>`, are available.
+-->
+## 見出し(Headings)
+
+見出し `<h1>` ～ `<h6>` が利用可能です。
+
 
 <table>
   <thead>
@@ -78,7 +98,10 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 <h6>h6. Bootstrap heading</h6>
 {% endhighlight %}
 
+<!--
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+-->
+`.h1` ~ `.h6` クラスも利用可能です。
 
 {% capture example %}
 <p class="h1">h1. Bootstrap heading</p>
@@ -90,9 +113,14 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ### Customizing headings
 
 Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+-->
+### 見出しをカスタマイズする (Customizing headings)
+
+ユーティリティクラスを利用できます。 
 
 <div class="bd-example">
   <span class="h3">
@@ -108,9 +136,15 @@ Use the included utility classes to recreate the small secondary heading text fr
 </h3>
 {% endhighlight %}
 
+<!--
 ## Display headings
 
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
+-->
+
+## 見出しの表示(Display headings)
+
+**display heading** を利用することで大きく目立たせることができます。
 
 <div class="bd-example bd-example-type">
   <table class="table">
@@ -138,9 +172,14 @@ Traditional heading elements are designed to work best in the meat of your page 
 <h1 class="display-4">Display 4</h1>
 {% endhighlight %}
 
+<!--
 ## Lead
 
 Make a paragraph stand out by adding `.lead`.
+-->
+## リード(Lead)
+
+`.lead` で文章を目立たせることができます。
 
 {% capture example %}
 <p class="lead">
@@ -149,9 +188,15 @@ Make a paragraph stand out by adding `.lead`.
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ## Inline text elements
 
 Styling for common inline HTML5 elements.
+-->
+## インラインテキスト(Inline text elements)
+
+HTML5の一般的なインライン要素でスタイリングされています。
+
 
 {% capture example %}
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
@@ -165,9 +210,15 @@ Styling for common inline HTML5 elements.
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 `.mark` and `.small` classes are also available to apply the same styles as `<mark>` and `<small>` while avoiding any unwanted semantic implications that the tags would bring.
 
 While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance while `<i>` is mostly for voice, technical terms, etc.
+-->
+`.mark` , `.small` クラスは `<mark>` , `<small>` とも記載できます。  
+HTML5では `<b>` , `<i>` を気楽に利用してください。 `<b>` は単語や文章を強調できます。  
+`<i>` は音声や技術用語に用いられます。
+
 
 ## Text utilities
 
