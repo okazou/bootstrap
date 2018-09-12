@@ -17,7 +17,8 @@
     "Twitter, Inc."
   ],
   "scripts": {
-    "start": "npm-run-all --parallel watch docs-serve",
+    "_start": "npm-run-all --parallel watch docs-serve",
+    "start": "jekyll serve --watch --detach",
     "blc": "blc --exclude-external --filter-level 3 --get --ordered --recursive --host-requests 4 --input http://localhost:3000/",
     "http-server": "http-server --silent -p 3000",
     "bundlesize": "bundlesize",
