@@ -216,19 +216,31 @@ HTML5の一般的なインライン要素でスタイリングされています
 While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance while `<i>` is mostly for voice, technical terms, etc.
 -->
 `.mark` , `.small` クラスは `<mark>` , `<small>` とも記載できます。  
-HTML5では `<b>` , `<i>` を気楽に利用してください。 `<b>` は単語や文章を強調できます。  
-`<i>` は音声や技術用語に用いられます。
+HTML5では `<b>` , `<i>` を気楽に利用してください。  
+`<b>` は単語や文章を強調できます。`<i>` は音声や技術用語に用いられます。  
 
-
+<!--
 ## Text utilities
-
 Change text alignment, transform, style, weight, and color with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/) and [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/).
+-->
+## テキストユーティリティ(Text utilities)
+配置 , スタイルの変更は下記を参考にしてください。  
+[text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/) ,
+[color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 
 
+
+<!--
 ## Abbreviations
 
 Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
 Add `.initialism` to an abbreviation for a slightly smaller font-size.
+-->
+
+## 省略語(Abbreviations)
+省略された文字には `<abbr>` を適用します。  `title` に省略前の文字を設定すると、ホバーすると表示されます。
+Add `.initialism` to an abbreviation for a slightly smaller font-size.
+
 
 {% capture example %}
 <p><abbr title="attribute">attr</abbr></p>
@@ -236,9 +248,16 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ## Blockquotes
 
 For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
+-->
+## 引用（Blockquotes）
+
+文章に外部ソースからのコンテンツやブロックを引用する場合は `<blockquote class="blockquote">` で囲みます。  
+
+
 
 {% capture example %}
 <blockquote class="blockquote">
@@ -247,9 +266,15 @@ For quoting blocks of content from another source within your document. Wrap `<b
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ### Naming a source
 
 Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the name of the source work in `<cite>`.
+
+-->
+### 引用元(Naming a source)
+
+引用元を記載するには `<footer class="blockquote-footer">` `<cite>` を使用します。  
 
 {% capture example %}
 <blockquote class="blockquote">
@@ -259,9 +284,13 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ### Alignment
 
 Use text utilities as needed to change the alignment of your blockquote.
+-->
+### 配置(Alignment)
+引用の配置を変更するには、テキストユーティリティを使用します。
 
 {% capture example %}
 <blockquote class="blockquote text-center">
@@ -279,11 +308,18 @@ Use text utilities as needed to change the alignment of your blockquote.
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ## Lists
 
 ### Unstyled
 
 Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
+-->
+
+## リスト(Lists)
+
+### スタイルなしのリスト（Unstyled）
+`list-style` , `margin-left` は削除されています。(直後の子のみ)
 
 {% capture example %}
 <ul class="list-unstyled">
@@ -306,9 +342,14 @@ Remove the default `list-style` and left margin on list items (immediate childre
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ### Inline
 
 Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
+-->
+### インライン（Inline）
+箇条書きの黒丸がなくなり、 `.list-inline` , `.list-inline-item`により margin を適用されます。
+
 
 {% capture example %}
 <ul class="list-inline">
@@ -319,9 +360,15 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ### Description list alignment
 
 Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
+-->
+### 水平リスト（Description list alignment）
+グリッドシステム(または semantic mixins )を使用して、用語と説明リストを水平方向に配置します。
+文字が長い場合は場合は  `.text-truncate` クラスを追加してテキストを省略できます。
+
 
 {% capture example %}
 <dl class="row">
@@ -351,11 +398,16 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ## Responsive typography
 
 *Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. Bootstrap doesn't do this for you, but it's fairly easy to add if you need it.
 
 Here's an example of it in practice. Choose whatever `font-size`s and media queries you wish.
+-->
+## レスポンシブ(Responsive typography)
+
+`font-size` と メディアクエリを利用することでレスポンシブな文字サイズを実現することができます。  
 
 {% highlight scss %}
 html {
