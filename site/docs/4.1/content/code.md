@@ -1,10 +1,20 @@
 ---
 layout: docs
+title: コード(Code)
+description: インラインコード, マルチラインブロックの表示例です。
+group: content
+toc: true
+---
+
+<!--
+---
+layout: docs
 title: Code
 description: Documentation and examples for displaying inline and multiline blocks of code with Bootstrap.
 group: content
 toc: true
 ---
+-->
 
 ## Inline code
 <!--Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.-->

@@ -1,17 +1,37 @@
 ---
 layout: docs
+title: 概要(Overview)
+description: レイアウトのコンポーネントやオプションには, コンテナ, グリッドシステム, フレキシブルオブジェクト, レスポンシブクラス が組み込まれています。  
+group: layout
+redirect_from: "/docs/4.1/layout/"
+toc: true
+---
+
+<!--
+---
+layout: docs
 title: Overview
 description: Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.
 group: layout
 redirect_from: "/docs/4.1/layout/"
 toc: true
 ---
+-->
 
+<!--
 ## Containers
 
 Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Choose from a responsive, fixed-width container (meaning its `max-width` changes at each breakpoint) or fluid-width (meaning it's `100%` wide all the time).
 
 While containers *can* be nested, most layouts do not require a nested container.
+-->
+## コンテナ
+コンテナは基本のレイアウトで、**グリッドシステム**を使用する場合に必要です。  
+・固定幅のコンテナ(ブレークポイントで `max-width` が変わる)  
+・全幅のコンテナ(常に100%の幅)  
+から選択できます。
+コンテナは入れ子にすることができますが、多くのレイアウトは入れ子のコンテナは必要としません。
+
 
 <div class="bd-example">
   <div class="bd-example-container">
@@ -27,7 +47,10 @@ While containers *can* be nested, most layouts do not require a nested container
 </div>
 {% endhighlight %}
 
+<!--
 Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
+-->
+ビューポート全体に広がる全幅で利用するには, `.container-fluid` を使います。
 
 <div class="bd-example">
   <div class="bd-example-container bd-example-container-fluid">
@@ -43,12 +66,18 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 </div>
 {% endhighlight %}
 
-
+<!--
 ## Responsive breakpoints
 
 Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
 Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+-->
+## (レスポンシブ ブレークポイント)Responsive breakpoints
+Bootstrapはモバイルファーストで開発していて, レイアウトやインターフェースのブレークポイントは [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) を使用している。  
+これらのブレークポイント最小のビューポートに基づいていて、ビューポートの変更に合わせて、要素を拡大します。  
+
+下記のブレークポイントをSassファイルに記述しています。
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -66,8 +95,10 @@ Bootstrap primarily uses the following media query ranges—or breakpoints—in 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
-
+<!--
 Since we write our source CSS in Sass, all our media queries are available via Sass mixins:
+-->
+メディアクエリはSassのmixin経由で参照できます。  
 
 {% highlight scss %}
 // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
@@ -88,6 +119,8 @@ Since we write our source CSS in Sass, all our media queries are available via S
 {% endhighlight %}
 
 We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
+
+
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)

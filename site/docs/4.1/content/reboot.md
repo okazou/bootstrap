@@ -1,11 +1,21 @@
 ---
 layout: docs
 title: Reboot
+description: 要素固有のCSSの変更がまとめられたFileです。
+group: content
+redirect_from: "/docs/4.1/content/"
+toc: true
+---
+<!--
+---
+layout: docs
+title: Reboot
 description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
 group: content
 redirect_from: "/docs/4.1/content/"
 toc: true
 ---
+>
 <!-- 
 ## Approach 
 Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
@@ -20,7 +30,8 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 
 ## アプローチ(Approach)
 
-Reboot は Normalize に基づいて構築されていて、多くのセレクタを提供しています。スタイルが必要なときはクラスに追加します。  
+Normalize.css に基づき, デフォルトのスタイルを利用しながら, 要素セレクタを用いてあらゆる要素のスタイルを正常化しています。  
+スタイルが必要なときはクラスに追加します。  
 例えば `<table>` 要素はシンプルな作りになっていて、スタイルを適用したいときは `.table` , `.table-bordered` などが用意されています。  
 
 Rebootを適用するガイドラインがあります。  
@@ -373,7 +384,7 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 
 -->
 ## その他の要素(Misc elements)
-### 住所(address)
+### アドレス(address)
 `<address>` は連絡先の情報を表示するために使われ、行の終了には `<br>` を使用します。  
 `font-style` を `italic` から `normal` に変更して, `line-height` を継承し, `margin-bottom: 1rem` を適用します。
 

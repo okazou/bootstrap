@@ -1,10 +1,20 @@
 ---
 layout: docs
 title: Typography
+description: 見出し,本文,リストなどの例です。
+group: content
+toc: true
+---
+<!--
+---
+layout: docs
+title: Typography
 description: Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
 group: content
 toc: true
 ---
+>
+
 <!--
 ## Global settings
 
