@@ -249,7 +249,7 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 ## 省略語(Abbreviations)
 省略された文字には `<abbr>` を適用します。  `title` に省略前の文字を設定すると、ホバーすると表示されます。
-Add `.initialism` to an abbreviation for a slightly smaller font-size.
+`.initialism` を適用すると、`font-size` を少し小さくすることができます。
 
 
 {% capture example %}
