@@ -1,14 +1,29 @@
 ---
 layout: docs
 title: Alerts
+description: ユーザーのアクションに対してのアラートメッセージを提供しています。
+group: components
+toc: true
+---
+<!--
+---
+layout: docs
+title: Alerts
 description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 group: components
 toc: true
 ---
-
+-->
+<!--
 ## Examples
 
 Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts jQuery plugin](#dismissing).
+-->
+
+## 例(Examples)
+任意の長さのアラートを表示できます。オプションで閉じるボタンがあります。  
+8色(e.g., `.alert-success` ) を利用可のです。インラインで閉じる場合は [alerts jQuery plugin](#dismissing) を使用します。
+
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -20,9 +35,14 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 
 {% include callout-warning-color-assistive-technologies.md %}
 
+<!--
 ### Link color
 
 Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+-->
+### リンクカラー(Link color)
+`.alert-link` クラスを適用すると、リンクが適切なカラーになります。
+
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -31,10 +51,12 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 </div>{% endfor %}
 {% endcapture %}
 {% include example.html content=example %}
-
+<!--
 ### Additional content
-
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+-->
+### 追加コンテンツ(Additional content)
+アラートには、見出し、段落、仕切りなどのHTML要素を含めることができます。
 
 {% capture example %}
 <div class="alert alert-success" role="alert">
@@ -46,9 +68,8 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 {% endcapture %}
 {% include example.html content=example %}
 
-
+<!--
 ### Dismissing
-
 Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
 
 - Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
@@ -58,6 +79,18 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 - To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
 
 You can see this in action with a live demo:
+-->
+### 閉じるボタン(Dismissing)
+アラートのJavaScript plugin を使用すると、アラートインラインを消すことができます。  
+方法は  
+- アラートの JavaScript plugin を読み込むか、 Bootstrap JavaScriptを読み込んでください。
+- JavaScriptをソースからビルドする場合は、[requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util) が必要です。 コンパイルされたバージョンにはこれが含まれています。
+- 解除ボタンに `.alert-dismissible` クラスを追加すると警告の右側に追加の余白が追加され、 `.close` ボタンの位置が決まります。
+- 解除ボタンに `data-dismiss = "alert"` 属性を追加します。これにより、JavaScript機能がトリガーされます。 すべてのデバイスで適切な動作をさせるには、必ず`<button>`要素を使用してください。
+- アラートを解除するときにアラートをアニメートするには、必ず`.fade`および.showクラスを追加してください。
+
+ライブデモを見ることができます：
+
 
 {% capture example %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -69,27 +102,45 @@ You can see this in action with a live demo:
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ## JavaScript behavior
 
 ### Triggers
 
 Enable dismissal of an alert via JavaScript:
+-->
+
+## JavaScriptの動き(JavaScript behavior)
+
+### トリガー(Triggers)
+
+JavaScript経由でアラート閉じるを有効にします。
+
 
 {% highlight js %}
 $('.alert').alert()
 {% endhighlight %}
 
+<!--
 Or with `data` attributes on a button **within the alert**, as demonstrated above:
+-->
+上記のように、アラート内のボタンに `data` 属性を設定することも可能です。
+
 
 {% highlight html %}
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
   <span aria-hidden="true">&times;</span>
 </button>
 {% endhighlight %}
-
+<!--
 Note that closing an alert will remove it from the DOM.
+-->
+アラートを閉じると、アラートがDOMから削除される。
 
+<!--
 ### Methods
+-->
+### (メソッド)Methods
 
 | Method | Description |
 | --- | --- |
@@ -98,10 +149,14 @@ Note that closing an alert will remove it from the DOM.
 | `$().alert('dispose')` | Destroys an element's alert. |
 
 {% highlight js %}$(".alert").alert('close'){% endhighlight %}
-
+<!-->
 ### Events
 
 Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
+-->
+
+### イベント(Events)
+Bootstrapのアラートプラグインは、アラート機能のためにいくつかのイベントがあります。
 
 | Event | Description |
 | --- | --- |
