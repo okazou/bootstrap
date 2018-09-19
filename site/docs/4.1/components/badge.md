@@ -1,15 +1,28 @@
 ---
 layout: docs
 title: Badges
+description: バッチについての概要と例
+group: components
+toc: true
+--- 
+<!-- 
+---
+layout: docs
+title: Badges
 description: Documentation and examples for badges, our small count and labeling component.
 group: components
 toc: true
----
+--- 
+-->
 
+## 例(Example)
+親要素のサイズに一致するように相対的なフォントサイズ `em` を使用しています。
+
+<!--
 ## Example
 
 Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units.
-
+-->
 <div class="bd-example">
 <div class="h1">Example heading <span class="badge badge-secondary">New</span></div>
 <div class="h2">Example heading <span class="badge badge-secondary">New</span></div>
@@ -28,7 +41,10 @@ Badges scale to match the size of the immediate parent element by using relative
 <h6>Example heading <span class="badge badge-secondary">New</span></h6>
 {% endhighlight %}
 
+<!--
 Badges can be used as part of links or buttons to provide a counter.
+-->
+ボタンの一部としても利用することができます。
 
 {% capture example %}
 <button type="button" class="btn btn-primary">
@@ -41,6 +57,8 @@ Note that depending on how they are used, badges may be confusing for users of s
 
 Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
 
+
+
 {% capture example %}
 <button type="button" class="btn btn-primary">
   Profile <span class="badge badge-light">9</span>
@@ -49,9 +67,14 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ## Contextual variations
 
 Add any of the below mentioned modifier classes to change the appearance of a badge.
+-->
+
+## バッジの色(Contextual variations)
+バッジの色を下記のように変更することができます。
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -61,9 +84,13 @@ Add any of the below mentioned modifier classes to change the appearance of a ba
 
 {% include callout-warning-color-assistive-technologies.md %}
 
+<!--
 ## Pill badges
 
 Use the `.badge-pill` modifier class to make badges more rounded (with a larger `border-radius` and additional horizontal `padding`). Useful if you miss the badges from v3.
+-->
+## ピルバッジ(Pill badges)
+`.badge-pill` を適用すると, 丸みをおびたバッジを作成できます。
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -71,9 +98,14 @@ Use the `.badge-pill` modifier class to make badges more rounded (with a larger 
 {% endcapture %}
 {% include example.html content=example %}
 
+<!--
 ## Links
 
 Using the contextual `.badge-*` classes on an `<a>` element quickly provide _actionable_ badges with hover and focus states.
+-->
+
+## リンク(Links)
+`.badge-*` クラスを `<a>` 要素に適用するとホバー時にでフォーカスすることができます。
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
