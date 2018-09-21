@@ -4,7 +4,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.1.3): dropdown.js
+ * Bootstrap (v4.3.1): dropdown.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -17,7 +17,7 @@ const Dropdown = (($) => {
    */
 
   const NAME                     = 'dropdown'
-  const VERSION                  = '4.1.3'
+  const VERSION                  = '4.3.1'
   const DATA_KEY                 = 'bs.dropdown'
   const EVENT_KEY                = `.${DATA_KEY}`
   const DATA_API_KEY             = '.data-api'

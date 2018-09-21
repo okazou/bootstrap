@@ -33,8 +33,8 @@ social_image_path:  /docs/4.1/assets/brand/bootstrap-social.png
 social_logo_path:   /docs/4.1/assets/brand/bootstrap-social-logo.png
 
 # Custom variables
-current_version:      4.1.3
-current_ruby_version: 4.1.3
+current_version:      4.3.1
+current_ruby_version: 4.3.1
 docs_version:         4.1
 repo:                 "https://github.com/okazou/bootstrap"
 slack:                "https://bootstrap-slack.herokuapp.com"
@@ -44,15 +44,15 @@ jobs:                 "https://jobs.getbootstrap.com"
 themes:               "https://themes.getbootstrap.com"
 
 download:
-  source:           "https://github.com/twbs/bootstrap/archive/v4.1.3.zip"
-  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.1.3/bootstrap-4.1.3-dist.zip"
+  source:           "https://github.com/twbs/bootstrap/archive/v4.3.1.zip"
+  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.3.1/bootstrap-4.3.1-dist.zip"
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-  css_hash:         "sha384-jJ2L/Ujk8jWEwtIXPFEk3X+f20QKnj4IIscn+JZzxqkbAUC79idDdiAhAi2E7czT"
-  js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-  js_hash:          "sha384-K09cMhJkkwNoZK1BRIJX6fQk06LqHSs8LdWAE24M/18F4NlePaltFx1cnB9wKwQX"
+  css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  css_hash:         "sha384-GR8Z9NHLsZmwXxqCwsRATXK9QzBL/H558qYPT9te8bvrXfDLiZVfm1sPesNrt6n0"
+  js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  js_hash:          "sha384-npxxzHPI6VET23lYt3LKIh0VxxU9g4JPrYrlIJvBDCd5U2c2G3QvoAjpB8TzgcxM"
   jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
   jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
