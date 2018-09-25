@@ -1,40 +1,55 @@
 ---
 layout: docs
-title: Browsers and devices
-description: Learn about the browsers and devices, from modern to old, that are supported by Bootstrap, including known quirks and bugs for each.
+# title: Browsers and devices
+# description: Learn about the browsers and devices, from modern to old, that are supported by Bootstrap, including known quirks and bugs for each.
+title: ブラウザとOS
+description: Bootstrap でサポートされているブラウザと OS について, 新しいものから古いもの, それぞれの癖や既知のバグを学びましょう。
 group: getting-started
 toc: true
 ---
 
-## Supported browsers
+<!-- ## Supported browsers
 
 Bootstrap supports the **latest, stable releases** of all major browsers and platforms. On Windows, **we support Internet Explorer 10-11 / Microsoft Edge**.
 
 Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
 
-You can find our supported range of browsers and their versions [in our `.browserslistrc file`]({{ site.repo }}/blob/v4-dev/.browserslistrc):
+You can find our supported range of browsers and their versions [in our `.browserslistrc file`]({{ site.repo }}/blob/v4-dev/.browserslistrc): -->
+
+## サポートブラウザ
+
+Bootstrap はメジャーなブラウザの OS の **最新版, 安定版** をサポートします。**Internet Explorer 10-11, Microsoft Edge** を含みます。
+
+最新の Webkit, Blink, Gecko をレンダリングエンジンとするブラウザのサポートは明示していませんが、ほとんどの場合、正しく表示し動作するはずです。詳細は以下の通りです。
+
+サポート対象のブラウザとバージョンは [`package.json`](https://github.com/twbs/bootstrap/blob/v4-dev/package.json)
 
 ```
-# https://github.com/browserslist/browserslist#readme
-
->= 1%
-last 1 major version
-not dead
-Chrome >= 45
-Firefox >= 38
-Edge >= 12
-Explorer >= 10
-iOS >= 9
-Safari >= 9
-Android >= 4.4
-Opera >= 30
+"browserslist": [
+  "last 1 major version",
+  ">= 1%",
+  "Chrome >= 45",
+  "Firefox >= 38",
+  "Edge >= 12",
+  "Explorer >= 10",
+  "iOS >= 9",
+  "Safari >= 9",
+  "Android >= 4.4",
+  "Opera >= 30"
+]
 ```
 
-We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intended browser support via CSS prefixes, which uses [Browserslist](https://github.com/browserslist/browserslist) to manage these browser versions. Consult their documentation for how to integrate these tools into your projects.
+<!-- We use [Autoprefixer](https://github.com/postcss/autoprefixer) to handle intended browser support via CSS prefixes, which uses [Browserslist](https://github.com/browserslist/browserslist) to manage these browser versions. Consult their documentation for how to integrate these tools into your projects. -->
 
-### Mobile devices
+CSS プレフィックスには [Autoprefixer](https://github.com/postcss/autoprefixer), ブラウザのバージョン管理には [Browserslist](https://github.com/browserslist/browserslist) を用いて管理しています。これらのツールを統合するには, ドキュメントを参照してください。
 
-Generally speaking, Bootstrap supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
+<!-- ### Mobile devices
+
+Generally speaking, Bootstrap supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported. -->
+
+### モバイル
+
+Bootstrap は主要なプラットフォームの標準ブラウザ最新版をサポートしています。プロキシブラウザ(Opera ミニ, Opera モバイルターボモード, UC ブラウザミニ, Amazon シルク)などはサポートしません。
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -50,34 +65,37 @@ Generally speaking, Bootstrap supports the latest versions of each major platfor
   <tbody>
     <tr>
       <th scope="row">Android</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">サポート</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Android v5.0+ supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">Android v5.0 以降サポート</td>
+      <td class="text-success">サポート</td>
     </tr>
     <tr>
       <th scope="row">iOS</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">サポート</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
-    </tr>
-    <tr>
+      <td class="text-success">サポート</td>
+    </tr>v    <tr>
       <th scope="row">Windows 10 Mobile</th>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">サポート</td>
     </tr>
   </tbody>
 </table>
 
-### Desktop browsers
+<!-- ### Desktop browsers
 
-Similarly, the latest versions of most desktop browsers are supported.
+Similarly, the latest versions of most desktop browsers are supported. -->
+
+### デスクトップ
+
+同様にほとんどのデスクトップブラウザ最新版をサポートしています。
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -94,52 +112,76 @@ Similarly, the latest versions of most desktop browsers are supported.
   <tbody>
     <tr>
       <th scope="row">Mac</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">サポート</td>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">サポート</td>
     </tr>
     <tr>
       <th scope="row">Windows</th>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported, IE10+</td>
-      <td class="text-success">Supported</td>
-      <td class="text-success">Supported</td>
-      <td class="text-danger">Not supported</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">IE10 以降サポート</td>
+      <td class="text-success">サポート</td>
+      <td class="text-success">サポート</td>
+      <td class="text-danger">非サポート</td>
     </tr>
   </tbody>
 </table>
 
-For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/organizations/#faq) version of Firefox.
+<!-- For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/organizations/#faq) version of Firefox.
 
 Unofficially, Bootstrap should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 9, though they are not officially supported.
 
-For a list of some of the browser bugs that Bootstrap has to grapple with, see our [Wall of browser bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/).
+For a list of some of the browser bugs that Bootstrap has to grapple with, see our [Wall of browser bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/). -->
+
+Firefox は最新の安定版だけでなく, [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/organizations/#faq) もサポートしています。
+
+サポート外ですが Chrominum, Linux 用 Chrome, Internet Explorer 9 でも正常に表示・動作するはずです。
+
+Bootstrap が取り組んでいるブラウザのバグについては [Wall of browser bugs]({{ site.baseurl }}/docs/{{ site.docs_version }}/browser-bugs/) を参照してください。
 
 ## Internet Explorer
 
-Internet Explorer 10+ is supported; IE9 and down is not. Please be aware that some CSS3 properties and HTML5 elements are not fully supported in IE10, or require prefixed properties for full functionality. Visit [Can I use...](https://caniuse.com/) for details on browser support of CSS3 and HTML5 features.
+<!-- Internet Explorer 10+ is supported; IE9 and down is not. Please be aware that some CSS3 properties and HTML5 elements are not fully supported in IE10, or require prefixed properties for full functionality. Visit [Can I use...](https://caniuse.com/) for details on browser support of CSS3 and HTML5 features.
 
-**If you require IE8-9 support, use Bootstrap 3.** It's the most stable version of our code and is still supported by our team for critical bugfixes and documentation changes. However, no new features will be added to it.
+**If you require IE8-9 support, use Bootstrap 3.** It's the most stable version of our code and is still supported by our team for critical bugfixes and documentation changes. However, no new features will be added to it. -->
 
-## Modals and dropdowns on mobile
+Internet Explorer 10 以降をサポートします(IE9 以前は対象外)。一部の HTML5 要素と CSS3 プロパティは IE10 では完全にサポートされていないので, プレフィックス付きのプロパティが必要であることに注意してください。HTML5 と CSS3 の実装状況については [Can I use...](https://caniuse.com/) を参照してください。
 
-### Overflow and scrolling
+**IE8-9 をサポートする場合は Bootstrap 3 を使ってください。** これは最も安定したバージョンで, クリティカルなバグの修正やドキュメントの保守についてもチームによってサポートされています。ただし、新機能は追加されません。
 
-Support for `overflow: hidden;` on the `<body>` element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the `<body>` content will begin to scroll. See [Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (fixed in Chrome v40) and [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852).
+<!-- ## Modals and dropdowns on mobile -->
 
-### iOS text fields and scrolling
+<!-- ### Overflow and scrolling -->
 
-As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual `<input>` or a `<textarea>`, the `<body>` content underneath the modal will be scrolled instead of the modal itself. See [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856).
+<!-- Support for `overflow: hidden;` on the `<body>` element is quite limited in iOS and Android. To that end, when you scroll past the top or bottom of a modal in either of those devices' browsers, the `<body>` content will begin to scroll. See [Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (fixed in Chrome v40) and [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852). -->
+
+<!-- ### iOS text fields and scrolling
+
+As of iOS 9.2, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual `<input>` or a `<textarea>`, the `<body>` content underneath the modal will be scrolled instead of the modal itself. See [WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856). -->
+
+<!-- ### Navbar Dropdowns
+
+The `.dropdown-backdrop` element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile)). -->
+
+## モバイルでの Modals と dropdowns
+
+### Overflow と scrolling
+
+iOS と Android における `<body>` 要素の `overflow: hidden;` はかなり制限があります。そのため, これらのデバイスで Modal を上部/下部までスクロールすると `<body>` 要素の内容がスクロールし始めます。[Chrome bug #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (Chrome v40 で修正) と [WebKit bug #153852](https://bugs.webkit.org/show_bug.cgi?id=153852) を参照してください。
+
+### iOS のテキストフィールドとスクロール
+
+iOS 9.2 以降では, モーダルオープン時に最初のタッチが `<input>` もしくは `<textarea>` の境界にある場合, モーダルではなく `<body>` がスクロールされます。[WebKit bug #153856](https://bugs.webkit.org/show_bug.cgi?id=153856) を参照してください。
 
 ### Navbar Dropdowns
 
-The `.dropdown-backdrop` element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile)).
+iOS の `navbar` における `.dropdown-backdrop` 要素は z-index が複雑なので使えません。つまり, `navbar` の `dropdown` を閉じるには直接クリックする必要があります。(もしくは [any other element which will fire a click event in iOS](https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile)).
 
-## Browser zooming
+<!-- ## Browser zooming
 
 Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.
 
@@ -148,12 +190,29 @@ Page zooming inevitably presents rendering artifacts in some components, both in
 While `:hover` isn't possible on most touch devices, iOS emulates this behavior, resulting in "sticky" hover styles that persist after tapping one element. These hover styles are only removed when users tap another element. This behavior is considered largely undesirable and appears to not be an issue on Android or Windows devices.
 
 Throughout our v4 alpha and beta releases, we included incomplete and commented out code for opting into a media query shim that would disable hover styles in touch device browsers that emulate hovering. This work was never fully completed or enabled, but to avoid complete breakage, we've opted to deprecate [this shim](https://github.com/twbs/mq4-hover-shim) and keep the mixins as shortcuts for the pseudo-classes.
+ -->
 
-## Printing
+## ブラウザズーム
+
+ページのズームすると, いくつかのコンポーネントが意図しないレンダリング結果になることがあります。我々は問題によっては修正するかもしれません(もし, 最初に発見したら必要に応じてイシューを作成してください)。ただし、ハック以外の手段がないことが多いので, これらを無視する傾向があります。
+
+## iOS における Sticky `:hover`/`:focus`
+
+ほとんどのタッチデバイスでは `:hover` が使えませんが, iOS では使えます。その結果, 1 つの勝訴をタップしたあとでも持続する "sticky" ホバースタイルになります。このスタイルは, 他の要素をタップすると削除されます。望ましくない動作ですが Android や Windows では問題になりません。
+
+v4 のアルファ版とベータ版をリリースしたとき, "sticky" ホバースタイルを無効にする不完全でコメントアウトされたコードが含まれていました。完全に解決していませんが, 破損をさけるため [this shim](https://github.com/twbs/mq4-hover-shim) を廃止し擬似クラスの mixin にしました。
+
+<!-- ## Printing
 
 Even in some modern browsers, printing can be quirky.
 
-As of Safari v8.0, use of the fixed-width `.container` class can cause Safari to use an unusually small font size when printing. See [issue #14868]({{ site.repo }}/issues/14868) and [WebKit bug #138192](https://bugs.webkit.org/show_bug.cgi?id=138192) for more details. One potential workaround is the following CSS:
+As of Safari v8.0, use of the fixed-width `.container` class can cause Safari to use an unusually small font size when printing. See [issue #14868]({{ site.repo }}/issues/14868) and [WebKit bug #138192](https://bugs.webkit.org/show_bug.cgi?id=138192) for more details. One potential workaround is the following CSS: -->
+
+## 印刷
+
+モダンなブラウザでも, 正常に印刷できないことがあります。
+
+Safari v8.0 以降では, `.container` クラスを使用すると, 印刷時に Safari のフォントサイズが小さくなる可能性があります。詳細は [issue #14868]({{ site.repo }}/issues/14868) と [WebKit bug #138192](https://bugs.webkit.org/show_bug.cgi?id=138192) を参照してください。回避策の 1 つは次の CSS です。
 
 {% highlight css %}
 @media print {
@@ -163,13 +222,21 @@ As of Safari v8.0, use of the fixed-width `.container` class can cause Safari to
 }
 {% endhighlight %}
 
-## Android stock browser
+<!-- ## Android stock browser
 
-Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general.
+Out of the box, Android 4.1 (and even some newer releases apparently) ship with the Browser app as the default web browser of choice (as opposed to Chrome). Unfortunately, the Browser app has lots of bugs and inconsistencies with CSS in general. -->
 
-#### Select menu
+## Android ブラウザ
 
-On `<select>` elements, the Android stock browser will not display the side controls if there is a `border-radius` and/or `border` applied. (See [this StackOverflow question](https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with) for details.) Use the snippet of code below to remove the offending CSS and render the `<select>` as an unstyled element on the Android stock browser. The user agent sniffing avoids interference with Chrome, Safari, and Mozilla browsers.
+Android 4.1 (さらにいくつかの新しいリリースされた OS) はブラウザアプリ (Chrome ではなく) を標準ブラウザとして提供しています。残念なことに ブラウザアプリには, CSS においてたくさんのバグがあり標準的ではありません。
+
+<!-- #### Select menu
+
+On `<select>` elements, the Android stock browser will not display the side controls if there is a `border-radius` and/or `border` applied. (See [this StackOverflow question](https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with) for details.) Use the snippet of code below to remove the offending CSS and render the `<select>` as an unstyled element on the Android stock browser. The user agent sniffing avoids interference with Chrome, Safari, and Mozilla browsers. -->
+
+#### Select メニュー
+
+`<select>` 要素で `border-radius` または `border` が適用されている場合, Android ブラウザはフォームのコントロール部分を表示しません。(詳細は [this StackOverflow question](https://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with) を参照してください)。以下のスニペットで Android ブラウザで問題の CSS を削除し `<select>` がスタイル無しの要素としてレンダリングできます。ユーザエージェント判定で Chrome, Safari, Mozilla ブラウザへの干渉を回避できます。
 
 {% highlight html %}
 <script>
@@ -183,12 +250,21 @@ $(function () {
 </script>
 {% endhighlight %}
 
-Want to see an example? [Check out this JS Bin demo.](http://jsbin.com/OyaqoDO/2)
+<!-- Want to see an example? [Check out this JS Bin demo.](http://jsbin.com/OyaqoDO/2) -->
+サンプルは [Check out this JS Bin demo.](http://jsbin.com/OyaqoDO/2) を参照してください。
 
-## Validators
+<!-- ## Validators
 
 In order to provide the best possible experience to old and buggy browsers, Bootstrap uses [CSS browser hacks](http://browserhacks.com/) in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
 
 These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
 
-Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for [a certain Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=654072).
+Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for [a certain Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=654072). -->
+
+## バリデート
+
+Bootstrap は古いブラウザやバグの多いブラウザに最良のエクスペリエンスを提供するために, 特定のブラウザおよびバージョンで, いくつか CSS ハックを用いてブラウザ自体のバグを回避しています。 これらのハックは CSS バリデータが警告が出ます。 まだ完全に標準化されていない, 最新の CSS 機能をいくつか使用していますが、これは純粋にプログレッシブ・エンハンスメントに基づいています。
+
+CSS バリデータの警告は重要ではありません。なぜなら CSS ハック部分は完全に検証し, CSS ハック以外の機能を妨げていないからです。したがって, これらの警告を意図的に無視します。
+
+私たちの HTML 文書には, 特定の Firefox バグに対する回避策が含まれているため、同様に HTML 検証の警告も重要ではりません。
