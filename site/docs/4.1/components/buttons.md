@@ -62,8 +62,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 -->
 ## アウトライン ボタン(Outline buttons)
-`.btn-outline-*` を適用するとボタンを, 背景色がなくなり, ボタンの周り線を入れることができます。
-
+アウトラインボタン：`.btn-outline-*` を適用すると枠線を残してボタンの背景色を透過することができます。
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -144,8 +143,8 @@ Disabled buttons using the `<a>` element behave a bit different:
 -->
 無効化ボタンを `<a>` 要素で使用した場合はすこし動きが違います。
 - `<a>` は `disabled` 属性をサポートしていません。 `.disabled` クラスを利用する必要があります。
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons. In browsers which support that property, you won't see the disabled cursor at all.
-- Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- アンカーボタンを無効化したスタイルを含んでいます。ブラウザがその機能をサポートしているのであればカーソルは見えなくなるでしょう。
+- 無効化するボタンには aria-distabled="true" 属性をつけてください (スクリーンリーダー用)
 
 
 {% capture example %}

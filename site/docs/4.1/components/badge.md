@@ -52,11 +52,13 @@ Badges can be used as part of links or buttons to provide a counter.
 </button>
 {% endcapture %}
 {% include example.html content=example %}
-
+<!--
 Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
 
 Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
-
+-->
+リンクやボタンのように見えてしまうので使い方には注意が必要です。  
+コンテキストが明確なときだけ使うようにしましょう。 (例えば "お知らせ (4)" のような時のように)
 
 
 {% capture example %}
