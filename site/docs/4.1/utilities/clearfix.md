@@ -1,12 +1,21 @@
 ---
 layout: docs
 title: Clearfix
-description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+description: clearfix を適用するとfloatの解除ができます。
 group: utilities
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Clearfix
+description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+group: utilities
+toc: true
+--- -->
 
-Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
+<!-- Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin. -->
+親要素に `.clearfix` を適用することで `float` を解除することができます。mixinとしても使用できます  
+
 
 {% highlight html %}
 <div class="clearfix">...</div>
@@ -28,7 +37,8 @@ Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also 
 }
 {% endhighlight %}
 
-The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+<!-- The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout. -->
+下記に例を示します。`clearfix` がないと表示が崩れてしまいます。  
 
 {% capture example %}
 <div class="bg-info clearfix">
