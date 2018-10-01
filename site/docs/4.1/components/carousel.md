@@ -13,7 +13,7 @@ group: components
 toc: true
 --- -->
 
-## How it works
+<!-- ## How it works
 
 The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
 
@@ -21,17 +21,38 @@ In browsers where the [Page Visibility API](https://www.w3.org/TR/page-visibilit
 
 Please be aware that nested carousels are not supported, and carousels are generally not compliant with accessibility standards.
 
-Lastly, if you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
+Lastly, if you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util). -->
 
-## Example
+## 使い方(How it works)
+カルーセルはコンテンツを繰り返し表示するするためのスライドショーです。 CSS 3D と JavaScriptで構築するされている。  
+前後(previous/next)のコントロールもサポートされています。
+[Page Visibility API](https://www.w3.org/TR/page-visibility/) がサポートされているブラウザでは, ブラウザのタブがアクティブではない場合やウィンドウが最小化されいる場合など,
+ページが表示されていない場合はカルーセルは動きません。またネストされたカルーセルはサポートされていません。
+ソースからjavaScriptを構築す流場合は [`util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util) が必要です。
 
-Carousels don't automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. While carousels support previous/next controls and indicators, they're not explicitly required. Add and customize as you see fit.
 
-**The `.active` class needs to be added to one of the slides** otherwise the carousel will not be visible. Also be sure to set a unique id on the `.carousel` for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a `data-target` attribute (or `href` for links) that matches the id of the `.carousel` element.
+<!-- ## Example
 
-### Slides only
+Carousels don't automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. While carousels support previous/next controls and indicators, they're not explicitly required. Add and customize as you see fit. 
 
-Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-100` on carousel images to prevent browser default image alignment.
+ **The `.active` class needs to be added to one of the slides** otherwise the carousel will not be visible. Also be sure to set a unique id on the `.carousel` for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a `data-target` attribute (or `href` for links) that matches the id of the `.carousel` element. -->
+
+## 例(Example)
+
+カルーセルは自動的にスライドのサイズを正規化しません。 ユーティリティやカスタムスタイルでコンテンツのサイズを適切にする必要があります。　　
+前後(previous/next)のコントロールはサポートされているが, 明示的に必要とされているわけではないので、適切と思うようにカスタマイズや追加してください。　　
+
+** スライドの中に `.active` クラスが1つ必要です。ない場合は表示されません。　　
+複数のカルーセルを1つのページで使う場合には、 `.carousel` にユニークなIDを付与する必要があります。コントロール要素とインジケータ要素には `.carousel` 要素のIDと一致する data-target属性（リンクの場合は `href` ）が必要です。　　
+
+
+<!-- ### Slides only
+
+Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-100` on carousel images to prevent browser default image alignment. -->
+
+＃＃スライドのみ(Slides only)
+スライドのみのカルーセルを表示します。  
+ブラウザのデフォルトのイメージの配置を防ぐために、カルーセルのイメージ上に `.d-block` と `.w-100` が存在することに注意します。   
 
 {% capture example %}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -50,9 +71,15 @@ Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-
 {% endcapture %}
 {% include example.html content=example %}
 
-### With controls
+<!-- ### With controls
 
-Adding in the previous and next controls:
+Adding in the previous and next controls: -->
+
+### コントロール(With controls) 
+
+前後(previous/next)のコントロールを追加します。
+
+
 
 {% capture example %}
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -79,9 +106,12 @@ Adding in the previous and next controls:
 {% endcapture %}
 {% include example.html content=example %}
 
-### With indicators
+<!-- ### With indicators
 
-You can also add the indicators to the carousel, alongside the controls, too.
+You can also add the indicators to the carousel, alongside the controls, too. -->
+
+### インジケータ(With indicators)
+インジケータをカルーセルに追加可能です。  
 
 {% capture example %}
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -113,9 +143,16 @@ You can also add the indicators to the carousel, alongside the controls, too.
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ### With captions
+
+Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`. -->
+
 ### With captions
 
-Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
+`.carousel-item` に `.carousel-caption` を適用して、スライドにキャプションが追加できます。  
+[display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) を使用してビューポートに対して非表示にできます。  
+ `.d-none .d-md-block` のようにします。  
+
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -168,9 +205,12 @@ Add captions to your slides easily with the `.carousel-caption` element within a
 </div>
 {% endhighlight %}
 
-### Crossfade
+<!-- ### Crossfade
 
-Add `.carousel-fade` to your carousel to animate slides with a fade transition instead of a slide.
+Add `.carousel-fade` to your carousel to animate slides with a fade transition instead of a slide. -->
+
+### クロスフェード（Crossfade）
+`.carousel-fade` を適用すると、スライドをアニメーションで切り替えます。  
 
 {% capture example %}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -198,25 +238,39 @@ Add `.carousel-fade` to your carousel to animate slides with a fade transition i
 {% include example.html content=example %}
 
 
-## Usage
+<!-- ## Usage
 
 ### Via data attributes
 
 Use data attributes to easily control the position of the carousel. `data-slide` accepts the keywords `prev` or `next`, which alters the slide position relative to its current position. Alternatively, use `data-slide-to` to pass a raw slide index to the carousel `data-slide-to="2"`, which shifts the slide position to a particular index beginning with `0`.
 
-The `data-ride="carousel"` attribute is used to mark a carousel as animating starting at page load. **It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.**
+The `data-ride="carousel"` attribute is used to mark a carousel as animating starting at page load. **It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.** -->
 
-### Via JavaScript
+## 利用方法
 
-Call carousel manually with:
+データ属性を使用して、カルーセルの位置をコントロールできます。
+`data-slide` は `prev`, `next` を受け取り、スライドの現在の位置からの相対的な位置が変更されます。  
+または `data-slide-to` を使用して, スライドの位置を 0 から始まる特定のインデックスにシフトします。  
+
+`data-ride="carousel"` 属性は、ページの読み込み時にカルーセルをアニメーションとするために使用します。
+
+
+### データ属性経由(Via JavaScript)
+
+マニュアルでカルーセルを呼びます。
 
 {% highlight js %}
 $('.carousel').carousel()
 {% endhighlight %}
 
-### Options
+<!-- ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-interval=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-interval=""`. -->
+
+### オプション(Options)
+
+オプションは、データの属性やJavaScriptを使用して渡すことが可能です。 `data-` にオプション名を追加します。( `data-interval=""` のように)
+
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -262,13 +316,15 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
   </tbody>
 </table>
 
-### Methods
+<!-- ### Methods -->
+### メソッド(Methods)
 
 {% include callout-danger-async-methods.md %}
 
 #### `.carousel(options)`
 
-Initializes the carousel with an optional options `object` and starts cycling through items.
+<!-- Initializes the carousel with an optional options `object` and starts cycling through items. -->
+`object` オプションを使用してアイテムのスライドを開始します。
 
 {% highlight js %}
 $('.carousel').carousel({
@@ -278,29 +334,38 @@ $('.carousel').carousel({
 
 #### `.carousel('cycle')`
 
-Cycles through the carousel items from left to right.
+<!-- Cycles through the carousel items from left to right. -->
+左から右にアイテムがスライドします。
 
 #### `.carousel('pause')`
 
-Stops the carousel from cycling through items.
+<!-- Stops the carousel from cycling through items. -->
+アイテムのスライドを停止します。
 
 #### `.carousel(number)`
 
 Cycles the carousel to a particular frame (0 based, similar to an array). **Returns to the caller before the target item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+特定のアイテムにスライドします。
+
 
 #### `.carousel('prev')`
 
-Cycles to the previous item. **Returns to the caller before the previous item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+<!-- Cycles to the previous item. **Returns to the caller before the previous item has been shown** (i.e. before the `slid.bs.carousel` event occurs). -->
+前のアイテムにスライドします。
+
 
 #### `.carousel('next')`
 
-Cycles to the next item. **Returns to the caller before the next item has been shown** (i.e. before the `slid.bs.carousel` event occurs).
+<!-- Cycles to the next item. **Returns to the caller before the next item has been shown** (i.e. before the `slid.bs.carousel` event occurs). -->
+次のアイテムにスライドします。
 
 #### `.carousel('dispose')`
 
-Destroys an element's carousel.
+<!-- Destroys an element's carousel. -->
+アイテムを破棄します。
 
-### Events
+
+<!-- ### Events
 
 Bootstrap's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
 
@@ -309,8 +374,16 @@ Bootstrap's carousel class exposes two events for hooking into carousel function
 - `from`: The index of the current item
 - `to`: The index of the next item
 
-All carousel events are fired at the carousel itself (i.e. at the `<div class="carousel">`).
+All carousel events are fired at the carousel itself (i.e. at the `<div class="carousel">`). -->
 
+### イベント(Events)
+カルーセルの機能を操作するための2つのイベントがあります。  
+
+- `direction`: スライドされる方向
+- `relatedTarget`: アクティブなアイテムとして配置するDOM要素
+- `from`: 現在のアイテムのindex
+- `to`: 次のアイテムのindex
+  
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -339,3 +412,8 @@ $('#myCarousel').on('slide.bs.carousel', function () {
 ### Change transition duration
 
 The transition duration of `.carousel-item` can be changed with the `$carousel-transition` Sass variable before compiling or custom styles if you're using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (eg. `transition: transform 2s ease, opacity .5s ease-out`).
+
+### 遷移する時間を変更(Change transition duration)
+
+<!-- The transition duration of `.carousel-item` can be changed with the `$carousel-transition` Sass variable before compiling or custom styles if you're using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (eg. `transition: transform 2s ease, opacity .5s ease-out`). -->
+`.carousel-item` はコンパイル前の `$carousel-transition` で変更することもできます。
