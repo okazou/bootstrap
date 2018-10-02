@@ -13,15 +13,26 @@ group: utilities
 toc: true
 --- -->
 
-## How it works
+<!-- ## How it works
 
-Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need.
+Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need. -->
 
-## Notation
+## 使い方(How it works)
+
+[`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) の値を変更することができます。  
+クラスは、必要に応じてさまざまなエフェクトが組み合わせ可能です。  
+
+
+<!-- ## Notation
 
 Display utility classes that apply to all [breakpoints]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints), from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-As such, the classes are named using the format:
+As such, the classes are named using the format: -->
+
+`xs`から` xl`にはブレークポイントの省略形がありません。  これらのクラスが `min-width：0;`から適用され、メディアクエリにバインドされていないためです。 ただし、残りのブレークポイントにはブレークポイントの省略形が含まれます。  
+
+下記の形式で指定します。
+
 
 * `.d-{value}` for `xs`
 * `.d-{breakpoint}-{value}` for `sm`, `md`, `lg`, and `xl`.
