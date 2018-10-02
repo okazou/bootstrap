@@ -1,10 +1,17 @@
 ---
 layout: docs
 title: Colors
-description: Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.
+description: 意味合いを色で伝えます。ホーバー状態のリンクもサポートされています。
 group: utilities
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Colors
+description: Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.
+group: utilities
+toc: true
+--- -->
 
 ## Color
 
@@ -19,7 +26,9 @@ toc: true
 {% endcapture %}
 {% include example.html content=example %}
 
-Contextual text classes also work well on anchors with the provided hover and focus states. **Note that the `.text-white` and `.text-muted` class has no additional link styling beyond underline.**
+<!-- Contextual text classes also work well on anchors with the provided hover and focus states. **Note that the `.text-white` and `.text-muted` class has no additional link styling beyond underline.** -->
+文字色のクラスは、ホバーやフォーカス状態のアンカーでもうまく機能する。  
+`.text-white` と `.text-muted` では下線以外のスタイルは適用されない。  
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -29,9 +38,12 @@ Contextual text classes also work well on anchors with the provided hover and fo
 {% endcapture %}
 {% include example.html content=example %}
 
-## Background color
+<!-- ## Background color
 
-Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities.
+Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities. -->
+## 背景色（Background Color） 
+`.bg-` で背景色の適用ができます。背景色の色によっては `.text-` も設定する必要があります。
+
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
@@ -41,9 +53,15 @@ Similar to the contextual text color classes, easily set the background of an el
 {% endcapture %}
 {% include example.html content=example %}
 
-## Background gradient
+<!-- ## Background gradient
 
-When `$enable-gradients` is set to true, you'll be able to use `.bg-gradient-` utility classes. **By default, `$enable-gradients` is disabled and the example below is intentionally broken.** This is done for easier customization from the moment you start using Bootstrap. [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options) to enable these classes and more.
+When `$enable-gradients` is set to true, you'll be able to use `.bg-gradient-` utility classes. **By default, `$enable-gradients` is disabled and the example below is intentionally broken.** This is done for easier customization from the moment you start using Bootstrap. [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options) to enable these classes and more. -->
+
+## 背景色のグラデーション化（Background gradient
+
+`$enable-gradients` が true（デフォルト : false）に設定されている場合は `.bg-gradient-` が使用可能です。  
+[Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options)
+
 
 {% capture example %}
 {% for color in site.data.theme-colors %}
