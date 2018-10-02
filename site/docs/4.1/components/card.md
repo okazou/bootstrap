@@ -430,7 +430,7 @@ Cards include a few options for working with images. Choose from appending "imag
 Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card. -->
 
 ## イメージ（Images）
-カードには画像を扱うためのオプションがいくつか存在。カードの両端に「イメージキャップ」を追加したり、イメージにカードの内容を重ねたり、イメージをカードに埋め込んだりすることが可能。
+画像を扱うためのオプションが存在します。カードの両端に "image caps" を追加したり、イメージにカードの内容を重ねたり、イメージをカードに埋め込んだりすることが可能です。
 
 ## 画像の配置（Image caps）
 ヘッダとフッタと同様に、カードには上部と下部に「イメージキャップ」（カードの上部または下部の画像）が表示される。
