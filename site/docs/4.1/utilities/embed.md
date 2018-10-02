@@ -6,7 +6,7 @@ group: utilities
 toc: true
 ---
 
-## About
+<!-- ## About
 
 Rules are directly applied to `<iframe>`, `<embed>`, `<video>`, and `<object>` elements; optionally use an explicit descendant class `.embed-responsive-item` when you want to match the styling for other attributes.
 
@@ -14,7 +14,19 @@ Rules are directly applied to `<iframe>`, `<embed>`, `<video>`, and `<object>` e
 
 ## Example
 
-Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` and an aspect ratio. The `.embed-responsive-item` isn't strictly required, but we encourage it.
+Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` and an aspect ratio. The `.embed-responsive-item` isn't strictly required, but we encourage it. -->
+
+## 概要(About)
+
+ルールは`<iframe>`, `<embed>`, `<video>`, `<object>`要素に直接適用することです。 :  
+他の属性のスタイリングにマッチさせたいときは、オプションで `.embed-responsive-item` クラスを使います。  
+`<iframe>` に `frameborder =" 0 "`を追加する必要はありません。  
+
+## 例(Example)
+`.embed-responsive`とアスペクト比を持つ親要素に `<iframe>` のような埋め込みをラップします。  
+`.embed-responsive-item` を推奨します。
+
+
 
 {% capture example %}
 <div class="embed-responsive embed-responsive-16by9">
@@ -23,9 +35,14 @@ Wrap any embed like an `<iframe>` in a parent element with `.embed-responsive` a
 {% endcapture %}
 {% include example.html content=example %}
 
-## Aspect ratios
+<!-- ## Aspect ratios
 
-Aspect ratios can be customized with modifier classes.
+Aspect ratios can be customized with modifier classes. -->
+
+## アスペクト比(Aspect ratios)
+
+アスペクト比は下記のようにカスタマイズ可能です。
+
 
 {% highlight html %}
 <!-- 21:9 aspect ratio -->
