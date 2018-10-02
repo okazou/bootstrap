@@ -1,10 +1,17 @@
 ---
 layout: docs
 title: Embeds
-description: Create responsive video or slideshow embeds based on the width of the parent by creating an intrinsic ratio that scales on any device.
+description: 任意のデバイスで比例する比率で, 親要素の幅に基づいてレスポンシブなビデオやスライドショーの埋め込みをできます。
 group: utilities
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Embeds
+description: Create responsive video or slideshow embeds based on the width of the parent by creating an intrinsic ratio that scales on any device.
+group: utilities
+toc: true
+--- -->
 
 <!-- ## About
 
