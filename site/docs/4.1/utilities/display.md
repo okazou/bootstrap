@@ -1,10 +1,17 @@
 ---
 layout: docs
 title: Display property
-description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+description: コンポーネントの display の値をすばやくレスポンシブに切り替えることが可能です。  (一般的な値と印刷にも対応しています。)
 group: utilities
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Display property
+description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+group: utilities
+toc: true
+--- -->
 
 ## How it works
 

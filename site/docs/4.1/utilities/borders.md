@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Borders
-description: `.border` や `.border-radius` を適用すると枠線を適用することができます。画像やボタンなど様々な要素に適用できます。
+description: .border や .border-radius を適用すると枠線を適用することができます。画像やボタンなど様々な要素に適用できます。
 group: utilities
 redirect_from: "/docs/4.1/utilities/"
 toc: true
@@ -18,7 +18,7 @@ toc: true
 <!--
 ## Border
  Use border utilities to add or remove an element's borders. Choose from all borders or one at a time. -->
- ## ボーダー(Border)
+## ボーダー(Border)
 下記のように枠線を消したり、適用したりできます。  
 
 ### Additive
