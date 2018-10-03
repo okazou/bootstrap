@@ -1,15 +1,25 @@
 ---
 layout: docs
 title: Vertical alignment
-description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
+description: inline, inline-block, inline-table, 表のセル要素の垂直方向の配置を変更できます。
 group: utilities
 ---
+<!-- ---
+layout: docs
+title: Vertical alignment
+description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
+group: utilities
+--- -->
 
-Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
+<!-- Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
 
 Choose from `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` as needed.
 
-With inline elements:
+With inline elements: -->
+
+`vertical-alignment` で要素の配置を変更できます。  
+`.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` から選択できます。
+
 
 {% capture example %}
 <span class="align-baseline">baseline</span>

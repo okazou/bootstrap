@@ -1,21 +1,34 @@
 ---
 layout: docs
 title: Text
-description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
+description: 文字を簡単に配置できます。
 group: utilities
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Text
+description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
+group: utilities
+toc: true
+--- -->
 
-## Text alignment
 
-Easily realign text to components with text alignment classes.
+<!-- ## Text alignment
+
+Easily realign text to components with text alignment classes. -->
+
+## 配置(Text alignment)
+`alignment` で簡単にテキストを配置できます。
+
 
 {% capture example %}
 <p class="text-justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 {% endcapture %}
 {% include example.html content=example %}
 
-For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
+<!-- For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system. -->
+左揃え、右揃え、中央揃えの場合は、グリッドシステムと同じブレークポイントを使用するレスポンシブクラスが使用可能です。  
 
 {% capture example %}
 <p class="text-left">Left aligned text on all viewport sizes.</p>
@@ -29,9 +42,14 @@ For left, right, and center alignment, responsive classes are available that use
 {% endcapture %}
 {% include example.html content=example %}
 
-## Text wrapping and overflow
+<!-- ## Text wrapping and overflow
 
-Prevent text from wrapping with a `.text-nowrap` class.
+Prevent text from wrapping with a `.text-nowrap` class. -->
+
+## 折り返しとオーバーフロー(Text wrapping and overflow)
+
+`.text-nowrap` クラスで、テキストが折り返されないようにできます。
+
 
 {% capture example %}
 <div class="text-nowrap bd-highlight" style="width: 8rem;">
@@ -40,7 +58,8 @@ Prevent text from wrapping with a `.text-nowrap` class.
 {% endcapture %}
 {% include example.html content=example %}
 
-For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
+<!-- For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.** -->
+長いコンテンツの場合は、`.text-truncate` を追加してテキストを省略する事が可能です。`display: inline-block` または `display: block` が必要です。  
 
 {% capture example %}
 <!-- Block level -->
@@ -57,9 +76,14 @@ For longer content, you can add a `.text-truncate` class to truncate the text wi
 {% endcapture %}
 {% include example.html content=example %}
 
-## Text transform
+<!-- ## Text transform
 
-Transform text in components with text capitalization classes.
+Transform text in components with text capitalization classes. -->
+
+## 変換(Text transform)
+
+文字の大文字や小文字の変換ができます。
+
 
 {% capture example %}
 <p class="text-lowercase">Lowercased text.</p>
@@ -68,11 +92,18 @@ Transform text in components with text capitalization classes.
 {% endcapture %}
 {% include example.html content=example %}
 
-Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
+<!-- Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected. -->
+`.text-capitalize` が各単語の最初の文字だけをどのように変更するかに注意が必要です。
 
-## Font weight and italics
 
-Quickly change the weight (boldness) of text or italicize text.
+<!-- ## Font weight and italics
+
+Quickly change the weight (boldness) of text or italicize text. -->
+
+## 太さとイタリック体(Font weight and italics)
+
+太さ（太字）やテキストをイタリック体に変更できます。  
+
 
 {% capture example %}
 <p class="font-weight-bold">Bold text.</p>
@@ -82,9 +113,13 @@ Quickly change the weight (boldness) of text or italicize text.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Monospace
+<!-- ## Monospace
 
-Change a selection to our monospace font stack with `.text-monospace`.
+Change a selection to our monospace font stack with `.text-monospace`. -->
+
+## 等幅フォント(Monospace)
+
+`.text-monospace` を使って等幅フォントスタックが選択可能です.
 
 {% capture example %}
 <p class="text-monospace">This is in monospace</p>
@@ -93,7 +128,8 @@ Change a selection to our monospace font stack with `.text-monospace`.
 
 ## Reset color
 
-Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent.
+<!-- Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent. -->
+`.text-reset` を適用するとテキストやリンクの色をリセットする事ができます。
 
 {% capture example %}
 <p class="text-muted">

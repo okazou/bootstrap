@@ -1,12 +1,22 @@
 ---
 layout: docs
 title: Sizing
-description: Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.
+description: 簡単に幅や高さの調節ができます。
 group: utilities
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Sizing
+description: Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.
+group: utilities
+toc: true
+--- -->
 
-Width and height utilities are generated from the `$sizes` Sass map in `_variables.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
+<!-- Width and height utilities are generated from the `$sizes` Sass map in `_variables.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here. -->
+
+幅と高さは `_variables.scss` の `$sizes` Sassマップから生成されます。デフォルトでは、25%, 50%, 75%, 100%が組み込まれています。  
+
 
 {% capture example %}
 <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
@@ -28,7 +38,8 @@ Width and height utilities are generated from the `$sizes` Sass map in `_variabl
 {% endcapture %}
 {% include example.html content=example %}
 
-You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
+<!-- You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed. -->
+`max-width: 100%;` と `max-height：100%;` も使用できます。
 
 {% capture example %}
 <img class="mw-100" data-src="holder.js/1000px100?text=Max-width%20%3D%20100%25" alt="Max-width 100%">
