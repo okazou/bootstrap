@@ -78,7 +78,8 @@ Bootstrap は主要なプラットフォームの標準ブラウザ最新版を�
       <td class="text-success">サポート</td>
       <td class="text-muted">N/A</td>
       <td class="text-success">サポート</td>
-    </tr>v    <tr>
+    </tr>
+    <tr>
       <th scope="row">Windows 10 Mobile</th>
       <td class="text-muted">N/A</td>
       <td class="text-muted">N/A</td>
