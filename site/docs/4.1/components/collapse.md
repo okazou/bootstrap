@@ -1,16 +1,29 @@
 ---
 layout: docs
 title: Collapse
-description: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
+description: クラスとJavaScriptのプラグインを使用して、コンテンツの折り畳みができます。
 group: components
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Collapse
+description: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
+group: components
+toc: true
+--- -->
 
-## How it works
+<!-- ## How it works
 
-The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from it's current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element.
+The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from it's current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element. -->
 
-## Example
+## 使い方(How it works)
+
+ボタンやアンカーをトリガーにして, コンテンツの折り畳みができます。  
+要素を折り畳むと、`height` が現在の値から `0` にアニメーションで切り替わります。
+`.collapse` 要素では `padding` は使用できません。 代わりに、独立したラッピング要素としてクラスを使用します。
+
+<!-- ## Example
 
 Click the buttons below to show and hide another element via class changes:
 
@@ -19,6 +32,17 @@ Click the buttons below to show and hide another element via class changes:
 - `.collapse.show` shows content
 
 You can use a link with the `href` attribute, or a button with the `data-target` attribute. In both cases, the `data-toggle="collapse"` is required.
+-->
+
+## 例(Example)
+
+クラスの変更で要素を表示したり非表示にするには、
+
+- `.collapse` 隠す
+- `.collapsing` 遷移中に適用される。
+- `.collapse.show` 表示する
+
+`href` 属性をもつリンクや `data-target` 属性をもつボタンで使用可能です。 どちらも `data-toggle="collapse"` が必要です。
 
 {% capture example %}
 <p>
@@ -37,10 +61,14 @@ You can use a link with the `href` attribute, or a button with the `data-target`
 {% endcapture %}
 {% include example.html content=example %}
 
-## Multiple targets
+<!-- ## Multiple targets
 
 A `<button>` or `<a>` can show and hide multiple elements by referencing them with a JQuery selector in its `href` or `data-target` attribute.
-Multiple `<button>` or `<a>` can show and hide an element if they each reference it with their `href` or `data-target` attribute
+Multiple `<button>` or `<a>` can show and hide an element if they each reference it with their `href` or `data-target` attribute -->
+
+## 複数のターゲット(Multiple targets)
+
+`<button>` や `<a>` は `data-target` 属性のJQueryセレクタを使用して複数の要素を参照する場合、要素を表示および非表示にすることが可能です。  
 
 {% capture example %}
 <p>
@@ -67,9 +95,14 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
 {% endcapture %}
 {% include example.html content=example %}
 
-## Accordion example
+<!-- ## Accordion example
 
-Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/) component, you can extend the default collapse behavior to create an accordion.
+Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/) component, you can extend the default collapse behavior to create an accordion. -->
+
+## 例(Accordion example)
+
+[card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/) を利用するとアコーディオンの作成が可能です。
+
 
 {% capture example %}
 <div class="accordion" id="accordionExample">
@@ -120,15 +153,27 @@ Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card
 {% endcapture %}
 {% include example.html content=example %}
 
-## Accessibility
+<!-- ## Accessibility
 
 Be sure to add `aria-expanded` to the control element. This attribute explicitly conveys the current state of the collapsible element tied to the control to screen readers and similar assistive technologies. If the collapsible element is closed by default, the attribute on the control element should have a value of `aria-expanded="false"`. If you've set the collapsible element to be open by default using the `show` class, set `aria-expanded="true"` on the control instead. The plugin will automatically toggle this attribute on the control based on whether or not the collapsible element has been opened or closed (via JavaScript, or because the user triggered another control element also tied to the same collapsbile element). If the control element's HTML element is not a button (e.g., an `<a>` or `<div>`), the attribute `role="button"` should be added to the element.
 
 If your control element is targeting a single collapsible element – i.e. the `data-target` attribute is pointing to an `id` selector – you should add the `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
 
-Note that Bootstrap's current implementation does not cover the various keyboard interactions described in the [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - you will need to include these yourself with custom JavaScript.
+Note that Bootstrap's current implementation does not cover the various keyboard interactions described in the [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - you will need to include these yourself with custom JavaScript. -->
 
-## Usage
+## アクセシビリティ(Accessibility)
+
+コントロール要素(リンク,ボタンなど）に `aria-expanded` を追加してください。スクリーンリーダー(や同様の技術)に明示的に伝えるためです。  
+デフォルトが閉じている場合は、コントロール要素の属性は `aria-expanded="false"` にする必要があります。デフォルトで開くように設定した場合は `aria-expanded="true"` を設定します。  
+プラグインは、折り畳み可能な要素が開いているか閉じているかを属性を自動的に切り替えます。コントロール要素のHTML要素がボタンではない場合（例：`<a>` や `<div>` ）`role="button"` 属性を要素に追加する必要があります。  
+
+`data-target` 属性が `id` セレクタを指している場合、`id` を含むコントロール要素に追加の `aria-controls` 属性を追加できます。　　
+スクリーンリーダーはこの属性を利用して折り畳み可能な要素自体に直接移動するショートカットを提供できます。  
+
+現在の実装は [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) で説明されています。
+
+
+<!-- ## Usage
 
 The collapse plugin utilizes a few classes to handle the heavy lifting:
 
@@ -136,25 +181,45 @@ The collapse plugin utilizes a few classes to handle the heavy lifting:
 - `.collapse.show` shows the content
 - `.collapsing` is added when the transition starts, and removed when it finishes
 
-These classes can be found in `_transitions.scss`.
+These classes can be found in `_transitions.scss`. -->
 
-### Via data attributes
+## 使用方法(Usage)
+
+collapseプラグインでは開閉処理を取り扱うために、いくつかのクラスを使用できます。  
+
+- `.collapse` 隠す
+- `.collapse.show` 表示する
+- `.collapsing` 遷移すると追加され, 終了すると削除します。
+
+<!-- ### Via data attributes
 
 Just add `data-toggle="collapse"` and a `data-target` to the element to automatically assign control of one or more collapsible elements. The `data-target` attribute accepts a CSS selector to apply the collapse to. Be sure to add the class `collapse` to the collapsible element. If you'd like it to default open, add the additional class `show`.
 
-To add accordion-like group management to a collapsible area, add the data attribute `data-parent="#selector"`. Refer to the demo to see this in action.
+To add accordion-like group management to a collapsible area, add the data attribute `data-parent="#selector"`. Refer to the demo to see this in action. -->
+
+### データ属性(Via data attributes)
+
+`data-toggle="collapse"` と `data-target` を適用するとコントロールが自動で割り当てられます。`data-target` は collapse を適用するとCSSセレクタを受け入れます。  
+折り畳み可能な場合は `collapse` を摘要する必要があります。デフォルトで開いている場合は, `show` が必要です。
+
+折り畳み可能な領域にアコーディオンのようなグループ管理を追加するには、データ属性 `data-parent="#selector"` を追加します。
 
 ### Via JavaScript
 
-Enable manually with:
+<!-- Enable manually with: -->
+マニュアルで追加します。
 
 {% highlight js %}
 $('.collapse').collapse()
 {% endhighlight %}
 
-### Options
+<!-- ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-parent=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-parent=""`. -->
+
+###オプション(Options)
+
+オプションは データ属性やJavaScriptで渡すことが可能です。 `data-` にオプション名を追加します。( `data-parent=""` のように)  
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -187,7 +252,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 
 #### `.collapse(options)`
 
-Activates your content as a collapsible element. Accepts an optional options `object`.
+<!-- Activates your content as a collapsible element. Accepts an optional options `object`. -->
+折り畳み可能な要素としてコンテンツをアクティブにします。
 
 {% highlight js %}
 $('#myCollapsible').collapse({
@@ -197,23 +263,33 @@ $('#myCollapsible').collapse({
 
 #### `.collapse('toggle')`
 
-Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.bs.collapse` or `hidden.bs.collapse` event occurs).
+<!-- Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.bs.collapse` or `hidden.bs.collapse` event occurs). -->
+
+折り畳み可能な要素の表示/非表示に切り替えます。実際に表示されたり非表示にされる前（ `shown.bs.collapse` , `hidden.bs.collapse` が発生する前）に呼び出し元に戻ります。
+
+
 
 #### `.collapse('show')`
 
-Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (i.e. before the `shown.bs.collapse` event occurs).
+<!-- Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (i.e. before the `shown.bs.collapse` event occurs). -->
+
+折り畳み可能な要素の表示します。実際に表示される前（ `shown.bs.collapse` が発生する前）に呼び出し元に戻ります。
 
 #### `.collapse('hide')`
+<!-- 
+Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (i.e. before the `hidden.bs.collapse` event occurs). -->
 
-Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (i.e. before the `hidden.bs.collapse` event occurs).
+折り畳み可能な要素の表示します。実際に非表示になる前（ `hidden.bs.collapse` が発生する前）に呼び出し元に戻ります。
 
 #### `.collapse('dispose')`
 
-Destroys an element's collapse.
+<!-- Destroys an element's collapse. -->
+折り畳みを破棄します。
 
 ### Events
 
-Bootstrap's collapse class exposes a few events for hooking into collapse functionality.
+<!-- Bootstrap's collapse class exposes a few events for hooking into collapse functionality. -->
+いくつかのイベントが用意されています。
 
 <table class="table table-bordered table-striped">
   <thead>

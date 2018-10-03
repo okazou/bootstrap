@@ -57,7 +57,7 @@ Similar to the contextual text color classes, easily set the background of an el
 
 When `$enable-gradients` is set to true, you'll be able to use `.bg-gradient-` utility classes. **By default, `$enable-gradients` is disabled and the example below is intentionally broken.** This is done for easier customization from the moment you start using Bootstrap. [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options) to enable these classes and more. -->
 
-## 背景色のグラデーション化（Background gradient
+## 背景色のグラデーション化（Background gradient)
 
 `$enable-gradients` が true（デフォルト : false）に設定されている場合は `.bg-gradient-` が使用可能です。  
 [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options)
