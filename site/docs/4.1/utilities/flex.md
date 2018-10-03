@@ -360,7 +360,7 @@ Vertically move one flex item to the top or bottom of a container by mixing `ali
 
 ### With align-items
 
-<!-- Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`. --> -->
+<!-- Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`. --> 
 `align-items`, `flex-direction：column` と合わせて `margin-top：auto` や `margin-bottom：auto` を組み合わせるとFlexアイテムをコンテナの垂直方向に移動できます。
 
 

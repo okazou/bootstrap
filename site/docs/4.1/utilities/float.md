@@ -1,18 +1,33 @@
 ---
 layout: docs
 title: Float
-description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
+description: レスポンシブな float ユーティティを使用して, ブレークポイントで要素のfloatを切り替えます。
 group: utilities
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Float
+description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
+group: utilities
+toc: true
+--- -->
+
+<!-- ## Overview
+
+These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no affect on flex items. -->
 
 ## Overview
+[CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float) を使用して viewportサイズに基づいて水平方向の配置を無効にします。  
+グリッドシステムと同じブレークポイントを使用しています。
 
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no affect on flex items.
 
-## Classes
 
-Toggle a float with a class:
+<!-- ## Classes 
+Toggle a float with a class: -->
+
+## クラス(Classes)
+クラスで配置を変更できます。
 
 {% capture example %}
 <div class="float-left">Float left on all viewport sizes</div><br>
@@ -22,8 +37,8 @@ Toggle a float with a class:
 {% include example.html content=example %}
 
 ## Mixins
-
-Or by Sass mixin:
+<!-- Or by Sass mixin: -->
+Sass mixinを使用することもできます。
 
 {% highlight scss %}
 .element {
@@ -37,9 +52,14 @@ Or by Sass mixin:
 }
 {% endhighlight %}
 
-## Responsive
+<!-- ## Responsive
 
-Responsive variations also exist for each `float` value.
+Responsive variations also exist for each `float` value. -->
+
+## レスポンシブ(Responsive)
+
+`float` はレスポンシブにも対応しています。  
+
 
 {% capture example %}
 <div class="float-sm-left">Float left on viewports sized SM (small) or wider</div><br>
@@ -49,7 +69,8 @@ Responsive variations also exist for each `float` value.
 {% endcapture %}
 {% include example.html content=example %}
 
-Here are all the support classes;
+<!-- Here are all the support classes; -->
+サポートしているクラスは下記です。
 
 {% for bp in site.data.breakpoints %}
 - `.float{{ bp.abbr }}-left`
