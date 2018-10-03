@@ -1,16 +1,30 @@
 ---
 layout: docs
 title: Grid system
+description: 12カラムのシステムと,5段階のレスポンシブ,Sassとmixin,いくつかの定義されたクラスですべての図形とサイズのレイアウトを作成可能です
+group: layout
+toc: true
+--- 
+<!-- ---
+layout: docs
+title: Grid system
 description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
 group: layout
 toc: true
----
+--- -->
 
-## How it works
+<!-- ## How it works
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth look at how the grid comes together.
+Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth look at how the grid comes together. -->
 
-**New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
+## 使い方
+
+グリッドシステムは containers, rows, columns でレイアウトと整列を行う。これは [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) で構築されている。  
+下記にグリッドの例をしめす。  
+
+<!-- **New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets. -->
+
+flexboxは [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) を参考にしてください。
 
 <div class="bd-example-row">
 {% capture example %}
@@ -31,9 +45,13 @@ Bootstrap's grid system uses a series of containers, rows, and columns to layout
 {% include example.html content=example %}
 </div>
 
-The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
+<!-- The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent `.container`. -->
 
-Breaking it down, here's how it works:
+上記の例では、定義済みのグリッドクラスを使用して , small, medium, large, extra large のデバイスで3つの等幅列を作成しています。  
+列は親要素の `.container` を持つページの中央に配置されます。 
+
+
+<!-- Breaking it down, here's how it works:
 
 - Containers provide a means to center and horizontally pad your site's contents. Use `.container` for a responsive pixel width or `.container-fluid` for `width: 100%` across all viewport and device sizes.
 - Rows are wrappers for columns. Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
@@ -46,13 +64,35 @@ Breaking it down, here's how it works:
 - Grid breakpoints are based on minimum width media queries, meaning **they apply to that one breakpoint and all those above it** (e.g., `.col-sm-4` applies to small, medium, large, and extra large devices, but not the first `xs` breakpoint).
 - You can use predefined grid classes (like `.col-4`) or [Sass mixins](#sass-mixins) for more semantic markup.
 
-Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9).
+Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9). -->
 
-## Grid options
+下記の仕様やBugに注意が必要です。  
+- [bugs around flexbox](https://github.com/philipwalton/flexbugs) 
+- [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9)
+
+わかりやすく説明すると
+- コンテナは,サイトのコンテンツを中央に配置し水平に埋め込む手段を提供します。全てのviewportとデバイスサイズにわたって固定幅の `.container` または全幅の `.container-fluid` （width: 100%）を使用しています。
+- 行(Rows) で 列(columns) を囲みます。各列には、それらの間のスペースを制御するための水平 `padding` があります。 `padding` は `negative margins` で打ち消されます。これによって列内のすべてのコンテンツが視覚的に左側に整列されます。
+- コンテンツは列内に配置する必要があり、列(columns)のみを行(Rows)の直下の子にすることが可能です。
+- Flexboxによって指定された `width` を持たないグリッド列は自動的に等幅列としてレイアウトされます。4つの列は(小のブレークポイント以上で)自動的に25%の幅になります。そのほかの例は [auto-layout columns](#auto-layout-columns) を参考にできます。
+- 列は行ごとに12のうちから使用したい列の数を示します。3つの等幅列が必要な場合は `.col-4` を使用できます。
+- 列の幅 `width` は、パーセンテージで設定されているので親要素との相対的な値は常に流動的になります。
+- 列には水平方向の `padding` があり両端に空白を作成しますが `.row` に `.no-gutters` を入れれば、行から `margin` を削除したり、列から `padding` を削除することができます。
+- グリッドレスポンシブは,5つのグリッドブレークポイントがあります。(extra small, small, medium, large, extra large)
+- グリッドブレークポイントは、最小幅のメディアクエリに基づいています。(例 `.col-sm-4` は small, medium, large, extra large に適用されますが最初の `xs`ブレークポイントにはなりません)
+- 定義済みのグリッドクラス (例 `.col-4` )やSassのmixinも使用可能です。
+
+
+<!-- ## Grid options
 
 While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
 
-See how aspects of the Bootstrap grid system work across multiple devices with a handy table.
+See how aspects of the Bootstrap grid system work across multiple devices with a handy table. -->
+
+## Grid options
+
+Bootstrapではサイズの定義で `em` か `rem` 単位を使用していますが, グリッドのブレークポイントとコンテナ幅には `px` 単位を使用しています。  
+viewportの幅が `px` 単位なのと [font size](https://drafts.csswg.org/mediaqueries-3/#units) のよって変化しないためです。  
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -116,13 +156,23 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
   </tbody>
 </table>
 
+<!-- ## Auto-layout columns
+
+Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`. -->
+
 ## Auto-layout columns
 
-Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`.
+明示的に番号を付けられたクラス(例 `.col-sm-6` )がなければ、簡単な列サイズ設定のためにブレークポイント固有の列クラスを利用します。
 
-### Equal-width
 
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+<!-- ### Equal-width
+
+For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width. -->
+
+### 等幅(Equal-width)
+
+例えば、`xs` から `xl` までのすべてのデバイスとviewportに適用される2つのグリッドレイアウトがあった場合に　　
+ブレークポイントごとに任意の数のないクラスを追加し,すべての列が同じ幅になるようにします。
 
 <div class="bd-example-row">
 {% capture example %}
@@ -151,7 +201,9 @@ For example, here are two grid layouts that apply to every device and viewport, 
 {% include example.html content=example %}
 </div>
 
-Equal-width columns can be broken into multiple lines, but there was a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#flexbug-11) that prevented this from working without an explicit `flex-basis` or `border`. There are workarounds for older browser versions, but they shouldn't be necessary if you're up-to-date.
+<!-- Equal-width columns can be broken into multiple lines, but there was a [Safari flexbox bug](https://github.com/philipwalton/flexbugs#flexbug-11) that prevented this from working without an explicit `flex-basis` or `border`. There are workarounds for older browser versions, but they shouldn't be necessary if you're up-to-date. -->
+
+等幅のカラムでは列は複数の行に分割可能です。ただし [Safari flexbox bug](https://github.com/philipwalton/flexbugs#flexbug-11) により `flex-basis` や `border` なしでは動作しなかったことがあります。古いバージョンのブラウザでは回避策がありますが、最新の場合には必要はありません。
 
 <div class="bd-example-row">
 {% capture example %}
@@ -168,9 +220,13 @@ Equal-width columns can be broken into multiple lines, but there was a [Safari f
 {% include example.html content=example %}
 </div>
 
-### Setting one column width
+<!-- ### Setting one column width
 
-Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column. -->
+
+### 1列の幅の設定(Setting one column widt)
+
+任意の1列の幅を設定することができます。　　
 
 <div class="bd-example-row">
 {% capture example %}
@@ -202,9 +258,16 @@ Auto-layout for flexbox grid columns also means you can set the width of one col
 {% include example.html content=example %}
 </div>
 
-### Variable width content
+<!-- ### Variable width content
 
-Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
+Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content. -->
+
+### 可変幅(Variable width content)
+
+下記のように `col-{breakpoint}-auto` を適用すると, コンテンツの自然な幅に基づいて列のサイズを設定できます。
+
+
+
 
 <div class="bd-example-row">
 {% capture example %}
@@ -240,6 +303,11 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
 
+### 複数行の等幅（Equal-width multi-row）
+
+下記のように `.w-100` を適用すると数の行にまたがる等幅の列が作成できます。  
+`.w-100` と [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) を組み合わせてレスポンシブブレークポイントにもできます。
+
 <div class="bd-example-row">
 {% capture example %}
 <div class="row">
@@ -253,13 +321,21 @@ Create equal-width columns that span multiple rows by inserting a `.w-100` where
 {% include example.html content=example %}
 </div>
 
-## Responsive classes
+<!-- ## Responsive classes
 
-Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit. -->
+
+## レスポンシブクラス(Responsive classes)
+レスポンシブ・レイアウトを構築するための5つの階層が定義されています。(extra small, small, medium, large, extra large)
+
+<!-- ### All breakpoints
+
+For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`. -->
 
 ### All breakpoints
 
-For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.
+デバイスの最小サイズから最大サイズまで同じグリッドの場合は `.col` および `.col-* `クラスを使用します。  
+下記のように特定のサイズの列が必要な場合は番号付きクラスの指定します。   
 
 <div class="bd-example-row">
 {% capture example %}
@@ -277,9 +353,14 @@ For grids that are the same from the smallest of devices to the largest, use the
 {% include example.html content=example %}
 </div>
 
-### Stacked to horizontal
+<!-- ### Stacked to horizontal
 
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
+Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`). -->
+
+### 横に積み重ね（Stacked to horizontal）
+
+`.col-sm-*` を使用すると `sm` 以上のブレークポイントでは水平に表示できます。  
+`extra small` では積み重ねとなります。  
 
 <div class="bd-example-row">
 {% capture example %}
@@ -296,9 +377,14 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% include example.html content=example %}
 </div>
 
-### Mix and match
+<!-- ### Mix and match
 
-Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
+Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works. -->
+
+### ミックス＆マッチ(Mix and match)
+
+各階層に異なるクラスの組み合わせを使用できます。下記を参考にしてください。  
+
 
 <div class="bd-example-row">
 {% capture example %}
