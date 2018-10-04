@@ -18,7 +18,7 @@ Choose from `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `
 With inline elements: -->
 
 `vertical-alignment` で要素の配置を変更できます。  
-`.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` から選択できます。
+`.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, `.align-text-top` から選択できます。
 
 
 {% capture example %}
