@@ -75,7 +75,7 @@ Bootstrap primarily uses the following media query ranges—or breakpoints—in 
 -->
 ## (レスポンシブ ブレークポイント)Responsive breakpoints
 Bootstrapはモバイルファーストで開発していて, レイアウトやインターフェースのブレークポイントは [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) を使用している。  
-これらのブレークポイント最小のビューポートに基づいていて、ビューポートの変更に合わせて、要素を拡大します。  
+これらのブレークポイント最小のビューポートに基づいていてビューポートの変更に合わせて要素を拡大します。  
 
 下記のブレークポイントをSassファイルに記述しています。
 
@@ -118,8 +118,8 @@ Since we write our source CSS in Sass, all our media queries are available via S
 }
 {% endhighlight %}
 
-We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
-
+<!-- We occasionally use media queries that go in the other direction (the given screen size *or smaller*): -->
+私たちは時によって、他の方向に向かうメディアクエリを使用します。
 
 
 {% highlight scss %}
@@ -141,7 +141,8 @@ We occasionally use media queries that go in the other direction (the given scre
 
 {% include callout-info-mediaqueries-breakpoints.md %}
 
-Once again, these media queries are also available via Sass mixins:
+<!-- Once again, these media queries are also available via Sass mixins: -->
+これらのメディアクエリは、Sassミックスインでも利用できます。
 
 {% highlight scss %}
 @include media-breakpoint-down(xs) { ... }
@@ -158,7 +159,9 @@ Once again, these media queries are also available via Sass mixins:
 }
 {% endhighlight %}
 
-There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
+<!-- There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths. -->
+
+ブレークポイントの幅(最小,最大)を使用して画面サイズの1つのセグメントを対象とするメディアクエリやミックスインもあります。
 
 {% highlight scss %}
 // Extra small devices (portrait phones, less than 576px)
@@ -177,7 +180,8 @@ There are also media queries and mixins for targeting a single segment of screen
 @media (min-width: 1200px) { ... }
 {% endhighlight %}
 
-These media queries are also available via Sass mixins:
+<!-- These media queries are also available via Sass mixins: -->
+メディアクエリは Sass mixins でも利用可能です。
 
 {% highlight scss %}
 @include media-breakpoint-only(xs) { ... }
@@ -187,7 +191,8 @@ These media queries are also available via Sass mixins:
 @include media-breakpoint-only(xl) { ... }
 {% endhighlight %}
 
-Similarly, media queries may span multiple breakpoint widths:
+<!-- Similarly, media queries may span multiple breakpoint widths: -->
+メディアクエリは複数のブレークポイントの幅にまたがる場合があります。
 
 {% highlight scss %}
 // Example
@@ -203,11 +208,19 @@ The Sass mixin for targeting the same screen size range would be:
 
 ## Z-index
 
-Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
+<!-- Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
 
 These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
 
-We don't encourage customization of these individual values; should you change one, you likely need to change them all.
+We don't encourage customization of these individual values; should you change one, you likely need to change them all. -->
+
+いくつかのBootstrapのコンポーネントでは, コンテンツを配置するための第3の軸を提供することによってレイアウトを制御するのに役立つCSSプロパティである`z-index` を利用しています。`z-index` はナビゲーション、ツールチップ、ポップオーバー、モーダルなどを適切にレイヤーするように設計されています。
+
+これらは、任意の高めの値から始まっている。ツールチップ、ポップオーバー、ナビゲーションバー、ドロップダウン、モーダルなど階層化されたコンポーネント全体で、動作の合理的な一貫性のためこれらの標準セットが必要です。`100+` や `500+` を使用しなかった理由は特にありません。
+
+これらの値のカスタマイズは推奨していません。1つ変えたら、すべて変更する必要があるためです。
+
+
 
 {% highlight scss %}
 $zindex-dropdown:          1000 !default;
@@ -219,4 +232,6 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 {% endhighlight %}
 
-To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.
+<!-- To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements. -->
+
+コンポーネント内の重なり合う境界線（例えば、インプットグループ内のボタンやコントロール）を処理するために、デフォルト/ホバー/アクティブ状態に対しては、 `z-index` の値は `1`,`2`,`3` を使用。ホバー/フォーカス/アクティブでは、要素との境界線を表示するのに、より高い `z-index` 値を持つ特定の要素が最前になります。

@@ -71,7 +71,7 @@ Be aware of the limitations and [bugs around flexbox](https://github.com/philipw
 - [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9)
 
 わかりやすく説明すると
-- コンテナは,サイトのコンテンツを中央に配置し水平に埋め込む手段を提供します。全てのviewportとデバイスサイズにわたって固定幅の `.container` または全幅の `.container-fluid` （width: 100%）を使用しています。
+- コンテナは,サイトのコンテンツを中央に配置し水平に埋め込む手段を提供します。全てのビューポートとデバイスサイズにわたって固定幅の `.container` または全幅の `.container-fluid` （width: 100%）を使用しています。
 - 行(Rows) で 列(columns) を囲みます。各列には、それらの間のスペースを制御するための水平 `padding` があります。 `padding` は `negative margins` で打ち消されます。これによって列内のすべてのコンテンツが視覚的に左側に整列されます。
 - コンテンツは列内に配置する必要があり、列(columns)のみを行(Rows)の直下の子にすることが可能です。
 - Flexboxによって指定された `width` を持たないグリッド列は自動的に等幅列としてレイアウトされます。4つの列は(小のブレークポイント以上で)自動的に25%の幅になります。そのほかの例は [auto-layout columns](#auto-layout-columns) を参考にできます。
@@ -92,7 +92,7 @@ See how aspects of the Bootstrap grid system work across multiple devices with a
 ## Grid options
 
 Bootstrapではサイズの定義で `em` か `rem` 単位を使用していますが, グリッドのブレークポイントとコンテナ幅には `px` 単位を使用しています。  
-viewportの幅が `px` 単位なのと [font size](https://drafts.csswg.org/mediaqueries-3/#units) のよって変化しないためです。  
+ビューポートの幅が `px` 単位なのと [font size](https://drafts.csswg.org/mediaqueries-3/#units) のよって変化しないためです。  
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -171,7 +171,7 @@ For example, here are two grid layouts that apply to every device and viewport, 
 
 ### 等幅(Equal-width)
 
-例えば、`xs` から `xl` までのすべてのデバイスとviewportに適用される2つのグリッドレイアウトがあった場合に　　
+例えば、`xs` から `xl` までのすべてのデバイスとビューポートに適用される2つのグリッドレイアウトがあった場合に　　
 ブレークポイントごとに任意の数のないクラスを追加し,すべての列が同じ幅になるようにします。
 
 <div class="bd-example-row">

@@ -19,7 +19,7 @@ Use our [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/util
 
 ## Changing `display`
 
-レスポンシブに `display` を切り替えるには [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) を使用します。 グリッドシステム、コンテンツ、コンポーネントを組み合わせて、特定のviewportで表示や非表示にすることができます。
+レスポンシブに `display` を切り替えるには [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) を使用します。 グリッドシステム、コンテンツ、コンポーネントを組み合わせて、特定のビューポートで表示や非表示にすることができます。
 
 <!-- ## Flexbox options
 
@@ -41,7 +41,7 @@ Use the `margin` and `padding` [spacing utilities]({{ site.baseurl }}/docs/{{ si
 
 ## マージンとパディング(Margin and padding)
 
-`margin` と `padding` は [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) を使用して要素とコンポーネントの間隔とサイズを調整できます。Bootstrap4には、`1rem` のデフォルトの `$spacer` 変数で空白ユーティリティに5レベルのスケールが組み込まれています。vieportの値（ `margin-right：1rem` の場合は `.mr-3` など）を選択するか、特定のviewportをターゲットにするように `responsive variants` を選択します。（例： `md` ブレークポイントから始まる `margin-right：1rem` の場合は `.mr-md-3` ）
+`margin` と `padding` は [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) を使用して要素とコンポーネントの間隔とサイズを調整できます。Bootstrap4には、`1rem` のデフォルトの `$spacer` 変数で空白ユーティリティに5レベルのスケールが組み込まれています。vieportの値（ `margin-right：1rem` の場合は `.mr-3` など）を選択するか、特定のビューポートをターゲットにするように `responsive variants` を選択します。（例： `md` ブレークポイントから始まる `margin-right：1rem` の場合は `.mr-md-3` ）
 
 <!-- ## Toggle `visibility`
 
