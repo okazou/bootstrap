@@ -900,14 +900,27 @@ With that in mind, consider the following demos for our custom form validation s
 ### How it works
 
 Bootstrapで検証がどのように機能するかは下記です。
+- HTMLフォームの検証は、CSSの疑似クラス、`:invalid` と `:valid` を経由して適用されます。 `<input>`, `<select>`, `<textarea>` 要素に適用されます。
+- Bootstrapは `:invalid` と `:valid` を親の `.was-validated` に適用します。通常は `<form>` に適用しますが, それ以外の場合、値のない任意の必須フィールドは、ページのロード時に無効として表示されます。それらをアクティブにするタイミングを選択することが可能です。
+- フォームの外観をリセットするには（例：AJAXを使用した動的フォーム送信の場合）submit後に再び `<form>` から `.was-validated` を削除します。
+- フォールバックとして `.is-invalid` と `.is-valid` を [server side validation](#server-side) の疑似クラスの代わりに使用可能です。 (親要素に `.was-validated` は必要ない。)
+- CSSの仕組みの制約から、JavaScriptなしでDOMのフォームコントロールの前にある `<label>` にスタイルを適用することは不可能です。
+- 最新ブラウザでは、フォームコントロールを検証する一連のJavaScriptメソッドである [constraint validation API](https://www.w3.org/TR/html5/sec-forms.html#the-constraint-validation-api) はサポートされます。
+- フィードバックメッセージは、[browser defaults](#browser-defaults)（各ブラウザごとに異なり、CSS経由では変更不可です）や追加のHTMLとCSSを使用したカスタムフィードバックスタイルを利用可能です。
+- JavaScriptで `setCustomValidity` を使用してカスタムのメッセージを提供可能です。
 
 
-
-### Custom styles
+<!-- ### Custom styles
 
 For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
 
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`.
+Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.custom-select`, and not `.form-control`. -->
+
+### Custom styles
+
+フォーム検証メッセージの場合は、`<form>` に `novalidate` booleanの属性を追加する必要があります。これにより、ブラウザのデフォルトのフィードバックツールチップは無効になりますが、JavaScriptのフォーム検証APIにはまだアクセスできません。以下のフォームで送信すると、BootstrapのJavaScriptは送信ボタンを傍受し、フィードバックを中継します。送信しようとすると、フォームコントロールに `:invalid` と `:valid` スタイルが適用されます。  
+カスタムフィードバックスタイルではカスタムの色, 枠線, フォーカススタイル, 背景アイコンを適用して、フィードバックをよりよく伝えることができます。`<select>` の背景アイコンは `.custom-select` だけで利用でき `.form-control` では利用不可です。
+
 
 {% capture example %}
 <form class="needs-validation" novalidate>
@@ -999,11 +1012,16 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 {% endcapture %}
 {% include example.html content=example %}
 
-### Browser defaults
+<!-- ### Browser defaults
 
 Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you'll see a slightly different style of feedback.
 
-While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript. -->
+
+### Browser defaults
+
+カスタム検証フィードバックメッセージやJavaScriptでフォームの動作を変更するせずに, ブラウザのデフォルトが使用可能です。  
+フィードバックのスタイルはCSSでスタイルすることはできません。JavaScriptを使用してフィードバックテキストをカスタマイズすることは可能です。  
 
 {% capture example %}
 <form>
@@ -1053,9 +1071,13 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ### Server side
+
+We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes. -->
+
 ### Server side
 
-We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+クライアント側で検証をすることを推奨します。サーバー側の検証が必要な場合は無効や有効なフォームフィールドを `.is-invalid` と `.is-valid` で指定可能です。 `.invalid-feedback` もサポートされます。
 
 {% capture example %}
 <form>
@@ -1126,9 +1148,13 @@ We recommend using client-side validation, but in case you require server-side v
 {% endcapture %}
 {% include example.html content=example %}
 
-### Supported elements
+<!-- ### Supported elements
 
-Our example forms show native textual `<input>`s above, but form validation styles are also available for `<textarea>`s and custom form controls.
+Our example forms show native textual `<input>`s above, but form validation styles are also available for `<textarea>`s and custom form controls. -->
+
+### サポートしている要素(Supported elements)
+サンプルフォームは、上記のテキストの `<input>` を示しているがフォームの検証スタイルは `<textarea>` とカスタムフォームコントロールでも利用可能です。
+
 
 {% capture example %}
 <form class="was-validated">
@@ -1175,9 +1201,13 @@ Our example forms show native textual `<input>`s above, but form validation styl
 {% endcapture %}
 {% include example.html content=example %}
 
-### Tooltips
+<!-- ### Tooltips
 
-If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup.
+If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup. -->
+
+### Tooltips
+フォームレイアウトで許可されている場合は `.{valid|invalid}-feedback` を `.{valid|invalid}-tooltip` に置き換えると,検証フィードバックをスタイル付きツールチップで表示可能です。ツールヒントの位置を決めるため親要素に `position: relative` が入っていること確認してください。下記の例では、列クラスには既にこれがあリマスが場合によっては別の設定が必要です。
+
 
 {% capture example %}
 <form class="needs-validation" novalidate>
@@ -1237,11 +1267,15 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ## Custom forms
+
+For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They're built on top of semantic and accessible markup, so they're solid replacements for any default form control. -->
+
 ## Custom forms
+カスタマイズやクロスブラウザの一貫性をさらに高めるには、カスタムのフォーム要素を使用して、ブラウザのデフォルトを置き換えます。セマンティックでアクセシブルなマークアップの上に構築されているため、デフォルトのフォームコントロールの代わりに使用可能です。
 
-For even more customization and cross browser consistency, use our completely custom form elements to replace the browser defaults. They're built on top of semantic and accessible markup, so they're solid replacements for any default form control.
 
-### Checkboxes and radios
+<!-- ### Checkboxes and radios
 
 Each checkbox and radio is wrapped in a `<div>` with a sibling `<span>` to create our custom control and a `<label>` for the accompanying text. Structurally, this is the same approach as our default `.form-check`.
 
@@ -1249,7 +1283,20 @@ We use the sibling selector (`~`) for all our `<input>` states—like `:checked`
 
 We hide the default `<input>` with `opacity` and use the `.custom-control-label` to build a new custom form indicator in its place with `::before` and `::after`. Unfortunately we can't build a custom one from just the `<input>` because CSS's `content` doesn't work on that element.
 
-In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](https://github.com/iconic/open-iconic). This provides us the best control for styling and positioning across browsers and devices.
+In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](https://github.com/iconic/open-iconic). This provides us the best control for styling and positioning across browsers and devices. -->
+
+### Checkboxes and radios
+
+チェックボックスとラジオは`<div>` , `<span>` でラップされ、カスタムコントロールと　`<label>` に付随するテキストを作成します。構造的には、これはデフォルト( `.form-check` )と同じアプローチです。  
+
+`:checked` のように `<input>` の状態に兄弟セレクタ（ `~` ）を使用して、カスタムフォームのインジケータに適切なスタイルを設定します。
+`.custom-control-label` と組み合わせると `<input>` の状態に基づいて各アイテムのテキストのスタイルを設定することも可能です。
+
+デフォルトの `<input>` は `opacity` で非表示にして `.custom-control-label` を使用して、`::before` と `::after` で新しいカスタムフォームのインジケータを構築します。CSSの content はその要素では動作しないので `<input>` だけでカスタムを構築することはできません。
+
+チェック状態では、[Open Iconic](https://github.com/iconic/open-iconic) から **base64 embedded SVG icons** を使用してブラウザやデバイス間でのスタイルと配置が最適なコントロールを提供します。
+
+
 
 #### Checkboxes
 
@@ -1261,7 +1308,8 @@ In the checked states, we use **base64 embedded SVG icons** from [Open Iconic](h
 {% endcapture %}
 {% include example.html content=example %}
 
-Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+<!-- Custom checkboxes can also utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it). -->
+カスタムチェックボックスは、 JavaScript経由で手動で設定された場合は `:indeterminate` が使用可能です。
 
 <div class="bd-example bd-example-indeterminate">
   <div class="custom-control custom-checkbox">
@@ -1270,7 +1318,8 @@ Custom checkboxes can also utilize the `:indeterminate` pseudo class when manual
   </div>
 </div>
 
-If you're using jQuery, something like this should suffice:
+<!-- If you're using jQuery, something like this should suffice: -->
+jQueryを使用している場合は下記になります。
 
 {% highlight js %}
 $('.your-checkbox').prop('indeterminate', true)
@@ -1304,9 +1353,13 @@ $('.your-checkbox').prop('indeterminate', true)
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Disabled
+<!-- #### Disabled
 
-Custom checkboxes and radios can also be disabled. Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled.
+Custom checkboxes and radios can also be disabled. Add the `disabled` boolean attribute to the `<input>` and the custom indicator and label description will be automatically styled. -->
+
+#### Disabled
+カスタムのチェックボックスやラジオを無効にすることも可能です。 disabled boolean属性を `<input>` に追加すると、カスタムインジケータとラベルの説明が自動的にスタイルされます。
+
 
 {% capture example %}
 <div class="custom-control custom-checkbox">
@@ -1321,9 +1374,14 @@ Custom checkboxes and radios can also be disabled. Add the `disabled` boolean at
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ### Select menu
+
+Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations. -->
+
 ### Select menu
 
-Custom `<select>` menus need only a custom class, `.custom-select` to trigger the custom styles. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations.
+`<select>` メニューはカスタムクラスのみを必要として `.custom-select` で切替可能です。
+カスタムスタイルは　`<select>` の最初の外観に制限されており、ブラウザの制限のために `<option>` を変更することは不可能です。
 
 {% capture example %}
 <select class="custom-select">
@@ -1335,7 +1393,8 @@ Custom `<select>` menus need only a custom class, `.custom-select` to trigger th
 {% endcapture %}
 {% include example.html content=example %}
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+<!-- You may also choose from small and large custom selects to match our similarly sized text inputs. -->
+同様のサイズのテキスト入力と一致するように、小さなカスタム選択から選択することもできます。
 
 {% capture example %}
 <select class="custom-select custom-select-lg mb-3">
@@ -1354,7 +1413,8 @@ You may also choose from small and large custom selects to match our similarly s
 {% endcapture %}
 {% include example.html content=example %}
 
-The `multiple` attribute is also supported:
+<!-- The `multiple` attribute is also supported: -->
+`multiple`属性もサポートしています。  
 
 {% capture example %}
 <select class="custom-select" multiple>
@@ -1366,7 +1426,8 @@ The `multiple` attribute is also supported:
 {% endcapture %}
 {% include example.html content=example %}
 
-As is the `size` attribute:
+<!-- As is the `size` attribute: -->
+size 属性は下記のの通りです。
 
 {% capture example %}
 <select class="custom-select" size="3">
@@ -1378,9 +1439,14 @@ As is the `size` attribute:
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ### Range
+
+Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it. -->
+
 ### Range
 
-Create custom `<input type="range">` controls with `.custom-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only IE and Firefox support "filling" their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
+`.custom-range` でカスタムの `<input type="range">` コントロールを作成できます。背景と値はどのブラウザでも同じように表示されます。  
+IEとFirefoxでは進行状況を視覚的に示す手段としてサムの左右からトラックを"埋め込む"ことをサポートしているため、現在のところサポートしていません。
 
 {% capture example %}
 <label for="customRange1">Example range</label>
@@ -1388,7 +1454,8 @@ Create custom `<input type="range">` controls with `.custom-range`. The track (t
 {% endcapture %}
 {% include example.html content=example %}
 
-Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
+<!-- Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes. -->
+レンジ入力は、それぞれ `min` と `max` に `0` と `100` の暗黙の値を持つます。`min` 属性と `max` 属性を使用するユーザーには新しい値が指定可能です。
 
 {% capture example %}
 <label for="customRange2">Example range</label>
@@ -1396,7 +1463,10 @@ Range inputs have implicit values for `min` and `max`—`0` and `100`, respectiv
 {% endcapture %}
 {% include example.html content=example %}
 
-By default, range inputs "snap" to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`.
+<!-- By default, range inputs "snap" to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`. -->
+
+デフォルトでは、レンジ入力は整数値です。これを変更するには `step` 値を指定する。以下の例では、step="0.5" を使用してステップ数を2倍にしています。
+
 
 {% capture example %}
 <label for="customRange3">Example range</label>
@@ -1411,7 +1481,11 @@ Recommended plugin to animate custom file input: [bs-custom-file-input](https://
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-The file input is the most gnarly of the bunch and requires additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text.
+<!-- The file input is the most gnarly of the bunch and requires additional JavaScript if you'd like to hook them up with functional *Choose file...* and selected file name text. -->
+
+ファイルの入力は機能的にプレースホルダーの"ファイルを選択..."を選択したファイル名のテキストに変わるようにするには追加のJavaScriptが必要です。
+
+
 
 {% capture example %}
 <div class="custom-file">
@@ -1421,11 +1495,19 @@ The file input is the most gnarly of the bunch and requires additional JavaScrip
 {% endcapture %}
 {% include example.html content=example %}
 
-We hide the default file `<input>` via `opacity` and instead style the `<label>`. The button is generated and positioned with `::after`. Lastly, we declare a `width` and `height` on the `<input>` for proper spacing for surrounding content.
+<!-- We hide the default file `<input>` via `opacity` and instead style the `<label>`. The button is generated and positioned with `::after`. Lastly, we declare a `width` and `height` on the `<input>` for proper spacing for surrounding content. -->
+
+`opacity` を使ってデフォルトファイル `<input>` を隠し、代わりに `<label>` 使用します。
+ボタンは生成されて `::after` で配置。最後に周囲のコンテンツの適切な間隔のために `<input>` に幅と高さを宣言します。
+
+
+
+<!-- #### Translating or customizing the strings
+
+The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for translation of the "Browse" text into other languages. Override or add entries to the `$custom-file-text` Sass variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`): -->
 
 #### Translating or customizing the strings
-
-The [`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) is used to allow for translation of the "Browse" text into other languages. Override or add entries to the `$custom-file-text` Sass variable with the relevant [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and localized strings. The English strings can be customized the same way. For example, here's how one might add a Spanish translation (Spanish's language code is `es`):
+[`:lang()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:lang) を使用して ボタンの"Browse"テキストを他の言語に翻訳して上書きします。関連する [language tag](https://en.wikipedia.org/wiki/IETF_language_tag) とローカライズされた文字列を使用して `$custom-file-text` Sass変数にエントリを再定義したり追加するだけで、英語の文字列も同様にカスタマイズ可能です。例えば、日本語の翻訳を追加する方法は次のとおり（日本語の言語コードは `ja`）。
 
 {% highlight scss %}
 $custom-file-text: (
@@ -1434,7 +1516,8 @@ $custom-file-text: (
 );
 {% endhighlight %}
 
-Here's `lang(es)` in action on the custom file input for a Spanish translation:
+<!-- Here's `lang(es)` in action on the custom file input for a Spanish translation: -->
+上記の設定でスペイン語 `lang(es)`に翻訳したカスタムファイル入力：
 
 {% capture example %}
 <div class="custom-file">
@@ -1444,4 +1527,6 @@ Here's `lang(es)` in action on the custom file input for a Spanish translation:
 {% endcapture %}
 {% include example.html content=example %}
 
-You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods.
+<!-- You'll need to set the language of your document (or subtree thereof) correctly in order for the correct text to be shown. This can be done using [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) on the `<html>` element or the [`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12), among other methods. -->
+
+正しいテキストが表示されるようにするには文書（またはそのサブツリー）の言語を正しく設定する必要があります。これは、他のメソッドの中でも、要素または[`Content-Language` HTTP header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.12) を使用して [the `lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) 行うことができます。
