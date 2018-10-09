@@ -1,14 +1,25 @@
 ---
 layout: docs
 title: List group
-description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+description: リストグループは、一連のコンテンツを表示するための柔軟で強力なコンポーネントです。それらを変更して拡張して、その中のあらゆるコンテンツをサポートします。
 group: components
 toc: true
 ---
+<!-- ---
+layout: docs
+title: List group
+description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+group: components
+toc: true
+--- -->
 
-## Basic example
+<!-- ## Basic example
 
-The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed. -->
+
+## 例（Basic example)
+
+基本的なリストグループは、リストアイテムと適切なクラスを持つ順序が付けられていないリストです。それに続くオプションや必要に応じて独自のCSSを使って構築してください。
 
 {% capture example %}
 <ul class="list-group">
@@ -21,9 +32,13 @@ The most basic list group is an unordered list with list items and the proper cl
 {% endcapture %}
 {% include example.html content=example %}
 
-## Active items
+<!-- ## Active items
 
-Add `.active` to a `.list-group-item` to indicate the current active selection.
+Add `.active` to a `.list-group-item` to indicate the current active selection. -->
+
+## アクティブアイテム(Active items)
+
+`.active` と `.list-group-item` を適用するとに, アクティブな状態を示します。
 
 {% capture example %}
 <ul class="list-group">
@@ -36,9 +51,14 @@ Add `.active` to a `.list-group-item` to indicate the current active selection.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Disabled items
+<!-- ## Disabled items
 
-Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
+Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links). -->
+
+## 無効なアイテム(Disabled items)
+
+`.disabled` と `.list-group-item` を適用するとに, 無効な状態を示します。 `.disabled` は、クリックイベント（リンクなど）を完全に無効にするカスタムJavaScriptが必要になることにも注意してください。
+
 
 {% capture example %}
 <ul class="list-group">
@@ -51,11 +71,17 @@ Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Links and buttons
+<!-- ## Links and buttons
 
 Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, disabled, and active states by adding `.list-group-item-action`. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like `<li>`s or `<div>`s) don't provide a click or tap affordance.
 
-Be sure to **not use the standard `.btn` classes here**.
+Be sure to **not use the standard `.btn` classes here**. -->
+
+## リンクとボタン(Links and buttons)
+
+`.list-group-item-action` を `<a>` や `<button>` を適用することで、ホバー、無効、アクティブ状態のアクション可能なリストグループアイテムを作成します。
+これらの擬似クラスを分離して、非対話型要素（ <li> , <div> ）で作成されたリストグループがクリックまたはタップ機能を提供しないようにします。  
+**`.btn` は使用しないでください。**
 
 {% capture example %}
 <div class="list-group">
@@ -70,7 +96,10 @@ Be sure to **not use the standard `.btn` classes here**.
 {% endcapture %}
 {% include example.html content=example %}
 
-With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute.
+<!-- With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute. -->
+
+`<button>` では `disabled` 属性ではなく `.disabled` クラスを使用できます。( `disabled` 属性はサポートしていません。)
+
 
 {% capture example %}
 <div class="list-group">
@@ -85,9 +114,14 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ## Flush
+
+Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards). -->
+
 ## Flush
 
-Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+`.list-group-flush` を適用すると、親コンテナ（カードなど）内でリストグループアイテムを端から端までレンダリングするために、いくつかの枠線と丸みのある角が削除されます。
+
 
 {% capture example %}
 <ul class="list-group list-group-flush">
@@ -100,9 +134,13 @@ Add `.list-group-flush` to remove some borders and rounded corners to render lis
 {% endcapture %}
 {% include example.html content=example %}
 
-## Contextual classes
+<!-- ## Contextual classes
 
-Use contextual classes to style list items with a stateful background and color.
+Use contextual classes to style list items with a stateful background and color. -->
+
+## コンテキストクラス(Contextual classes)
+
+コンテキストクラスを使用して、リストアイテムの背景と色のスタイルを設定します。
 
 {% capture example %}
 <ul class="list-group">
@@ -114,7 +152,11 @@ Use contextual classes to style list items with a stateful background and color.
 {% endcapture %}
 {% include example.html content=example %}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+<!-- Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item. -->
+
+`.list-group-item-action` でもコンテキストクラスは動作します。
+`.active` 状態もサポートし、コンテキストリストグループアイテムのアクティブな選択を示すために適用できます。
+
 
 {% capture example %}
 <div class="list-group">
@@ -128,9 +170,13 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 
 {% include callout-warning-color-assistive-technologies.md %}
 
+<!-- ## With badges
+
+Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). -->
+
 ## With badges
 
-Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
+[utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) を使用してリストグループ項目にバッジを追加します。
 
 {% capture example %}
 <ul class="list-group">
@@ -150,9 +196,13 @@ Add badges to any list group item to show unread counts, activity, and more with
 {% endcapture %}
 {% include example.html content=example %}
 
-## Custom content
+<!-- ## Custom content
 
-Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/).
+Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). -->
+
+## カスタムコンテント
+
+下記のように [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) を使用できます。
 
 {% capture example %}
 <div class="list-group">
@@ -184,10 +234,13 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 {% endcapture %}
 {% include example.html content=example %}
 
-## JavaScript behavior
+<!-- ## JavaScript behavior
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
+Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content. -->
 
+## JavaScriptの動作
+
+JavaScriptプラグインやコンパイルされた `bootstrap.js` を使用してリストグループを拡張することで, ローカルコンテンツのタブの切替を作成できます。
 <div class="bd-example" role="tabpanel">
   <div class="row">
     <div class="col-4">
@@ -238,9 +291,14 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 </div>
 {% endhighlight %}
 
-### Using data attributes
+<!-- ### Using data attributes
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
+You can activate a list group navigation without writing any JavaScript by simply specifying `data-toggle="list"` or on an element. Use these data attributes on `.list-group-item`. -->
+
+### データ属性(Using data attributes)
+
+単純に `data-toggle="list"` を指定するだけでJavaScriptを記述せずにリストグループのナビゲーションを有効にすることができます。
+これらのデータ属性は `list-group-item` で使用してください。  
 
 <div role="tabpanel">
 {% highlight html %}
@@ -262,9 +320,14 @@ You can activate a list group navigation without writing any JavaScript by simpl
 {% endhighlight %}
 </div>
 
-### Via JavaScript
+<!-- ### Via JavaScript
 
-Enable tabbable list item via JavaScript (each list item needs to be activated individually):
+Enable tabbable list item via JavaScript (each list item needs to be activated individually): -->
+
+### JavaScript経由
+
+JavaScriptを経由してタブ切替可能なリストアイテムを有効にします。
+
 
 {% highlight js %}
 $('#myList a').on('click', function (e) {
@@ -273,7 +336,9 @@ $('#myList a').on('click', function (e) {
 })
 {% endhighlight %}
 
-You can activate individual list item in several ways:
+<!-- You can activate individual list item in several ways: -->
+いくつかの方法で個々のリストアイテムをアクティブにすることが可能です。
+
 
 {% highlight js %}
 $('#myList a[href="#profile"]').tab('show') // Select tab by name
@@ -282,9 +347,14 @@ $('#myList a:last-child').tab('show') // Select last tab
 $('#myList a:nth-child(3)').tab('show') // Select third tab
 {% endhighlight %}
 
+<!-- ### Fade effect
+
+To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible. -->
+
 ### Fade effect
 
-To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
+タブパネルをフェードインさせるには、`.tab-pane` に `.fade` を追加します。
+最初のタブパネルには、最初のコンテンツを表示させるために `.show` が必要です。
 
 {% highlight html %}
 <div class="tab-content">
@@ -299,7 +369,9 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 
 #### $().tab
 
-Activates a list item element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM.
+<!-- Activates a list item element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM. -->
+リストアイテム要素とコンテンツコンテナをアクティブにします。
+タブには、DOM内のコンテナノードをターゲットにする `data-target` か `href` を設定する必要があります。
 
 {% highlight html %}
 <div class="list-group" id="myList" role="tablist">
@@ -323,17 +395,22 @@ Activates a list item element and content container. Tab should have either a `d
 </script>
 {% endhighlight %}
 
+<!-- #### .tab('show')
+
+Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs). -->
+
 #### .tab('show')
 
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+指定されたリストアイテムを選択し、関連するコンテンツを表示します。前に選択された他のリストアイテムは選択解除され、関連するコンテンツは非表示になります。
+実際に関連するコンテンツが表示される前（ shown.bs.tabイベントが発生する前 ）に呼び出し元に戻ります。
 
 {% highlight js %}
 $('#someListItem').tab('show')
 {% endhighlight %}
 
-### Events
+<!-- ### Events
 
-When showing a new tab, the events fire in the following order:
+When showing a new tab, the events fire in the following order: 
 
 1. `hide.bs.tab` (on the current active tab)
 2. `show.bs.tab` (on the to-be-shown tab)
@@ -341,6 +418,20 @@ When showing a new tab, the events fire in the following order:
 4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
 
 If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+
+-->
+
+
+### イベント(Events)
+
+新しいタブを表示すると、イベントは次の順序で発生します。
+
+1. `hide.bs.tab` (on the current active tab)
+2. `show.bs.tab` (on the to-be-shown tab)
+3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
+4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
+
+すでにアクティブなタブがない場合、`hide.bs.tab` や `hidden.bs.tab` イベントは発生しません。
 
 <table class="table table-bordered table-striped">
   <thead>
