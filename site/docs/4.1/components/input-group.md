@@ -1,14 +1,25 @@
 ---
 layout: docs
 title: Input group
-description: Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.
+description: テキスト入力、カスタム選択、カスタムファイル入力の両側にテキスト、ボタン、またはボタングループを追加して、フォームコントロールを拡張可能です。
 group: components
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Input group
+description: Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.
+group: components
+toc: true
+--- -->
 
-## Basic example
+<!-- ## Basic example
 
-Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
+Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group. -->
+
+## 例(Basic example)
+
+1つのアドオンまたはボタンを入力の横に配置します。入力の両側に配置することもできます。入力グループの外に `<label>` を配置してください。
 
 {% capture example %}
 <div class="input-group mb-3">
@@ -52,9 +63,13 @@ Place one add-on or button on either side of an input. You may also place one on
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ## Sizing
+
+Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element. -->
+
 ## Sizing
 
-Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
+相対的なフォームサイジング `.input-group` を適用すると, その中のコンテンツは自動的にサイズ変更されます。各要素のフォームコントロールサイズクラスを繰り返す必要はありません。
 
 **Sizing on the individual input group elements isn't supported.**
 
@@ -82,9 +97,15 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 {% endcapture %}
 {% include example.html content=example %}
 
-## Checkboxes and radios
+<!-- ## Checkboxes and radios
 
-Place any checkbox or radio option within an input group's addon instead of text.
+Place any checkbox or radio option within an input group's addon instead of text. -->
+
+## チェックボックスとラジオ(Checkboxes and radios)
+
+テキストの代わりに入力グループのアドオン内に任意のチェックボックスまたはラジオオプションを配置します。
+
+
 
 {% capture example %}
 <div class="input-group mb-3">
@@ -107,9 +128,15 @@ Place any checkbox or radio option within an input group's addon instead of text
 {% endcapture %}
 {% include example.html content=example %}
 
-## Multiple inputs
+<!-- ## Multiple inputs
 
-While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
+While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`. -->
+
+## 複数の入力(Multiple inputs)
+
+複数 `<input>` は視覚的にサポートされていますが、検証スタイルは単一の入力グループでのみ使用できます。
+
+
 
 {% capture example %}
 <div class="input-group">
@@ -122,9 +149,15 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ## Multiple addons
+
+Multiple add-ons are supported and can be mixed with checkbox and radio input versions. -->
+
 ## Multiple addons
 
-Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
+複数のアドオンがサポートされており、チェックボックスとラジオ入力のバージョンとを混在させることができます。
+
+
 
 {% capture example %}
 <div class="input-group mb-3">
@@ -254,7 +287,10 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 
 ## Custom forms
 
-Input groups include support for custom selects and custom file inputs. Browser default versions of these are not supported.
+<!-- Input groups include support for custom selects and custom file inputs. Browser default versions of these are not supported. -->
+入力グループには、カスタム選択とカスタムファイル入力のサポートが含まれています。これらのブラウザのデフォルトバージョンはサポートされていません。
+
+
 
 ### Custom select
 
@@ -354,8 +390,14 @@ Input groups include support for custom selects and custom file inputs. Browser 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Accessibility
+<!-- ## Accessibility
 
 Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.
 
-The exact technique to be used (`<label>` elements hidden using the `.sr-only` class, or use of the `aria-label` and `aria-labelledby` attributes, possibly in combination with `aria-describedby`) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches.
+The exact technique to be used (`<label>` elements hidden using the `.sr-only` class, or use of the `aria-label` and `aria-labelledby` attributes, possibly in combination with `aria-describedby`) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches. -->
+
+## アクセスビリティ(Accessibility)
+
+すべての入力にラベルを付けない場合、スクリーンリーダーではフォームに問題が起きます。入力グループについては、追加のラベルや機能が支援技術に伝達されていることを確認してください。  
+
+使用される技術（ `.sr-only` を使用して非表示にした `<label>` や `aria-describedby` と組み合わせた `aria-label` や `aria-labelledby` 属性の使用）と追加情報がどのように伝達されるかは、実装するインタフェースウィジェットのタイプによって異なります。このセクションの例では、ケース固有のアプローチをいくつか提案しています。
