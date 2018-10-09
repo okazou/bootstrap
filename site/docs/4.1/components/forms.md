@@ -213,9 +213,23 @@ Disabled checkboxes and radios are supported, but to provide a `not-allowed` cur
 
 Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. -->
 
-### Default (stacked)
+## チェックボックスとラジオ
 
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+`.form-check` にてチェックボックス、ラジオは大幅に改善されています。レイアウトと動作を向上させ、両方の入力タイプのための単一のクラスで行えます。
+チェックボックスはリスト内の1以上のオプションを選択できます。ラジオは複数のオプションから1つを選択するためのものです。
+
+チェックボックスやラジオでは `not-allowed` によって無効状態もサポートしています。 `disabled` 属性を `.form-check-input` に適用します。無効な属性は色で見分けられるようになります。
+
+チェックボックスとラジオボタンは、HTMLベースのフォーム機能をサポートしています。`<input>` と `<label>` は親子要素ではなく、兄弟要素になります。
+少し冗長になるが `<input>` と `<label>` には、関連付けのため `id` と `for` を指定する必要があります。
+
+<!-- ### Default (stacked)
+
+By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`. -->
+
+### Default (stacked)
+デフォルトでは、兄弟である任意の数のチェックボックスとラジオボタンが垂直方向に積み重ねられま。 `.form-check` で適切に配置されます。
+
 
 {% capture example %}
 <div class="form-check">
@@ -255,9 +269,13 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 {% endcapture %}
 {% include example.html content=example %}
 
-### Inline
+<!-- ### Inline
 
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`. -->
+
+### インライン(Inline)
+
+`.form-check-inline` を `.form-check` に適用すると同じ水平行にチェックボックスまたはラジオボタンをグループ化できます。
 
 {% capture example %}
 <div class="form-check form-check-inline">
@@ -291,9 +309,14 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 {% endcapture %}
 {% include example.html content=example %}
 
-### Without labels
+<!-- ### Without labels
 
-Add `.position-static` to inputs within `.form-check` that don't have any label text. Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`).
+Add `.position-static` to inputs within `.form-check` that don't have any label text. Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`). -->
+
+### ラベルなし(Without labels)
+
+ `<label>` を持たない場合は `.form-check` 内の `input` に `.position-static` を追加します。
+
 
 {% capture example %}
 <div class="form-check">
@@ -305,13 +328,26 @@ Add `.position-static` to inputs within `.form-check` that don't have any label 
 {% endcapture %}
 {% include example.html content=example %}
 
-## Layout
+<!-- ## Layout
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis. -->
 
-### Form groups
+## レイアウト(Layout)
 
-The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element.
+bootstrapが適用されると `display: block` と `width: 100%` がフォームコントロールに適用され,フォームはデフォルトで縦方向にスタックします。  
+フォームごとにこのレイアウトを変更するには、追加のクラスを使用できます。
+
+
+<!-- ### Form groups
+
+The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element. -->
+
+### フォームグループ(Form groups)
+
+`.form-group` はフォームに構造体を適用できます。ラベル、コントロール、オプションのヘルプテキスト、フォーム検証メッセージを提供しています。  
+デフォルトでは `margin-bottom` が適用されますが `.form-inline` に追加のスタイルが取り込まれます。
+`<fieldset>` や `<div>` などほぼすべての要素に使用します。
+
 
 {% capture example %}
 <form>
@@ -327,9 +363,12 @@ The `.form-group` class is the easiest way to add some structure to forms. It pr
 {% endcapture %}
 {% include example.html content=example %}
 
-### Form grid
+<!-- ### Form grid
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options. -->
+
+### フォームグリッド(Form grid)
+複雑なフォームは、グリッドクラスを使用して構築できます。列, 幅, 追加の配置オプションをフォームレイアウト適用します。
 
 {% capture example %}
 <form>
@@ -345,9 +384,13 @@ More complex forms can be built using our grid classes. Use these for form layou
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- #### Form row
+
+You may also swap `.row` for `.form-row`, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts. -->
+
 #### Form row
 
-You may also swap `.row` for `.form-row`, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
+`.form-row` でよりコンパクトなレイアウトにもできます。
 
 {% capture example %}
 <form>
@@ -363,7 +406,8 @@ You may also swap `.row` for `.form-row`, a variation of our standard grid row t
 {% endcapture %}
 {% include example.html content=example %}
 
-More complex layouts can also be created with the grid system.
+<!-- More complex layouts can also be created with the grid system. -->
+さらに複雑なレイアウトをグリッドシステムで作成することもできます。
 
 {% capture example %}
 <form>
@@ -415,11 +459,20 @@ More complex layouts can also be created with the grid system.
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Horizontal form
+<!-- #### Horizontal form
 
 Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
 
-At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline. -->
+
+#### Horizontal form
+
+`.row` をフォームグループに追加して `col-*-*` を使用してラベルとコントロールの幅を指定することで、水平フォームを作成できます。  
+`.col-form-label`を適用するとフォームコントロールの中央に垂直に配置されます。
+
+場合によっては, `margin` や `padding` ユーティリティを用いてカスタマイズして作成する必要があります。
+たとえば `padding-top` で積み重ねられたラベルを整列させます。
+
 
 {% capture example %}
 <form>
@@ -480,9 +533,15 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- ##### Horizontal form label sizing
+
+Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`. -->
+
+
 ##### Horizontal form label sizing
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+`.col-form-label-sm` や `.col-form-label-lg` を `<label>` や `<legend>` 適用すると下記のようにサイズになります。
+
 
 {% capture example %}
 <form>
@@ -508,9 +567,15 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- #### Column sizing
+
+As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row` or `.form-row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-7`. -->
+
 #### Column sizing
 
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row` or `.form-row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-7`.
+グリッドシステムでは 複数の `.col` を `.row` や `.form-row` をに適用することができます。利用可能な幅を均等に分割します。
+下記のように `.col-7` を適用していスペースを取ることができます。  
+
 
 {% capture example %}
 <form>
@@ -529,9 +594,15 @@ As shown in the previous examples, our grid system allows you to place any numbe
 {% endcapture %}
 {% include example.html content=example %}
 
+<!-- #### Auto-sizing
+
+The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents. -->
+
+
 #### Auto-sizing
 
-The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+フレックスボックスユーティリティを使用しています。 `.col` を `.col-auto` に変更して列が必要なだけのスペースを占めるようにしています。別の言い方をすれば、列は内容に基づいてサイズが決まります。
+
 
 {% capture example %}
 <form>
@@ -565,7 +636,8 @@ The example below uses a flexbox utility to vertically center the contents and c
 {% endcapture %}
 {% include example.html content=example %}
 
-You can then remix that once again with size-specific column classes.
+<!-- You can then remix that once again with size-specific column classes. -->
+サイズ別の列クラスを使用して、これを再度リミックスすることができます。
 
 {% capture example %}
 <form>
@@ -599,7 +671,8 @@ You can then remix that once again with size-specific column classes.
 {% endcapture %}
 {% include example.html content=example %}
 
-And of course [custom form controls](#custom-forms) are supported.
+<!-- And of course [custom form controls](#custom-forms) are supported. -->
+[custom form controls](#custom-forms) もサポートされています。
 
 {% capture example %}
 <form>
@@ -627,7 +700,7 @@ And of course [custom form controls](#custom-forms) are supported.
 {% endcapture %}
 {% include example.html content=example %}
 
-### Inline forms
+<!-- ### Inline forms
 
 Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms vary slightly from their default states.
 
@@ -635,7 +708,15 @@ Use the `.form-inline` class to display a series of labels, form controls, and b
 - Controls and input groups receive `width: auto` to override the Bootstrap default `width: 100%`.
 - Controls **only appear inline in viewports that are at least 576px wide** to account for narrow viewports on mobile devices.
 
-You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`.
+You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`. -->
+
+### Inline forms(インラインフォーム)
+`.form-inline` を使用して、一連のラベル、フォームコントロール、ボタンを1つの水平行に表示します。インラインフォーム内のフォームコントロールは、デフォルトの状態と異なります。
+
+コントロールは `display: flex` です。スペースやフレックスボックスのユーティリティで整列を制御できるようにします。
+コントロールとインプットグループは `width: auto` となります。 
+コントロールは、モバイルデバイス上の狭いビューポートに対応するために、576ピクセル幅のビューポートにのみインラインで表示されます。
+個々のフォームコントロールの幅とアライメントをスペーシングユーティリティー（下記参照）で手動で指定する必要があるかもしれません。`<label>` スクリーンリーダーでない訪問者から非表示にする必要がある場合でも、常に各フォームコントロールに `.sr-only` を含めるようにしてください
 
 {% capture example %}
 <form class="form-inline">
@@ -662,7 +743,8 @@ You may need to manually address the width and alignment of individual form cont
 {% endcapture %}
 {% include example.html content=example %}
 
-Custom form controls and selects are also supported.
+<!-- Custom form controls and selects are also supported. -->
+カスタムフォームのコントロールと選択もサポートされています。
 
 {% capture example %}
 <form class="form-inline">
@@ -690,9 +772,13 @@ Assistive technologies such as screen readers will have trouble with your forms 
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-## Help text
+<!-- ## Help text
 
-Block-level help text in forms can be created using `.form-text` (previously known as `.help-block` in v3). Inline help text can be flexibly implemented using any inline HTML element and utility classes like `.text-muted`.
+Block-level help text in forms can be created using `.form-text` (previously known as `.help-block` in v3). Inline help text can be flexibly implemented using any inline HTML element and utility classes like `.text-muted`. -->
+
+## ヘルプテキスト(Help text)
+
+フォーム内のブロックレベルのヘルプテキストは `.form-text`（v3では `.help-block` ）を使用して作成できます。インラインヘルプテキストは、以下のようなインラインHTML要素とユーティリティクラス(`.text-muted。` のような)を使用して柔軟に実装できます。
 
 {% capture callout %}
 ##### Associating help text with form controls
@@ -701,7 +787,10 @@ Help text should be explicitly associated with the form control it relates to us
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-Help text below inputs can be styled with `.form-text`. This class includes `display: block` and adds some top margin for easy spacing from the inputs above.
+`Help text below inputs can be styled with `.form-text`. This class includes `display: block` and adds some top margin for easy spacing from the inputs above.`
+
+ヘルプテキストにはスタイルを付けることができます。
+ `.form-text` には`display: block` から簡単にスペーシングできるように、いくつかのマージンが含まれています。
 
 {% capture example %}
 <label for="inputPassword5">Password</label>
@@ -712,7 +801,10 @@ Help text below inputs can be styled with `.form-text`. This class includes `dis
 {% endcapture %}
 {% include example.html content=example %}
 
-Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`, or something else) with nothing more than a utility class.
+<!-- Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`, or something else) with nothing more than a utility class. -->
+
+インラインテキストは、ユーティリティクラス以外の通常のインラインHTML要素（`<small>`, `<span>` など）を使用できます。
+
 
 {% capture example %}
 <form class="form-inline">
@@ -729,13 +821,15 @@ Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`
 
 ## Disabled forms
 
-Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
+<!-- Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter. -->
+`disabled`にboolean属性を追加して, 下記のようなユーザーとのやりとりが可能です。
 
 {% highlight html %}
 <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
 {% endhighlight %}
 
-Add the `disabled` attribute to a `<fieldset>` to disable all the controls within.
+<!-- Add the `disabled` attribute to a `<fieldset>` to disable all the controls within. -->
+すべてのコントロールを無効にするには、`disabled` 属性を `<fieldset>` に追加します。
 
 {% capture example %}
 <form>
@@ -776,16 +870,19 @@ While Bootstrap will apply these styles in all browsers, Internet Explorer 11 an
 {% endcapture %}
 {% include callout.html content=callout type="danger" %}
 
-## Validation
+<!-- ## Validation
 
-Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
+Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript. -->
+
+## 検証(Validation)
+ブラウザ [available in all our supported browsers](https://caniuse.com/#feat=form-validation) でHTML5フォーム検証機能をして貴重なフィードバックをユーザーに提供します。ブラウザのデフォルト検証フィードバックから選択するか、組み込みクラスとスターターJavaScriptを使用してカスタムメッセージを実装します。
 
 {% capture callout %}
 We currently recommend using custom validation styles, as native browser default validation messages are not consistently exposed to assistive technologies in all browsers (most notably, Chrome on desktop and mobile).
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-### How it works
+<!-- ### How it works
 
 Here's how form validation works with Bootstrap:
 
@@ -798,7 +895,13 @@ Here's how form validation works with Bootstrap:
 - Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
 - You may provide custom validity messages with `setCustomValidity` in JavaScript.
 
-With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults.
+With that in mind, consider the following demos for our custom form validation styles, optional server side classes, and browser defaults. -->
+
+### How it works
+
+Bootstrapで検証がどのように機能するかは下記です。
+
+
 
 ### Custom styles
 
