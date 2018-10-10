@@ -1,12 +1,20 @@
 ---
 layout: docs
 title: Modal
-description: Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+description: JavaScript modal プラグインを使用して, ライトボックス, 通知, カスタムダイアログを作成できます。
 group: components
 toc: true
 ---
 
-## How it works
+<!-- ---
+layout: docs
+title: Modal
+description: Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+group: components
+toc: true
+--- -->
+
+<!-- ## How it works
 
 Before getting started with Bootstrap's modal component, be sure to read the following as our menu options have recently changed.
 
@@ -15,7 +23,20 @@ Before getting started with Bootstrap's modal component, be sure to read the fol
 - Bootstrap only supports one modal window at a time. Nested modals aren't supported as we believe them to be poor user experiences.
 - Modals use `position: fixed`, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You'll likely run into issues when nesting a `.modal` within another fixed element.
 - Once again, due to `position: fixed`, there are some caveats with using modals on mobile devices. [See our browser support docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile) for details.
-- Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript:
+- Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript: -->
+
+## 使い方(How it works)
+
+モーダルの実装を始める前に下記のオプションの変更点を確認してください。
+
+- モーダルは HTML, CSS, JavaScript で構築されています。 モダールは `<body>` からスクロールを無効にして, 代わりにモーダルコンテンツがスクロールします。
+- モーダルの "backdrop" をクリックすると自動でモーダルは閉じます。
+- モーダルは画面上で1度に1個までしかサポートされません。ネスとされたモーダルはユーザー体験を低下させるためサポートしていません。
+- モーダルは `position: fixed` を使用しています。他の要素からの潜在的な干渉を避けるために、モーダルのHTMLを最上位に配置します。 別の固定要素の中に ``.modal'` を入れ子にすると、問題がおきます。
+- `position：fixed` を使用しているため, モバイルデバイスにモーダルを使用することでいくつかの警告があります。 [See our browser support docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile) を参考にしてください。
+- HTML5がそのセマンティクスをどのように定義するかによって [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) はブートストラップには何の効果もありません。同じ効果を得るには、カスタムJavaScriptを使用してください：
+
+
 
 {% highlight js %}
 $('#myModal').on('shown.bs.modal', function () {
@@ -23,13 +44,20 @@ $('#myModal').on('shown.bs.modal', function () {
 })
 {% endhighlight %}
 
-Keep reading for demos and usage guidelines.
+<!-- Keep reading for demos and usage guidelines. -->
+デモと使い方のガイドラインを参照してください。
 
-## Examples
+<!-- ## Examples
 
 ### Modal components
 
-Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
+Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action. -->
+
+## 例(Examples)
+
+### モーダルコンポーネント(Modal components)
+
+下記は _static_ モーダルの例です。 ( `position` と `display` がオーバーライドされたことを意味します). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
 <div class="bd-example bd-example-modal">
   <div class="modal" tabindex="-1" role="dialog">
