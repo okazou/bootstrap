@@ -1,12 +1,19 @@
 ---
 layout: docs
 title: Popovers
-description: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+description: ポップオーバーについてのドキュメントと例です。
 group: components
 toc: true
 ---
+<!-- ---
+layout: docs
+title: Popovers
+description: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+group: components
+toc: true
+--- -->
 
-## Overview
+<!-- ## Overview
 
 Things to know when using the popover plugin:
 
@@ -21,11 +28,29 @@ Things to know when using the popover plugin:
 - When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use `.text-nowrap` on your `<a>`s to avoid this behavior.
 - Popovers must be hidden before their corresponding elements have been removed from the DOM.
 
-Keep reading to see how popovers work with some examples.
+Keep reading to see how popovers work with some examples. -->
+
+## 概要(Overview)
+
+Popover Pluginを使用するときに知っておくべきこと：
+
+- 第三者のライブラリ [Popper.js](https://popper.js.org/) で位置を取得します。bootstrap.jsの前に[popper.min.js]({{ site.cdn.popper }}) を含めるか Popper.jsを含む `bootstrap.bundle.min.js` か `bootstrap.bundle.js` を使用する必要があります。 
+- 依存関係として [tooltip plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/tooltips/) が必要です。
+- ソースからJavaScriptを部いるどする場合は [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util) が必要です。
+- パフォーマンス上の理由からオプトインするので、自分で初期化する必要があります。 
+- 長さが0の`title` や `content` はポップオーバーを表示されません
+- `container: 'body'` を指定すると、複雑なコンポーネント（インプットグループ,ボタングループなど）のレンダリングの問題が回避可能です。
+- 非表示要素のポップオーバーは機能しません。
+- `.disabled` , `disabled` 要素のポップオーバーはそれを囲む要素で起動する必要があります。
+- 複数行にまたがるアンカーからトリガーすると、アンカーの全体的な幅の中央にポップオーバーが配置されます。この動作を避けるために `<a>` に `text-nowrap` を使用します。
+- ポップオーバーは、対応する要素がDOMから削除される前に非表示にする必要があります。
+
+どのように動作するかは下記を参考にしてください。
 
 ## Example: Enable popovers everywhere
 
-One way to initialize all popovers on a page would be to select them by their `data-toggle` attribute:
+<!-- One way to initialize all popovers on a page would be to select them by their `data-toggle` attribute: -->
+ページ上のすべてのポップオーバーを初期化する方法の1つは `data-toggle` 属性でそれらを選択することです。
 
 {% highlight js %}
 $(function () {
@@ -35,7 +60,8 @@ $(function () {
 
 ## Example: Using the `container` option
 
-When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom `container` so that the popover's HTML appears within that element instead.
+<!-- When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom `container` so that the popover's HTML appears within that element instead. -->
+ポップオーバーに干渉するスタイルが親要素にある場合は, ポップオーバーのHTMLが代わりにその要素内に表示されるように `container` の指定をすることを推奨します。
 
 {% highlight js %}
 $(function () {
@@ -45,16 +71,21 @@ $(function () {
 })
 {% endhighlight %}
 
-## Example
+<!-- ## Example -->
+
+## 例(Example)
 
 {% capture example %}
 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 {% endcapture %}
 {% include example.html content=example %}
 
-### Four directions
+<!-- ### Four directions
 
-Four options are available: top, right, bottom, and left aligned.
+Four options are available: top, right, bottom, and left aligned. -->
+
+### 方向設定
+上、右、下、左の4つのオプションがあります。
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
@@ -92,9 +123,13 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 </button>
 {% endhighlight %}
 
-### Dismiss on next click
+<!-- ### Dismiss on next click
 
-Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element.
+Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element. -->
+
+### 次のクリックで閉じる(Dismiss on next click)
+`focus` を使用して, トグル要素とは別の要素の次のクリックに対するポップオーバーを閉じます。
+
 
 {% capture callout %}
 #### Specific markup required for dismiss-on-next-click
@@ -114,11 +149,19 @@ $('.popover-dismiss').popover({
 })
 {% endhighlight %}
 
-### Disabled elements
+<!-- ### Disabled elements
 
 Elements with the `disabled` attribute aren't interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you'll want to trigger the popover from a wrapper `<div>` or `<span>` and override the `pointer-events` on the disabled element.
 
-For disabled popover triggers, you may also prefer `data-trigger="hover"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
+For disabled popover triggers, you may also prefer `data-trigger="hover"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element. -->
+
+### 無効な要素(Disabled elements)
+
+`disabled` 属性を持つ要素はインタラクティブではないため,ユーザーがカーソルを移動したりクリックしてポップオーバー（またはツールチップ）をトリガーすることはできません。
+ラッパーの `<div>` や `<span>` からポップオーバーを起動し, 無効化された要素の `pointer-events` を上書きする必要があります。    
+
+無効化されたポップオーバーのトリガーの場合, 無効化された要素をクリックすると予想されないため、ポップオーバーがユーザーに視覚的なフィードバックとしてすぐに表示されるように `data-trigger="hover"` を適用することもできます。  
+  
 
 {% capture example %}
 <span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
@@ -127,15 +170,22 @@ For disabled popover triggers, you may also prefer `data-trigger="hover"` so tha
 {% endcapture %}
 {% include example.html content=example %}
 
-## Usage
+<!-- ## Usage
 
-Enable popovers via JavaScript:
+Enable popovers via JavaScript: -->
+
+## 使い方(Usage)
+
+JavaScriptでポップオーバーを有効にします：
 
 {% highlight js %}$('#example').popover(options){% endhighlight %}
 
-### Options
+<!-- ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`. -->
+
+### オプション(Options)
+オプションは、データ属性またはJavaScriptを使用して渡すことが可能です。データ属性の場合、`data-` にオプション名を追加できます。
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -257,63 +307,80 @@ Options for individual popovers can alternatively be specified through the use o
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-### Methods
+<!-- ### Methods -->
+### 方法(Methods)
 
 {% include callout-danger-async-methods.md %}
 
 #### `$().popover(options)`
 
-Initializes popovers for an element collection.
+<!-- Initializes popovers for an element collection. -->
+ポップオーバーを初期化します。
 
 #### `.popover('show')`
 
-Reveals an element's popover. **Returns to the caller before the popover has actually been shown** (i.e. before the `shown.bs.popover` event occurs). This is considered a "manual" triggering of the popover. Popovers whose both title and content are zero-length are never displayed.
+<!-- Reveals an element's popover. **Returns to the caller before the popover has actually been shown** (i.e. before the `shown.bs.popover` event occurs). This is considered a "manual" triggering of the popover. Popovers whose both title and content are zero-length are never displayed. -->
+
+ポップオーバーを表示します。実際にポップオーバーが表示される前（ `show.bs.popover` の発動前）に呼び出し元に戻ります。
+ポップオーバーの `"manual"` トリガーとみなされます。タイトルとコンテンツの両方が長さゼロのポップオーバーは決して表示されません。
+
 
 {% highlight js %}$('#element').popover('show'){% endhighlight %}
 
 #### `.popover('hide')`
 
-Hides an element's popover. **Returns to the caller before the popover has actually been hidden** (i.e. before the `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover.
+<!-- Hides an element's popover. **Returns to the caller before the popover has actually been hidden** (i.e. before the `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover. -->
+
+ポップオーバーを非表示にします。ポップオーバーが実際に隠される前（ `hidden.bs.popover` が発生する前）に呼び出し元に戻ります。手動のトリガとみなされます。
 
 {% highlight js %}$('#element').popover('hide'){% endhighlight %}
 
 #### `.popover('toggle')`
 
-Toggles an element's popover. **Returns to the caller before the popover has actually been shown or hidden** (i.e. before the `shown.bs.popover` or `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover.
+ポップオーバーを切り替えます。ポップオーバーの前に呼び出し元に戻りますが、実際に表示または非表示にされている（ `shown.bs.popover` , `hidden.bs.popover` が発生します）。手動のトリガとみなされます。
+
+<!-- Toggles an element's popover. **Returns to the caller before the popover has actually been shown or hidden** (i.e. before the `shown.bs.popover` or `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover. -->
 
 {% highlight js %}$('#element').popover('toggle'){% endhighlight %}
 
 #### `.popover('dispose')`
 
-Hides and destroys an element's popover. Popovers that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements.
+<!-- Hides and destroys an element's popover. Popovers that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements. -->
+
+ポップオーバーを隠したり破棄したりします。（ [the `selector` option](#options) で作成されます。）子孫トリガー要素で個別に破棄することはできません。  
 
 {% highlight js %}$('#element').popover('dispose'){% endhighlight %}
 
 #### `.popover('enable')`
 
-Gives an element's popover the ability to be shown. **Popovers are enabled by default.**
+<!-- Gives an element's popover the ability to be shown. **Popovers are enabled by default.** -->
+ポップオーバーに表示する機能を与えます。デフォルトでは、ポップオーバーが有効になっています。  
 
 {% highlight js %}$('#element').popover('enable'){% endhighlight %}
 
 #### `.popover('disable')`
 
-Removes the ability for an element's popover to be shown. The popover will only be able to be shown if it is re-enabled.
+<!-- Removes the ability for an element's popover to be shown. The popover will only be able to be shown if it is re-enabled. -->
+ポップオーバーが表示されるようにする機能を削除します。ポップオーバーは、再び有効にされた場合にのみ表示することができます。  
 
 {% highlight js %}$('#element').popover('disable'){% endhighlight %}
 
 #### `.popover('toggleEnabled')`
 
-Toggles the ability for an element's popover to be shown or hidden.
+<!-- Toggles the ability for an element's popover to be shown or hidden. -->
+ポップオーバーが表示または非表示になるように切り替えます。  
 
 {% highlight js %}$('#element').popover('toggleEnabled'){% endhighlight %}
 
 #### `.popover('update')`
 
-Updates the position of an element's popover.
+<!-- Updates the position of an element's popover. -->
+ポップオーバーの位置を更新します。  
 
 {% highlight js %}$('#element').popover('update'){% endhighlight %}
 
-### Events
+<!-- ### Events -->
+### イベント(Events)
 
 <table class="table table-bordered table-striped">
   <thead>
