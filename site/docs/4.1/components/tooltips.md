@@ -1,12 +1,20 @@
 ---
 layout: docs
 title: Tooltips
-description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.
+description: ツールチップを追加するためのドキュメントと例です。
 group: components
 toc: true
 ---
 
-## Overview
+<!-- ---
+layout: docs
+title: Tooltips
+description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.
+group: components
+toc: true
+--- -->
+
+<!-- ## Overview
 
 Things to know when using the tooltip plugin:
 
@@ -20,11 +28,35 @@ Things to know when using the tooltip plugin:
 - When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
 - Tooltips must be hidden before their corresponding elements have been removed from the DOM.
 
-Got all that? Great, let's see how they work with some examples.
+Got all that? Great, let's see how they work with some examples. -->
 
-## Example: Enable tooltips everywhere
+## 概要(Overview)
 
-One way to initialize all tooltips on a page would be to select them by their `data-toggle` attribute:
+ツールチップを使用するときに知っておくべきことは下記です。：
+
+- ツールチップの位置は [Popper.js](https://popper.js.org/) に依存します。 [popper.min.js]({{ site.cdn.popper }}) を bootstrap.jsの前におくか, Popper.jsを含む `bootstrap.bundle.min.js` / `bootstrap.bundle.js` を使用する必要があります。
+- JavaScriptをソースから構築するには [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util) を使用します。
+- ツールチップはパフォーマンスの理由でオプトイン(任意)で取得されるため、初期化する必要があります。
+- 長さが0のタイトルのツールチップは表示されません。
+- `container: 'body'` を指定すると、複雑なコンポーネント（インプットグループやボタングループなど）のレンダリングの問題が回避可能です。
+- 隠された要素のツールチップをトリガーすることはできません。
+- `.disabled` または `disabled` 要素のツールチップはそれを囲む要素で起動する必要があります。
+- 複数の行にまたがるハイパーリンクからトリガされると、ツールチップが中央に配置されます。この動作を避けるために `<a>` に `white-space: nowrap;` をラップしてください。
+- ツールチップは、対応する要素がDOMから削除される前に非表示にする必要があります。
+
+
+<!-- Got all that? Great, let's see how they work with some examples. -->
+
+下記の例をみてください。
+
+<!-- ## Example: Enable tooltips everywhere
+
+One way to initialize all tooltips on a page would be to select them by their `data-toggle` attribute: -->
+
+## 例:ツールチップを有効にする(Example: Enable tooltips everywhere)
+
+ツールチップを初期化する方法の1つは `data-toggle` 属性で選択することです。
+
 
 {% highlight js %}
 $(function () {
@@ -32,16 +64,21 @@ $(function () {
 })
 {% endhighlight %}
 
-## Examples
+<!-- ## Examples
 
-Hover over the links below to see tooltips:
+Hover over the links below to see tooltips: -->
+
+## 例(Examples)
+
+ツールチップを表示するには、以下のリンクをホバーしてください。
 
 <div class="bd-example tooltip-demo">
   <p class="muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
   </p>
 </div>
 
-Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left.
+<!-- Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. -->
+下記のボタンをホバーすると上、右、下、左の4つの例がみれます。
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
@@ -76,17 +113,26 @@ And with custom HTML added:
 </button>
 {% endhighlight %}
 
-## Usage
+<!-- ## Usage
 
 The tooltip plugin generates content and markup on demand, and by default places tooltips after their trigger element.
 
-Trigger the tooltip via JavaScript:
+Trigger the tooltip via JavaScript: -->
+
+## 使い方(Usage)
+
+ツールチップは、コンテンツとマークアップを生成します。デフォルトでは、ツールチップはトリガー要素の後に配置されます。
+
+
+<!-- Trigger the tooltip via JavaScript: -->
+JavaScript経由でツールチップをトリガします。
 
 {% highlight js %}
 $('#example').tooltip(options)
 {% endhighlight %}
 
 {% capture callout %}
+
 ##### Overflow `auto` and `scroll`
 
 Tooltip position attempts to automatically change when a parent container has `overflow: auto` or `overflow: scroll` like our `.table-responsive`, but still keeps the original placement's positioning. To resolve, set the `boundary` option to anything other than default value, `'scrollParent'`, such as `'window'`:
@@ -97,9 +143,14 @@ $('#example').tooltip({ boundary: 'window' })
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-### Markup
+<!-- ### Markup
 
-The required markup for a tooltip is only a `data` attribute and `title` on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to `top` by the plugin).
+The required markup for a tooltip is only a `data` attribute and `title` on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to `top` by the plugin). -->
+
+### マークアップ(Markup)
+
+ツールチップに必要なマークアップは `data` 属性と HTML要素の `title` だけです。
+生成されたツールチップのマークアップは位置が必要です（デフォルトでは、プラグインによって `top` に設定されています）。
 
 {% capture callout %}
 ##### Making tooltips work for keyboard and assistive technology users
@@ -123,9 +174,18 @@ Additionally, do not rely solely on `hover` as the trigger for your tooltip, as 
 </div>
 {% endhighlight %}
 
-### Disabled elements
+<!-- ### Disabled elements
 
-Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`, and override the `pointer-events` on the disabled element.
+Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`, and override the `pointer-events` on the disabled element. -->
+
+### 非表示(Disabled elements)
+
+`disabled` 属性をもつ要素はインタラクティブではないので ユーザーがフォーカス , ホバー, クリックしてツールチップ（またはポップオーバー）を起動することはできません。 
+
+ As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`, and override the `pointer-events` on the disabled element.
+
+回避策として `tabindex="0"` を適用して `<div>` または `<span>` をラッパーしてツールチップを起動し、無効化された要素の `pointer-events` を上書きする必要があります。
+
 
 <div class="tooltip-demo">
 {% capture example %}
@@ -136,9 +196,13 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 {% include example.html content=example %}
 </div>
 
-### Options
+<!-- ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`. -->
+
+### オプション(Options)
+オプションは, データ属性またはJavaScriptを使用して渡すことができます。 データ属性の場合 `data-` にオプション名を適用します( `data-animation =" "` のように)  
+
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -254,67 +318,94 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {% capture callout %}
 #### Data attributes for individual tooltips
 
-Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.
+<!-- Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above. -->
+個々のツールチップのオプションはデータ属性を使用して指定するできます。
+
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-### Methods
+<!-- ### Methods -->
+### 方法(Methods)
 
 {% include callout-danger-async-methods.md %}
 
 #### `$().tooltip(options)`
 
-Attaches a tooltip handler to an element collection.
+<!-- Attaches a tooltip handler to an element collection. -->
+要素にツールチップハンドラーをつけます。
 
 #### `.tooltip('show')`
 
-Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed.
+<!-- Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed. -->
+
+ツールチップを表示します。ツールチップが表示される前（ `shown.bs.tooltip` の発動前）に呼び出し元に戻ります。
+これは、ツールチップの "manual" トリガーとみなされる。タイトルの長さが0のツールチップは表示されません。
+
 
 {% highlight js %}$('#element').tooltip('show'){% endhighlight %}
 
 #### `.tooltip('hide')`
 
-Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.
+<!-- Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. -->
+ツールチップを非表示にする。ツールチップが非表示になる前（ `hidden.bs.tooltip` の前）に呼び出し元に戻ります。
+ツールチップの "manual" トリガーとみなされます。
+
 
 {% highlight js %}$('#element').tooltip('hide'){% endhighlight %}
 
 #### `.tooltip('toggle')`
 
-Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.bs.tooltip` or `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.
+<!-- Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.bs.tooltip` or `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. -->
+
+ツールチップを切り替えます。ツールチップが表示/非表示になる前（ `shown.bs.tooltip` , `hidden.bs.tooltip` の発動前）に呼び出し元に戻ります。
+ツールチップの "manual" トリガーとみなされる。
+
 
 {% highlight js %}$('#element').tooltip('toggle'){% endhighlight %}
 
 #### `.tooltip('dispose')`
 
-Hides and destroys an element's tooltip. Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements.
+<!-- Hides and destroys an element's tooltip. Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements. -->
+
+ツールチップを非表示にしたり破棄したりします。
+[the `selector` option](#options) を使用して作成されます。
+デリゲートを使用するツールチップは、子孫トリガー要素で個別に破棄できません。
+
 
 {% highlight js %}$('#element').tooltip('dispose'){% endhighlight %}
 
 #### `.tooltip('enable')`
 
-Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.**
+<!-- Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.** -->
+ツールチップに表示する機能を与えます。デフォルトは有効です。
 
 {% highlight js %}$('#element').tooltip('enable'){% endhighlight %}
 
 #### `.tooltip('disable')`
 
-Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled.
+<!-- Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled. -->
+ツールチップを表示する機能を削除します。ヒントが再度有効になっている場合にのみ、ツールチップを表示することができます。
+
 
 {% highlight js %}$('#element').tooltip('disable'){% endhighlight %}
 
 #### `.tooltip('toggleEnabled')`
 
-Toggles the ability for an element's tooltip to be shown or hidden.
+<!-- Toggles the ability for an element's tooltip to be shown or hidden. -->
+ツールチップの表示/非表示にするかを切り替えます。
 
 {% highlight js %}$('#element').tooltip('toggleEnabled'){% endhighlight %}
 
 #### `.tooltip('update')`
 
-Updates the position of an element's tooltip.
+<!-- Updates the position of an element's tooltip. -->
+ツールチップの位置を更新します。
 
 {% highlight js %}$('#element').tooltip('update'){% endhighlight %}
 
-### Events
+<!-- ### Events -->
+### イベント(Events)
+
 
 <table class="table table-bordered table-striped">
   <thead>
