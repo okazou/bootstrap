@@ -28,7 +28,7 @@ This doesn't include documentation, source files, or any optional JavaScript dep
 
 ここにはドキュメントやソースファイル, オプションである JavaScript(jQuery, Popper.js) は含まれません。
 
-<a href="{{ site.download.dist }}" class="btn btn-bd-primary">ダウンロード</a>
+<a href="{{ site.download.dist }}" class="btn btn-bd-primary" onclick="_tg('send', 'event' , 'gettingStarted' , 'download' , '{{ site.download.dist }}', 1);">ダウンロード</a>
 
 <!-- ## Source files
 
@@ -51,7 +51,7 @@ Sass, JavaScript そしてドキュメントを含むソース・ファイルを
 
 Bootstrap どそのドキュメントを開発するために[ビルドツール]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/build-tools/#tooling-setup)が含まれていますが、使わない可能性が高いでしょう。
 
-<a href="{{ site.download.source }}" class="btn btn-bd-primary">ソースをダウンロード</a>
+<a href="{{ site.download.source }}" class="btn btn-bd-primary" onclick="_tg('send', 'event' , 'gettingStarted' , 'download' , '{{ site.download.source }}' , 1);">ソースをダウンロード</a>
 
 <!-- ## BootstrapCDN
 
