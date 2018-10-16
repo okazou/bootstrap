@@ -16,7 +16,7 @@ group: components
 <!--
 ## Example
 -->
-## 例(Example)
+## Example
 
 {% capture example %}
 <nav aria-label="breadcrumb">
@@ -47,7 +47,7 @@ group: components
 
 Separators are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). They can be changed by changing `$breadcrumb-divider`. The [quote](https://sass-lang.com/documentation/Sass/Script/Functions.html#quote-instance_method) function is needed to generate the quotes around a string, so if you want `>` as separator, you can use this:
 -->
-## セパレーターの変更(Changing the separator)
+## Changing the separator
 セパレーターは [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) と [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content) により自動で追加されます。  
 `$breadcrumb-divider` によってセパレーターを変更できます。　The [quote](https://sass-lang.com/documentation/Sass/Script/Functions.html#quote-instance_method) 関数を利用して,
 `>` をセパレータとして使いたい場合は、次のように使用できます。  
@@ -79,7 +79,7 @@ Since breadcrumbs provide a navigation, it's a good idea to add a meaningful lab
 For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
 -->
 
-## アクセシビリティ(Accessibility)
+## Accessibility
 `<nav>` 要素に `aria-label="breadcrumb"` を適用してラベルを待たせたり、 
 現在のページを示すために `aria-current="page" 適用することができます。
 

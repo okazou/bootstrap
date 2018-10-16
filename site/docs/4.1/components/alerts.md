@@ -20,7 +20,7 @@ toc: true
 Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts jQuery plugin](#dismissing).
 -->
 
-## 例(Examples)
+## Examples
 任意の長さのアラートを表示できます。オプションで閉じるボタンがあります。  
 8色(e.g., `.alert-success` ) を利用可のです。インラインで閉じる場合は [alerts jQuery plugin](#dismissing) を使用します。
 
@@ -40,7 +40,7 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 
 Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
 -->
-### リンクカラー(Link color)
+### Link color
 `.alert-link` クラスを適用すると、リンクが適切なカラーになります。
 
 
@@ -80,7 +80,8 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 
 You can see this in action with a live demo:
 -->
-### 閉じるボタン(Dismissing)
+### Dismissing
+
 アラートのJavaScript plugin を使用すると、アラートインラインを消すことができます。  
 方法は  
 - アラートの JavaScript plugin を読み込むか、 Bootstrap JavaScriptを読み込んでください。
@@ -110,9 +111,9 @@ You can see this in action with a live demo:
 Enable dismissal of an alert via JavaScript:
 -->
 
-## JavaScriptの動き(JavaScript behavior)
+## JavaScript behavior
 
-### トリガー(Triggers)
+### Triggers
 
 JavaScript経由でアラート閉じるを有効にします。
 
@@ -140,7 +141,7 @@ Note that closing an alert will remove it from the DOM.
 <!--
 ### Methods
 -->
-### (メソッド)Methods
+### Methods
 
 | Method | Description |
 | --- | --- |
@@ -155,7 +156,7 @@ Note that closing an alert will remove it from the DOM.
 Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
 -->
 
-### イベント(Events)
+### Events
 Bootstrapのアラートプラグインは、アラート機能のためにいくつかのイベントがあります。
 
 | Event | Description |

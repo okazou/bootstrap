@@ -25,7 +25,7 @@ Progress components are built with two HTML elements, some CSS to set the width,
 
 Put that all together, and you have the following examples. -->
 
-## 使い方(How it works)
+## How it works
 [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) は、2つのHTML要素, 幅を設定するCSS, いくつかの属性で構築されています。  
 
 - `.progress` は最大値を示すラッパーとして使用します。
@@ -71,7 +71,7 @@ Put that all together, and you have the following examples. -->
 
 Add labels to your progress bars by placing text within the `.progress-bar`. -->
 
-## ラベル(Labels)
+## Labels
 
 `.progress-bar` 内にテキストを配置して、プログレスバーにラベルを追加します。
 
@@ -87,7 +87,7 @@ Add labels to your progress bars by placing text within the `.progress-bar`. -->
 
 We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly. -->
 
-## 高さ(Height)
+## Height
 
 `.progress` にのみ `height` の値を設定します。値を変更すると、`.progress-bar` はそれに応じて自動的にサイズが変更します。
 
@@ -106,7 +106,7 @@ We only set a `height` value on the `.progress`, so if you change that value the
 
 Use background utility classes to change the appearance of individual progress bars. -->
 
-## 背景色 (Backgrounds)
+## Backgrounds
 
 下記のように色を設定できます。
 
@@ -130,7 +130,7 @@ Use background utility classes to change the appearance of individual progress b
 
 Include multiple progress bars in a progress component if you need. -->
 
-## 複数のプログレスバー(Multiple bars)
+## Multiple bars
 
 プログレスバーに複数のプログレスバーを含めることができます。  
 
@@ -148,7 +148,7 @@ Include multiple progress bars in a progress component if you need. -->
 
 Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color. -->
 
-## ストライプ(Striped)
+## Striped
 
 `.progress-bar-striped` に `.progress-bar` を追加してストライプを適用できます。  
 
@@ -176,7 +176,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 
 The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations. -->
 
-## アニメーションストライプ(Animated stripes)
+## Animated stripes
 
 CSS3アニメーションを使用して右から左にストライプをアニメーション化するには、`.progress-bar-animated` を `.progress-bar` に適用します。
 

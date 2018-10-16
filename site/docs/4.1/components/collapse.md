@@ -17,7 +17,7 @@ toc: true
 
 The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from it's current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element. -->
 
-## 使い方(How it works)
+## How it works
 
 ボタンやアンカーをトリガーにして, コンテンツの折り畳みができます。  
 要素を折り畳むと、`height` が現在の値から `0` にアニメーションで切り替わります。
@@ -34,7 +34,7 @@ Click the buttons below to show and hide another element via class changes:
 You can use a link with the `href` attribute, or a button with the `data-target` attribute. In both cases, the `data-toggle="collapse"` is required.
 -->
 
-## 例(Example)
+## Example
 
 クラスの変更で要素を表示したり非表示にするには、
 
@@ -66,7 +66,7 @@ You can use a link with the `href` attribute, or a button with the `data-target`
 A `<button>` or `<a>` can show and hide multiple elements by referencing them with a JQuery selector in its `href` or `data-target` attribute.
 Multiple `<button>` or `<a>` can show and hide an element if they each reference it with their `href` or `data-target` attribute -->
 
-## 複数のターゲット(Multiple targets)
+## Multiple targets
 
 `<button>` や `<a>` は `data-target` 属性のJQueryセレクタを使用して複数の要素を参照する場合、要素を表示および非表示にすることが可能です。  
 
@@ -99,7 +99,7 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
 
 Using the [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/) component, you can extend the default collapse behavior to create an accordion. -->
 
-## 例(Accordion example)
+## Accordion example
 
 [card]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/card/) を利用するとアコーディオンの作成が可能です。
 
@@ -161,7 +161,7 @@ If your control element is targeting a single collapsible element – i.e. the `
 
 Note that Bootstrap's current implementation does not cover the various keyboard interactions described in the [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - you will need to include these yourself with custom JavaScript. -->
 
-## アクセシビリティ(Accessibility)
+## Accessibility
 
 コントロール要素(リンク,ボタンなど）に `aria-expanded` を追加してください。スクリーンリーダー(や同様の技術)に明示的に伝えるためです。  
 デフォルトが閉じている場合は、コントロール要素の属性は `aria-expanded="false"` にする必要があります。デフォルトで開くように設定した場合は `aria-expanded="true"` を設定します。  
@@ -183,7 +183,7 @@ The collapse plugin utilizes a few classes to handle the heavy lifting:
 
 These classes can be found in `_transitions.scss`. -->
 
-## 使用方法(Usage)
+## Usage
 
 collapseプラグインでは開閉処理を取り扱うために、いくつかのクラスを使用できます。  
 
@@ -197,7 +197,7 @@ Just add `data-toggle="collapse"` and a `data-target` to the element to automati
 
 To add accordion-like group management to a collapsible area, add the data attribute `data-parent="#selector"`. Refer to the demo to see this in action. -->
 
-### データ属性(Via data attributes)
+### Via data attributes
 
 `data-toggle="collapse"` と `data-target` を適用するとコントロールが自動で割り当てられます。`data-target` は collapse を適用するとCSSセレクタを受け入れます。  
 折り畳み可能な場合は `collapse` を摘要する必要があります。デフォルトで開いている場合は, `show` が必要です。
@@ -217,7 +217,7 @@ $('.collapse').collapse()
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-parent=""`. -->
 
-###オプション(Options)
+### Options
 
 オプションは データ属性やJavaScriptで渡すことが可能です。 `data-` にオプション名を追加します。( `data-parent=""` のように)  
 

@@ -17,7 +17,7 @@ toc: true
 
 The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed. -->
 
-## 例（Basic example)
+## Basic example
 
 基本的なリストグループは、リストアイテムと適切なクラスを持つ順序が付けられていないリストです。それに続くオプションや必要に応じて独自のCSSを使って構築してください。
 
@@ -36,7 +36,7 @@ The most basic list group is an unordered list with list items and the proper cl
 
 Add `.active` to a `.list-group-item` to indicate the current active selection. -->
 
-## アクティブアイテム(Active items)
+## Active items
 
 `.active` と `.list-group-item` を適用するとに, アクティブな状態を示します。
 
@@ -55,7 +55,7 @@ Add `.active` to a `.list-group-item` to indicate the current active selection. 
 
 Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links). -->
 
-## 無効なアイテム(Disabled items)
+## Disabled items
 
 `.disabled` と `.list-group-item` を適用するとに, 無効な状態を示します。 `.disabled` は、クリックイベント（リンクなど）を完全に無効にするカスタムJavaScriptが必要になることにも注意してください。
 
@@ -77,7 +77,7 @@ Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, di
 
 Be sure to **not use the standard `.btn` classes here**. -->
 
-## リンクとボタン(Links and buttons)
+## Links and buttons
 
 `.list-group-item-action` を `<a>` や `<button>` を適用することで、ホバー、無効、アクティブ状態のアクション可能なリストグループアイテムを作成します。
 これらの擬似クラスを分離して、非対話型要素（ <li> , <div> ）で作成されたリストグループがクリックまたはタップ機能を提供しないようにします。  
@@ -138,7 +138,7 @@ Add `.list-group-flush` to remove some borders and rounded corners to render lis
 
 Use contextual classes to style list items with a stateful background and color. -->
 
-## コンテキストクラス(Contextual classes)
+## Contextual classes
 
 コンテキストクラスを使用して、リストアイテムの背景と色のスタイルを設定します。
 
@@ -200,7 +200,7 @@ Add badges to any list group item to show unread counts, activity, and more with
 
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). -->
 
-## カスタムコンテント
+## Custom content
 
 下記のように [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) を使用できます。
 
@@ -238,7 +238,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content. -->
 
-## JavaScriptの動作
+## JavaScript behavior
 
 JavaScriptプラグインやコンパイルされた `bootstrap.js` を使用してリストグループを拡張することで, ローカルコンテンツのタブの切替を作成できます。
 <div class="bd-example" role="tabpanel">
@@ -295,7 +295,7 @@ JavaScriptプラグインやコンパイルされた `bootstrap.js` を使用し
 
 You can activate a list group navigation without writing any JavaScript by simply specifying `data-toggle="list"` or on an element. Use these data attributes on `.list-group-item`. -->
 
-### データ属性(Using data attributes)
+### Using data attributes
 
 単純に `data-toggle="list"` を指定するだけでJavaScriptを記述せずにリストグループのナビゲーションを有効にすることができます。
 これらのデータ属性は `list-group-item` で使用してください。  
@@ -324,7 +324,7 @@ You can activate a list group navigation without writing any JavaScript by simpl
 
 Enable tabbable list item via JavaScript (each list item needs to be activated individually): -->
 
-### JavaScript経由
+### Via JavaScript
 
 JavaScriptを経由してタブ切替可能なリストアイテムを有効にします。
 
@@ -422,7 +422,7 @@ If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will 
 -->
 
 
-### イベント(Events)
+### Events
 
 新しいタブを表示すると、イベントは次の順序で発生します。
 

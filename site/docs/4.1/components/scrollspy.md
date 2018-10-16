@@ -25,7 +25,7 @@ Scrollspy has a few requirements to function properly:
 
 When successfully implemented, your nav or list group will update accordingly, moving the `.active` class from one item to the next based on their associated targets. -->
 
-## 使い方(How it works)
+## How it works
 
 スクロールは正しく機能させるために要件があります。  
 
@@ -40,7 +40,7 @@ When successfully implemented, your nav or list group will update accordingly, m
 
 Scroll the area below the navbar and watch the active class change. The dropdown items will be highlighted as well. -->
 
-## ナブバーでの例(Example in navbar)
+## Example in navbar
 
 ナビゲーションバーの下の領域をスクロールして, アクティブなクラスの変更を確認します。 ドロップダウン項目も強調表示されます。 
 
@@ -120,7 +120,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
 
 Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its parents will also be `.active`. Scroll the area next to the navbar and watch the active class change. -->
 
-## ネストされたナビゲーションの例(Example with nested nav)
+## Example with nested nav
 
 スクロールプラグインはネスとされた `.nav` でも動作可能です。入れ子になった `.nav` が `.active` の場合, その親も `.active` になります。
 ナビゲーションバーの横にある領域をスクロールして、アクティブなクラスの変更を確認できます。
@@ -208,7 +208,7 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 
 Scrollspy also works with `.list-group`s. Scroll the area next to the list group and watch the active class change. -->
 
-## リストグループの例(Example with list-group)
+## Example with list-group
 
 スクロールは `.list-groups `でも動作します。リストグループの横にある領域をスクロールして、アクティブなクラスの変更を確認します。
 
@@ -263,9 +263,9 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 
 To easily add scrollspy behavior to your topbar navigation, add `data-spy="scroll"` to the element you want to spy on (most typically this would be the `<body>`). Then add the `data-target` attribute with the ID or class of the parent element of any Bootstrap `.nav` component. -->
 
-## 使い方8Usage)
+## Usage
 
-### データ属性経由(Via data attributes)
+### Via data attributes
 
 スクロールバーの動作をトップバーのナビゲーションに追加するには `<body>` に `data-spy="scroll"` を適用します。
 次に `.nav` の親要素のIDやクラスを `data-target` 属性を追加します。
@@ -294,7 +294,7 @@ body {
 
 After adding `position: relative;` in your CSS, call the scrollspy via JavaScript: -->
 
-### JavaScript経由(Via JavaScript)
+### Via JavaScript
 
 `position: relative;` をCSSに追加した後, JavaScript経由でスクロールを呼び出します  
 
@@ -321,7 +321,7 @@ Target elements that are not [`:visible` according to jQuery](https://api.jquery
 
 <!-- ### Methods -->
 
-### 方法(Methods)
+### Methods
 
 #### `.scrollspy('refresh')`
 
@@ -343,7 +343,7 @@ $('[data-spy="scroll"]').each(function () {
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`. -->
 
-### オプション(Options)
+### Options
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`. -->
 オプションは, データ属性やJavaScriptを使用して渡すことが可能です。データ属性の場合は、`data-offset=""` のように `data-` にオプション名を追加します。

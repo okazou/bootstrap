@@ -25,7 +25,7 @@ Before getting started with Bootstrap's modal component, be sure to read the fol
 - Once again, due to `position: fixed`, there are some caveats with using modals on mobile devices. [See our browser support docs]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile) for details.
 - Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript: -->
 
-## 使い方(How it works)
+## How it works
 
 モーダルの実装を始める前に下記のオプションの変更点を確認してください。
 
@@ -53,9 +53,9 @@ $('#myModal').on('shown.bs.modal', function () {
 
 Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action. -->
 
-## 例(Examples)
+## Examples
 
-### モーダルコンポーネント(Modal components)
+### Modal components
 
 下記は _static_ モーダルの例です。 ( `position` と `display` がオーバーライドされたことを意味します). 例はヘッダー,ボディ,フッターが配置されています。 and modal footer (optional). モーダルをを終了するヘッダを含めるか、明示的な終了するアクションを提供することを推奨します。
 
@@ -107,7 +107,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
 
 Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page. -->
 
-### ライブデモ(Live demo)
+### Live demo
 
 下記のボタンをクリックすると, ページの上からスライドしてフェードインしてモーダルが表示されます。
 
@@ -171,7 +171,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 
 When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean. -->
 
-### 長いコンテンツのスクロール(Scrolling long content)
+### Scrolling long content
 
 モーダルのコンテンツが長い場合は, スクロールできるようにします。下記の例を見てください。
 
@@ -251,7 +251,7 @@ When modals become too long for the user's viewport or device, they scroll indep
 
 Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal. -->
 
-### 垂直方向の中央に配置(Vertically centered)
+### Vertically centered
 
 `.modal-dialog-centered` と `.modal-dialog` を適用します。
 
@@ -361,7 +361,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal. 
 
 Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` within the `.modal-body`. Then, use the normal grid system classes as you would anywhere else. -->
 
-### グリッドの使用(Using the grid)
+### Using the grid
 
 `.modal-body` 内に `.container-fluid` を入れ子にしてグリッドシステムを利用できます。
 
@@ -452,7 +452,7 @@ Have a bunch of buttons that all trigger the same modal with slightly different 
 
 Below is a live demo followed by example HTML and JavaScript. For more information, [read the modal events docs](#events) for details on `relatedTarget`. -->
 
-### 様々なモーダルコンテンツ(Varying modal content)
+### Varying modal content
 
 モーダルを起動する複数のボタンが必要な場合は `event.relatedTarget` と [HTML `data-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (possibly [via jQuery](https://api.jquery.com/data/)) を使用します。 
 
@@ -513,7 +513,7 @@ The `$modal-fade-transform` variable determines the transform state of `.modal-d
 
 If you want for example a zoom-in animation, you can set `$modal-fade-transform: scale(.8)`. -->
 
-###アニメーションを変更する
+### Change animation
 
 `$ modal-fade-transform` 変数はフェードインアニメーションの前の `.modal-dialog` の状態を決定し, 
 `$ modal-show-transform` 変数はフェードインアニメーションの終わり `.modal-dialog` の状態を決定します。
@@ -524,7 +524,7 @@ If you want for example a zoom-in animation, you can set `$modal-fade-transform:
 
 For modals that simply appear rather than fade in to view, remove the `.fade` class from your modal markup. -->
 
-### アニメーションの削除(Remove animation)
+### Remove animation
 
 フェードインではなく、いきなり表示されるモーダルにする場合は、モーダルのマークアップから .fade クラスを削除します。
 
@@ -539,7 +539,7 @@ For modals that simply appear rather than fade in to view, remove the `.fade` cl
 
 If the height of a modal changes while it is open, you should call `$('#myModal').modal('handleUpdate')` to readjust the modal's position in case a scrollbar appears. -->
 
-### 動的な高さ(Dynamic heights)
+### Dynamic heights
 
 高さがモーダルの開いている間に変更され, スクロールバーが表示された場合には $('#myModal').modal('handleUpdate') を呼び出してモーダルの位置を再調整する必要があります。
 
@@ -548,7 +548,7 @@ If the height of a modal changes while it is open, you should call `$('#myModal'
 
 Be sure to add `role="dialog"` and `aria-labelledby="..."`, referencing the modal title, to `.modal`, and `role="document"` to the `.modal-dialog` itself. Additionally, you may give a description of your modal dialog with `aria-describedby` on `.modal`. -->
 
-### (アクセシビリティ)Accessibility
+### Accessibility
 
 モーダルタイトルを参照する `role="dialog"` と `aria-labelledby="..."` を `.modal` に, 
 `role="document"` を `.modal-dialog` に必ず追加します。モーダルダイアログの説明を `.modal` の `aria-describedby` で指定することも可能です。
@@ -559,7 +559,7 @@ Be sure to add `role="dialog"` and `aria-labelledby="..."`, referencing the moda
 
 Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) for more information. -->
 
-### YouTube動画の埋め込み(Embedding YouTube videos)
+### Embedding YouTube videos
 
 YouTubeの動画をモーダルに埋め込むには、再生を自動的に停止するなどの追加のJavaScriptが必要です。
 詳細は [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) を参照してください。
@@ -569,7 +569,7 @@ YouTubeの動画をモーダルに埋め込むには、再生を自動的に停�
 
 Modals have three optional sizes, available via modifier classes to be placed on a `.modal-dialog`. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports. -->
 
-## オプショナルサイズ(Optional sizes)
+## Optional sizes
 
 モーダルは3つのサイズのオプションがあります。`.modal-dialog` に配置することが可能です。これらのサイズは、狭いビューポートでの水平スクロールバーの出現を避けるために特定のブレークポイントで実行される。
 
@@ -703,7 +703,7 @@ Modals have three optional sizes, available via modifier classes to be placed on
 
 The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds `.modal-open` to the `<body>` to override default scrolling behavior and generates a `.modal-backdrop` to provide a click area for dismissing shown modals when clicking outside the modal. -->
 
-## 使い方(Usage)
+## Usage
 
 モーダルプラグインはデータ属性やJavaScriptを使用して, 非表示のコンテンツを切り替えます。 `<body>` に `.modal-open` を適用してデフォルトのスクロール動作を再定義し, モーダルの外側をクリックしたときに, 閉じるためのクリック領域を提供する `.modal-backdrop` を生成します。
 
@@ -712,7 +712,7 @@ The modal plugin toggles your hidden content on demand, via data attributes or J
 
 Activate a modal without writing JavaScript. Set `data-toggle="modal"` on a controller element, like a button, along with a `data-target="#foo"` or `href="#foo"` to target a specific modal to toggle. -->
 
-### データ属性経由(Via data attributes)
+### Via data attributes
 
 JavaScriptを書かずにモーダルを有効にします。 特定のモーダルを起動させるためには `data-target="#foo"` または `href="#foo"` とともに、ボタンのようなコントローラー要素に `data-toggle = "modal"` を設定します。
 
@@ -724,7 +724,7 @@ JavaScriptを書かずにモーダルを有効にします。 特定のモーダ
 
 Call a modal with id `myModal` with a single line of JavaScript: -->
 
-### JavaScript経由(Via JavaScript)
+### Via JavaScript
 
 JavaScript1行でID `myModal` のモーダルを呼び出します。
 
@@ -734,7 +734,7 @@ JavaScript1行でID `myModal` のモーダルを呼び出します。
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-backdrop=""`. -->
 
-### オプション (Options)
+### Options
 
 オプションはデータ属性またはJavaScriptを使用して渡すことが可能です。データ属性の場合 `data-backdrop=""` のように `data-` にオプション名を追加します。
 

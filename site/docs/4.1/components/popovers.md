@@ -30,7 +30,7 @@ Things to know when using the popover plugin:
 
 Keep reading to see how popovers work with some examples. -->
 
-## 概要(Overview)
+## Overview
 
 Popover Pluginを使用するときに知っておくべきこと：
 
@@ -73,7 +73,7 @@ $(function () {
 
 <!-- ## Example -->
 
-## 例(Example)
+## Example
 
 {% capture example %}
 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
@@ -84,7 +84,7 @@ $(function () {
 
 Four options are available: top, right, bottom, and left aligned. -->
 
-### 方向設定
+### Four directions
 上、右、下、左の4つのオプションがあります。
 
 <div class="bd-example popover-demo">
@@ -127,7 +127,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
 Use the `focus` trigger to dismiss popovers on the user's next click of a different element than the toggle element. -->
 
-### 次のクリックで閉じる(Dismiss on next click)
+### Dismiss on next click
 `focus` を使用して, トグル要素とは別の要素の次のクリックに対するポップオーバーを閉じます。
 
 
@@ -155,7 +155,7 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 
 For disabled popover triggers, you may also prefer `data-trigger="hover"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element. -->
 
-### 無効な要素(Disabled elements)
+### Disabled elements
 
 `disabled` 属性を持つ要素はインタラクティブではないため,ユーザーがカーソルを移動したりクリックしてポップオーバー（またはツールチップ）をトリガーすることはできません。
 ラッパーの `<div>` や `<span>` からポップオーバーを起動し, 無効化された要素の `pointer-events` を上書きする必要があります。    
@@ -174,7 +174,7 @@ For disabled popover triggers, you may also prefer `data-trigger="hover"` so tha
 
 Enable popovers via JavaScript: -->
 
-## 使い方(Usage)
+## Usage
 
 JavaScriptでポップオーバーを有効にします：
 
@@ -184,7 +184,7 @@ JavaScriptでポップオーバーを有効にします：
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`. -->
 
-### オプション(Options)
+### Options
 オプションは、データ属性またはJavaScriptを使用して渡すことが可能です。データ属性の場合、`data-` にオプション名を追加できます。
 
 <table class="table table-bordered table-striped">
@@ -308,7 +308,7 @@ Options for individual popovers can alternatively be specified through the use o
 {% include callout.html content=callout type="info" %}
 
 <!-- ### Methods -->
-### 方法(Methods)
+### Methods
 
 {% include callout-danger-async-methods.md %}
 
@@ -380,7 +380,7 @@ Options for individual popovers can alternatively be specified through the use o
 {% highlight js %}$('#element').popover('update'){% endhighlight %}
 
 <!-- ### Events -->
-### イベント(Events)
+### Events
 
 <table class="table table-bordered table-striped">
   <thead>

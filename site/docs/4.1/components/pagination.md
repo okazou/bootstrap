@@ -19,7 +19,7 @@ We use a large block of connected links for our pagination, making links hard to
 
 In addition, as pages likely have more than one such navigation section, it's advisable to provide a descriptive `aria-label` for the `<nav>` to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be `aria-label="Search results pages"`. -->
 
-## 概要(Overview)
+## Overview
 
 件数が多く、画面の多くの領域を締める場合はページネーションを活用できます。
 ページネーションはリストのHTML要素で構成され,スクリーンリーダーは利用可能なリンクの数を知らせることが可能です。
@@ -46,7 +46,7 @@ In addition, as pages likely have more than one such navigation section, it's ad
 
 Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes and the `.sr-only` utility. -->
 
-## アイコンの操作(Working with icons)
+## Working with icons
 ページネーションリンクのテキストの代わりにアイコンやシンボルを使用したい場合は,
 `aria` 属性と `.sr-only` ユーティリティを使用してスクリーンリーダーを適切にサポートするようにしてください。
 
@@ -79,7 +79,7 @@ Pagination links are customizable for different circumstances. Use `.disabled` f
 
 While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality. -->
 
-## アクティブと無効状態(Disabled and active states)
+## Disabled and active states
 ページリンクは、さまざまな状況に合わせてカスタマイズできます。 
 `.disabled` でクリックできないようにしたり, 現在のページを示すために `.active` 使用します。    
 
@@ -135,7 +135,7 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 
 Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes. -->
 
-## サイズ(Sizing)
+## Sizing
 `.pagination-lg` や `.pagination-sm` でサイズの変更が可能です。
 
 {% capture example %}
@@ -168,7 +168,7 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 
 Change the alignment of pagination components with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). -->
 
-## 配置(Alignment)
+## Alignment
 
 [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) を利用して配置を変更できます。
 

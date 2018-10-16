@@ -19,7 +19,7 @@ Navigation available in Bootstrap share general markup and styles, from the base
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling. -->
 
-## 基本
+## Base nav
 
 利用可能なナビゲーションは、`.nav` クラスからアクティブ/無効状態へのマークアップやスタイルを共有します。各スタイルを切り替えるための修飾子クラスを入れ替えます。
 `.nav` はflexboxで構築されています。スタイルのオーバーライド（リストを操作するため）, 大きな領域のリンク埋め込み, 基本的なディセーブルスタイルなどがあります。
@@ -77,7 +77,7 @@ Change the horizontal alignment of your nav with [flexbox utilities]({{ site.bas
 
 Centered with `.justify-content-center`: -->
 
-### 水平方向の配置(Horizontal alignment)
+### Horizontal alignment
 
 [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment) を使用して水平方向の配置を変更できます。
 デフォルトでは左揃えになっていますが、中央または右揃えに簡単に変更できます。  
@@ -129,7 +129,7 @@ Centered with `.justify-content-center`: -->
 
 Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`). -->
 
-### 垂直
+### Vertical
 `.flex-column` ユーティリティでflexアイテムの方向を変更して, ナビゲーションを積み重ねます。
 それらをいくつかのビューポートに積み重ねる必要がありますが,他のものに積み重ねる必要はありません。例えば `.flex-sm-column`を使用してください。
 
@@ -311,7 +311,7 @@ If you're using navs to provide a navigation bar, be sure to add a `role="naviga
 
 Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. -->
 
-## アクセシビリティ(Regarding accessibility)
+## Regarding accessibility
 
 <!-- If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies. -->
 
@@ -325,12 +325,12 @@ Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` 
 
 Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage). -->
 
-## ドロップダウン(Using dropdowns)
+## Using dropdowns
 
 [dropdowns JavaScript plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage) を適用します。
 
 <!-- ### Tabs with dropdowns -->
-### タブとドロップダウン(Tabs with dropdowns)
+### Tabs with dropdowns
 
 {% capture example %}
 <ul class="nav nav-tabs">
@@ -358,7 +358,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {% include example.html content=example %}
 
 <!-- ### Pills with dropdowns -->
-### ピルとドロップダウン(Pills with dropdowns)
+### Pills with dropdowns
 
 
 {% capture example %}
@@ -387,8 +387,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {% include example.html content=example %}
 
 <!-- ## JavaScript behavior -->
-## JavaScriptの動作(JavaScript behavior)
-
+## JavaScript behavior
 
 <!-- Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus. -->
 
@@ -602,7 +601,7 @@ And with vertical pills.
 
 You can activate a tab or pill navigation without writing any JavaScript by simply specifying `data-toggle="tab"` or `data-toggle="pill"` on an element. Use these data attributes on `.nav-tabs` or `.nav-pills`. -->
 
-### データ属性の使い方
+### Using data attributes
 `data-toggle="tab"`, `data-toggle="pill"` を指定することでJavaScriptを記述することなく, タブやピルナビゲーションを有効にすることができます。
 これらのデータ属性を `.nav-tabs` や `.nav-pills。` で使用してください。
 
@@ -636,7 +635,7 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 
 <!-- Enable tabbable tabs via JavaScript (each tab needs to be activated individually): -->
 
-### JavaScript経由(Via JavaScript)
+### Via JavaScript
 JavaScriptを使用してタブ切替可能なタブを有効にします。（各タブは個別に有効にする必要あります。）：
 
 {% highlight js %}
@@ -748,7 +747,7 @@ When showing a new tab, the events fire in the following order:
 If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
 -->
 
-### イベント
+### Events
 新しいタブを表示すると、イベントは次の順序で発生します。  
 
 1. `hide.bs.tab` (現在アクティブなタブ）

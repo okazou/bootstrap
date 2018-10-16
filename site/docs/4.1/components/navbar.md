@@ -26,7 +26,7 @@ Here's what you need to know before getting started with the navbar:
 
 Read on for an example and list of supported sub-components. -->
 
-## 使い方(How it works)
+## How it works
 
 navbarを始める前に下記を確認してください。
 
@@ -54,7 +54,7 @@ Navbars come with built-in support for a handful of sub-components. Choose from 
 
 Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint. -->
 
-## サポートコンテント(Supported content)
+## Supported content
 
 ナビゲーションバーにはサブコンポーネントが組み込まれています。
 下記が使用できるコンポーネントですが、詳細は例をみてください。
@@ -112,7 +112,7 @@ This example uses [color]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilit
 
 The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles. -->
 
-### ブランド(Brand)
+### Brand
 `.navbar-brand` はほとんどの要素で適用可能です。ユーティリティクラスやカスタムスタイルを必要とする要素がある場合にはアンカーリンクに設定するのが最適です。  
 `.navbar-brand` にイメージを追加するには、カスタムスタイルやユーティリティが必要になります。  
 下記の例を参考にしてください。
@@ -322,7 +322,7 @@ Input groups work, too:
 
 Navbars may contain bits of text with the help of `.navbar-text`. This class adjusts vertical alignment and horizontal spacing for strings of text. -->
 
-### テキスト(Text)
+### Text
 
 `.navbar-text` で 文字列の縦方向の配置と横方向の間隔を調整できます。
 
@@ -368,7 +368,7 @@ Navbars may contain bits of text with the help of `.navbar-text`. This class adj
 
 Theming the navbar has never been easier thanks to the combination of theming classes and `background-color` utilities. Choose from `.navbar-light` for use with light background colors, or `.navbar-dark` for dark background colors. Then, customize with `.bg-*` utilities. -->
 
-## 色(Color schemes)
+## Color schemes
 
 テーマのクラスと `background-color` ユーティリティの組み合わせにより, 色の変更が可能です。
 明るめの色は `.navbar-light` , 暗めの色は `.navbar-dark` を選択できます。 `.bg-*` ユーティリティでカスタマイズもできます。
@@ -479,7 +479,7 @@ Theming the navbar has never been easier thanks to the combination of theming cl
 
 Although it's not required, you can wrap a navbar in a `.container` to center it on a page or add one within to only center the contents of a [fixed or static top navbar](#placement). -->
 
-## コンテナ(Containers)
+## Containers
 
 `.container` でナビゲーションバーを囲んでページ上に配置したり、[fixed or static top navbar](#placement) でコンテンツを中央にのみ配置することが可能です。
 
@@ -664,7 +664,7 @@ With no `.navbar-brand` shown in lowest breakpoint: -->
 
 Sometimes you want to use the collapse plugin to trigger hidden content elsewhere on the page. Because our plugin works on the `id` and `data-target` matching, that's easily done! -->
 
-### 外部コンテンツ(External content)
+### External content
 折りたたみプラグインを使用して, 隠しコンテンツにすることもできます。プラグインが動作するために `id` と `data-target` のマッチングを行えます。
 
 

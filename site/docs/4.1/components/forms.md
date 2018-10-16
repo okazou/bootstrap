@@ -21,7 +21,7 @@ Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for 
 
 Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more. -->
 
-## 概要(Overview)
+## Overview
 
 フォームコントロールは [our Rebooted form styles]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms) で展開します。これらのクラスを使用してカスタマイズされた表示をオプトインし、ブラウザとデバイス間でより一貫性のあるレンダリングを実現します。  
 入力項目に `type` 属性を使用してください。(emailや数値情報など)  
@@ -53,7 +53,7 @@ Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are st
 
 Be sure to explore our [custom forms](#custom-forms) to further style `<select>`s. -->
 
-## Form controls(フォームコントロール)
+## Form controls
 
 `<input>`, `<select>`, `<textarea>` のようなテキスト形式のコントロールは `form-control` が付与されています。 
 
@@ -138,7 +138,7 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
 
 Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor. -->
 
-### 読み取り専用 (Readonly)
+### Readonly
 `readonly` boolean属性を適用して入力値の変更を不可能にします。読み取り専用入力は、（無効な入力と同じように）軽く表示されますが、標準カーソルは保持されます。
 
 
@@ -191,7 +191,7 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 
 Set horizontally scrollable range inputs using `.form-control-range`. -->
 
-##範囲入力
+## Range Inputs
 
 `.form-control-range` を使って水平方向にスクロール可能な範囲の入力設定をできます。
 
@@ -213,7 +213,7 @@ Disabled checkboxes and radios are supported, but to provide a `not-allowed` cur
 
 Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. -->
 
-## チェックボックスとラジオ
+## Checkboxes and radios
 
 `.form-check` にてチェックボックス、ラジオは大幅に改善されています。レイアウトと動作を向上させ、両方の入力タイプのための単一のクラスで行えます。
 チェックボックスはリスト内の1以上のオプションを選択できます。ラジオは複数のオプションから1つを選択するためのものです。
@@ -273,7 +273,7 @@ By default, any number of checkboxes and radios that are immediate sibling will 
 
 Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`. -->
 
-### インライン(Inline)
+### Inline
 
 `.form-check-inline` を `.form-check` に適用すると同じ水平行にチェックボックスまたはラジオボタンをグループ化できます。
 
@@ -313,7 +313,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
 
 Add `.position-static` to inputs within `.form-check` that don't have any label text. Remember to still provide some form of label for assistive technologies (for instance, using `aria-label`). -->
 
-### ラベルなし(Without labels)
+### Without labels
 
  `<label>` を持たない場合は `.form-check` 内の `input` に `.position-static` を追加します。
 
@@ -332,7 +332,7 @@ Add `.position-static` to inputs within `.form-check` that don't have any label 
 
 Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis. -->
 
-## レイアウト(Layout)
+## Layout
 
 bootstrapが適用されると `display: block` と `width: 100%` がフォームコントロールに適用され,フォームはデフォルトで縦方向にスタックします。  
 フォームごとにこのレイアウトを変更するには、追加のクラスを使用できます。
@@ -342,7 +342,7 @@ bootstrapが適用されると `display: block` と `width: 100%` がフォー�
 
 The `.form-group` class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies `margin-bottom`, but it picks up additional styles in `.form-inline` as needed. Use it with `<fieldset>`s, `<div>`s, or nearly any other element. -->
 
-### フォームグループ(Form groups)
+### Form groups
 
 `.form-group` はフォームに構造体を適用できます。ラベル、コントロール、オプションのヘルプテキスト、フォーム検証メッセージを提供しています。  
 デフォルトでは `margin-bottom` が適用されますが `.form-inline` に追加のスタイルが取り込まれます。
@@ -367,7 +367,7 @@ The `.form-group` class is the easiest way to add some structure to forms. It pr
 
 More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options. -->
 
-### フォームグリッド(Form grid)
+### Form grid
 複雑なフォームは、グリッドクラスを使用して構築できます。列, 幅, 追加の配置オプションをフォームレイアウト適用します。
 
 {% capture example %}
@@ -710,7 +710,7 @@ Use the `.form-inline` class to display a series of labels, form controls, and b
 
 You may need to manually address the width and alignment of individual form controls with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) (as shown below). Lastly, be sure to always include a `<label>` with each form control, even if you need to hide it from non-screenreader visitors with `.sr-only`. -->
 
-### Inline forms(インラインフォーム)
+### Inline forms
 `.form-inline` を使用して、一連のラベル、フォームコントロール、ボタンを1つの水平行に表示します。インラインフォーム内のフォームコントロールは、デフォルトの状態と異なります。
 
 コントロールは `display: flex` です。スペースやフレックスボックスのユーティリティで整列を制御できるようにします。
@@ -776,7 +776,7 @@ Assistive technologies such as screen readers will have trouble with your forms 
 
 Block-level help text in forms can be created using `.form-text` (previously known as `.help-block` in v3). Inline help text can be flexibly implemented using any inline HTML element and utility classes like `.text-muted`. -->
 
-## ヘルプテキスト(Help text)
+## Help text
 
 フォーム内のブロックレベルのヘルプテキストは `.form-text`（v3では `.help-block` ）を使用して作成できます。インラインヘルプテキストは、以下のようなインラインHTML要素とユーティリティクラス(`.text-muted。` のような)を使用して柔軟に実装できます。
 
@@ -874,7 +874,7 @@ While Bootstrap will apply these styles in all browsers, Internet Explorer 11 an
 
 Provide valuable, actionable feedback to your users with HTML5 form validation–[available in all our supported browsers](https://caniuse.com/#feat=form-validation). Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript. -->
 
-## 検証(Validation)
+## Validation
 ブラウザ [available in all our supported browsers](https://caniuse.com/#feat=form-validation) でHTML5フォーム検証機能をして貴重なフィードバックをユーザーに提供します。ブラウザのデフォルト検証フィードバックから選択するか、組み込みクラスとスターターJavaScriptを使用してカスタムメッセージを実装します。
 
 {% capture callout %}
@@ -1152,7 +1152,7 @@ We recommend using client-side validation, but in case you require server-side v
 
 Our example forms show native textual `<input>`s above, but form validation styles are also available for `<textarea>`s and custom form controls. -->
 
-### サポートしている要素(Supported elements)
+### Supported elements
 サンプルフォームは、上記のテキストの `<input>` を示しているがフォームの検証スタイルは `<textarea>` とカスタムフォームコントロールでも利用可能です。
 
 

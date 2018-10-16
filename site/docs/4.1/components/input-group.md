@@ -17,7 +17,7 @@ toc: true
 
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group. -->
 
-## 例(Basic example)
+## Basic example
 
 1つのアドオンまたはボタンを入力の横に配置します。入力の両側に配置することもできます。入力グループの外に `<label>` を配置してください。
 
@@ -101,7 +101,7 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 Place any checkbox or radio option within an input group's addon instead of text. -->
 
-## チェックボックスとラジオ(Checkboxes and radios)
+## Checkboxes and radios
 
 テキストの代わりに入力グループのアドオン内に任意のチェックボックスまたはラジオオプションを配置します。
 
@@ -132,7 +132,7 @@ Place any checkbox or radio option within an input group's addon instead of text
 
 While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`. -->
 
-## 複数の入力(Multiple inputs)
+## Multiple inputs
 
 複数 `<input>` は視覚的にサポートされていますが、検証スタイルは単一の入力グループでのみ使用できます。
 
@@ -396,7 +396,7 @@ Screen readers will have trouble with your forms if you don't include a label fo
 
 The exact technique to be used (`<label>` elements hidden using the `.sr-only` class, or use of the `aria-label` and `aria-labelledby` attributes, possibly in combination with `aria-describedby`) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches. -->
 
-## アクセスビリティ(Accessibility)
+## Accessibility
 
 すべての入力にラベルを付けない場合、スクリーンリーダーではフォームに問題が起きます。入力グループについては、追加のラベルや機能が支援技術に伝達されていることを確認してください。  
 

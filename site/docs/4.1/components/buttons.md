@@ -22,7 +22,7 @@ toc: true
 
 Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
 -->
-## 例(Examples)
+## Examples
 いくつかの定義済みのボタンスタイルがあり, それぞれ目的を持っています。
 
 {% capture example %}
@@ -42,7 +42,7 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 -->
-## ボタンタグ(Button tags)
+## Button tags
 `.btn` クラスは `<button>` 要素で使用するために設計されていますが, `<a>` や `<input>` 要素でも利用できます。   
 （ブラウザによってはレンダリングされる内容に差異が可能性があります） 
 `.btn` を `a` で機能のトリガーとして利用する場合は　`role="button"` を適用する必要があります。
@@ -61,7 +61,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 -->
-## アウトライン ボタン(Outline buttons)
+## Outline buttons
 アウトラインボタン：`.btn-outline-*` を適用すると枠線を残してボタンの背景色を透過することができます。
 
 {% capture example %}
@@ -75,7 +75,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 -->
-## サイズ(Sizes)
+## Sizes
 ボタンのサイズを `.btn-lg` , `.btn-sm`  を適用すると変更できます。 
 
 
@@ -124,7 +124,7 @@ Buttons will appear pressed (with a darker background, darker border, and inset 
 
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element.
 -->
-## 無効ステータス(Disabled state)
+## Disabled state
 ボタンを無効状態にするには `aria-disabled="true"` を適用します。
 
 
@@ -174,10 +174,10 @@ Do more with buttons. Control button states or create groups of buttons for more
 
 Add `data-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to the `<button>`.
 -->
-## ボタンプラグイン (Button plugin)
+## Button plugin
 コントロールボタンで, ツールバーのようなコンポーネントのボタンの状態を示したり, ボタンのグループが作成可能です。
 
-### トグルステータス(Toggle states)
+### Toggle states
 ボタンを押された状態に切り替えるには, `data-toggle="button"` を追加します。
 ボタンをあらかじめ押された状態に切り替えておく場合は, `.active` クラスと `aria-pressed="true"` を `<button>` に適用します。
 
@@ -198,7 +198,7 @@ The checked state for these buttons is **only updated via `click` event** on the
 
 Note that pre-checked buttons require you to manually add the `.active` class to the input's `<label>`.
 -->
-### チェックボックスとラジオボタン(Checkbox and radio buttons)
+### Checkbox and radio buttons
 `.button` スタイルは、 `<label>` などの他の要素に適用すると, チェックボックスやラジオボタンの切り替えを行うことが可能です。  
 `.btn` グループに `data-toggle="buttons"` を追加してJavaScript経由で切替動作を有効にします。
 単一またはグループの入力電源ボタンも作成可能。
@@ -234,7 +234,7 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 <!--
 ### Methods
 -->
-### メソッド(Methods)
+### Methods
 
 | Method | Description |
 | --- | --- |
