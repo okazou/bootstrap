@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: イメージ(Images)
+title: Images
 description: レスポンシブな画像とクラスの適用についての例です。
 group: content
 toc: true
@@ -14,11 +14,8 @@ description: Documentation and examples for opting images into responsive behavi
 group: content
 toc: true
 ---
->
-
-<!-- ## Responsive images -->
-## レスポンシブ イメージ
-
+-->
+## Responsive images
 <!--
 Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` and `height: auto;` are applied to the image so that it scales with the parent element.
 -->
@@ -35,21 +32,17 @@ Images in Bootstrap are made responsive with `.img-fluid`. `max-width: 100%;` an
 
 {% capture callout %}
 
-<!--
 ##### SVG images and IE 10
-
+<!--
 In Internet Explorer 10, SVG images with `.img-fluid` are disproportionately sized. To fix this, add `width: 100% \9;` where necessary. This fix improperly sizes other image formats, so Bootstrap doesn't apply it automatically.
 -->
-##### SVGとIE10について(SVG images and IE 10)
 IE10の場合, SVGに .img-fluid が効きません。IE10 に対応するには CSSハック width: 100% \9; を追加してください。  
 この修正は他フォーマットの画像に影響を及ぼすため、Bootstrap では標準でセットしていません。
 
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-<!-- ## Image thumbnails -->
-## サムネイル イメージ
-
+## Image thumbnails
 <!--
 In addition to our [border-radius utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/borders/), you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
 -->
@@ -64,12 +57,10 @@ In addition to our [border-radius utilities]({{ site.baseurl }}/docs/{{ site.doc
 <img src="..." alt="..." class="img-thumbnail">
 {% endhighlight %}
 
-<!--
 ## Aligning images
-
+<!--
 Align images with the [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float) or [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering).
 -->
-## 画像の配置(Aligning images)
 画像の鉢は [helper float classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/float) と [text alignment classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) を参考にしてください。  
 `block` レベルでは画像は真ん中に配置されます。 [the `.mx-auto` margin utility class]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/#horizontal-centering)  
 

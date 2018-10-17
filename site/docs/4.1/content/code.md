@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: コード(Code)
+title: Code
 description: インラインコード, マルチラインブロックの表示例です。
 group: content
 toc: true

@@ -13,11 +13,11 @@ description: Documentation and examples for Bootstrap typography, including glob
 group: content
 toc: true
 ---
->
+-->
 
-<!--
 ## Global settings
 
+<!--
 Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/).
 
 - Use a [native font stack]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
@@ -29,7 +29,6 @@ Bootstrap sets basic global display, typography, and link styles. When more cont
 These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 -->
 
-## グルーバル設定(Global settings)
 Bootstrapは文字に関するスタイル(文字の大きさや、リンクスタイル)を設定しています。
 よりカスタマイズが必要な場合は  [textual utility classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/). を参照できます。
 
@@ -42,12 +41,11 @@ so visitors can customize their browser defaults as needed.
 
 `_reboot.scss` にて設定されていて, グローバル変数は `_variables.scss` で定義されている。
 
-<!-- 
 ## Headings
+<!-- 
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 -->
-## 見出し(Headings)
 
 見出し `<h1>` ～ `<h6>` が利用可能です。
 
@@ -123,12 +121,10 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
 ### Customizing headings
-
+<!--
 Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
 -->
-### 見出しをカスタマイズする (Customizing headings)
 
 ユーティリティクラスを利用できます。 
 
@@ -146,13 +142,11 @@ Use the included utility classes to recreate the small secondary heading text fr
 </h3>
 {% endhighlight %}
 
-<!--
 ## Display headings
-
+<!--
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 -->
 
-## 見出しの表示(Display headings)
 
 **display heading** を利用することで大きく目立たせることができます。
 
@@ -182,12 +176,11 @@ Traditional heading elements are designed to work best in the meat of your page 
 <h1 class="display-4">Display 4</h1>
 {% endhighlight %}
 
-<!--
 ## Lead
+<!--
 
 Make a paragraph stand out by adding `.lead`.
 -->
-## リード(Lead)
 
 `.lead` で文章を目立たせることができます。
 
@@ -198,12 +191,10 @@ Make a paragraph stand out by adding `.lead`.
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
 ## Inline text elements
-
+<!--
 Styling for common inline HTML5 elements.
 -->
-## インラインテキスト(Inline text elements)
 
 HTML5の一般的なインライン要素でスタイリングされています。
 
@@ -229,25 +220,21 @@ While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant
 HTML5では `<b>` , `<i>` を気楽に利用してください。  
 `<b>` は単語や文章を強調できます。`<i>` は音声や技術用語に用いられます。  
 
-<!--
+
 ## Text utilities
+<!--
 Change text alignment, transform, style, weight, and color with our [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/) and [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/).
 -->
-## テキストユーティリティ(Text utilities)
 配置 , スタイルの変更は下記を参考にしてください。  
 [text utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/) ,
 [color utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) 
 
-
-<!--
 ## Abbreviations
-
+<!--
 Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
 Add `.initialism` to an abbreviation for a slightly smaller font-size.
 -->
-
-## 省略語(Abbreviations)
 省略された文字には `<abbr>` を適用します。  `title` に省略前の文字を設定すると、ホバーすると表示されます。
 `.initialism` を適用すると、`font-size` を少し小さくすることができます。
 
@@ -258,12 +245,12 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
+
 ## Blockquotes
 
+<!--
 For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
 -->
-## 引用（Blockquotes）
 
 文章に外部ソースからのコンテンツやブロックを引用する場合は `<blockquote class="blockquote">` で囲みます。  
 
@@ -276,13 +263,13 @@ For quoting blocks of content from another source within your document. Wrap `<b
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
+
+
 ### Naming a source
 
+<!--
 Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the name of the source work in `<cite>`.
-
 -->
-### 引用元(Naming a source)
 
 引用元を記載するには `<footer class="blockquote-footer">` `<cite>` を使用します。  
 
@@ -294,12 +281,12 @@ Add a `<footer class="blockquote-footer">` for identifying the source. Wrap the 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
+
 ### Alignment
 
+<!--
 Use text utilities as needed to change the alignment of your blockquote.
 -->
-### 配置(Alignment)
 引用の配置を変更するには、テキストユーティリティを使用します。
 
 {% capture example %}
@@ -318,17 +305,13 @@ Use text utilities as needed to change the alignment of your blockquote.
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
+
 ## Lists
 
 ### Unstyled
-
+<!--
 Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 -->
-
-## リスト(Lists)
-
-### スタイルなしのリスト（Unstyled）
 `list-style` , `margin-left` は削除されています。(直後の子のみ)
 
 {% capture example %}
@@ -352,12 +335,12 @@ Remove the default `list-style` and left margin on list items (immediate childre
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
+
 ### Inline
 
+<!--
 Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
 -->
-### インライン（Inline）
 箇条書きの黒丸がなくなり、 `.list-inline` , `.list-inline-item`により margin を適用されます。
 
 
@@ -370,12 +353,13 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
+
 ### Description list alignment
+
+<!--
 
 Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 -->
-### 水平リスト（Description list alignment）
 グリッドシステム(または semantic mixins )を使用して、用語と説明リストを水平方向に配置します。
 文字が長い場合は場合は  `.text-truncate` クラスを追加してテキストを省略できます。
 
@@ -408,14 +392,15 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!--
+
+
 ## Responsive typography
 
+<!--
 *Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. Bootstrap doesn't do this for you, but it's fairly easy to add if you need it.
 
 Here's an example of it in practice. Choose whatever `font-size`s and media queries you wish.
 -->
-## レスポンシブ(Responsive typography)
 
 `font-size` と メディアクエリを利用することでレスポンシブな文字サイズを実現することができます。  
 
