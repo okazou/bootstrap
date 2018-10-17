@@ -5,16 +5,17 @@ description: ナビゲーションコンポーネントを利用するための�
 group: components
 toc: true
 ---
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Navs
 description: Documentation and examples for how to use Bootstrap's included navigation components.
 group: components
 toc: true
---- -->
+--- 
+-->
 
-<!-- ## Base nav
-
+<!-- 
 Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
 
 The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling. -->
@@ -62,23 +63,19 @@ The base `.nav` component does not include any `.active` state. The following ex
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Available styles
-
-Change the style of `.nav`s component with modifiers and utilities. Mix and match as needed, or build your own. -->
-
 ## Available styles
-
+<!-- 
+Change the style of `.nav`s component with modifiers and utilities. Mix and match as needed, or build your own. 
+-->
 `.nav` とユーティリティを使用してコンポーネントのスタイルを変更します。必要に応じてミックスしたり、自分で作成したりできます。
 
 
-<!-- ### Horizontal alignment
-
+### Horizontal alignment
+<!-- 
 Change the horizontal alignment of your nav with [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment). By default, navs are left-aligned, but you can easily change them to center or right aligned.
 
-Centered with `.justify-content-center`: -->
-
-### Horizontal alignment
-
+Centered with `.justify-content-center`: 
+-->
 [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/grid/#horizontal-alignment) を使用して水平方向の配置を変更できます。
 デフォルトでは左揃えになっていますが、中央または右揃えに簡単に変更できます。  
 
@@ -125,11 +122,10 @@ Centered with `.justify-content-center`: -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Vertical
-
-Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`). -->
-
 ### Vertical
+<!-- 
+Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`). 
+-->
 `.flex-column` ユーティリティでflexアイテムの方向を変更して, ナビゲーションを積み重ねます。
 それらをいくつかのビューポートに積み重ねる必要がありますが,他のものに積み重ねる必要はありません。例えば `.flex-sm-column`を使用してください。
 
@@ -166,12 +162,10 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Tabs
-
-Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior). -->
-
 ### Tabs
-
+<!-- 
+Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior). 
+-->
 基本的なナビゲーションを受け取り, `.nav-tabs` を適用してタブ付きのインターフェースを生成します。
 それらを使用して、JavaScriptプラグインでタブ領域を作成します。  
 
@@ -216,11 +210,10 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Fill and justify
-
-Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width. -->
-
 ### Fill and justify
+<!-- 
+Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width. 
+-->
 
 `.nav` のコンテンツに2つのクラスのうちの利用可能な幅の1つを拡張するように強制します。
 `.nav-item` を使用可能なスペースを埋めるには `.nav-fill` を利用します。  
@@ -286,12 +279,10 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Working with flex utilities
-
-If you need responsive nav variations, consider using a series of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint. -->
-
 ## Working with flex utilities
-
+<!-- 
+If you need responsive nav variations, consider using a series of [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint. 
+-->
 レスポンス型のnavバリエーションが必要な場合は, [flexbox utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/flex/) の使用を検討してください。これらのユーティリティはより冗長ですが、応答可能なブレークポイント全体でカスタマイズを提供します。下の例では、Navが最も低いブレークポイントにスタックされ、小さなブレークポイントから利用可能な幅を埋める水平レイアウトに適応します。
 
 
@@ -305,31 +296,27 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Regarding accessibility
-
+## Regarding accessibility
+<!-- 
 If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies.
 
-Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. -->
+Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. 
 
-## Regarding accessibility
-
-<!-- If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies. -->
-
+If you're using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies. 
+-->
 ナビゲーションバーを提供するために `navs` を使用している場合は `<ul>` の親コンテナに `role="navigation"` を適用するか ナビゲーション全体を `<nav>` 要素で囲むようにし `<ul>` に `role` 属性を追加しないでください。補助技術に実際のリストとして通知されないようにするためです。
-
-<!-- Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. -->
 
 ナビゲーションバーは、`.nav-tabs` でタブとして視覚的にスタイルされていても `role="tablist"`, `role="tab"`, `role="tabpanel"` 属性を与えるべきではありません。[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) で説明されています。動的タブ付きインタフェースにのみ適している。セクションの動的タブ付きインタフェースの [JavaScript behavior](#javascript-behavior) を参照してください。
 
-<!-- ## Using dropdowns
 
-Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage). -->
 
 ## Using dropdowns
+<!-- 
+Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage). 
+-->
 
 [dropdowns JavaScript plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/dropdowns/#usage) を適用します。
 
-<!-- ### Tabs with dropdowns -->
 ### Tabs with dropdowns
 
 {% capture example %}
@@ -357,7 +344,6 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Pills with dropdowns -->
 ### Pills with dropdowns
 
 
@@ -386,7 +372,6 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## JavaScript behavior -->
 ## JavaScript behavior
 
 <!-- Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus. -->
@@ -597,11 +582,10 @@ And with vertical pills.
 </div>
 {% endhighlight %}
 
-<!-- ### Using data attributes
-
-You can activate a tab or pill navigation without writing any JavaScript by simply specifying `data-toggle="tab"` or `data-toggle="pill"` on an element. Use these data attributes on `.nav-tabs` or `.nav-pills`. -->
-
 ### Using data attributes
+<!-- 
+You can activate a tab or pill navigation without writing any JavaScript by simply specifying `data-toggle="tab"` or `data-toggle="pill"` on an element. Use these data attributes on `.nav-tabs` or `.nav-pills`. 
+-->
 `data-toggle="tab"`, `data-toggle="pill"` を指定することでJavaScriptを記述することなく, タブやピルナビゲーションを有効にすることができます。
 これらのデータ属性を `.nav-tabs` や `.nav-pills。` で使用してください。
 
@@ -631,11 +615,8 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 </div>
 {% endhighlight %}
 
-<!-- ### Via JavaScript -->
-
-<!-- Enable tabbable tabs via JavaScript (each tab needs to be activated individually): -->
-
 ### Via JavaScript
+<!-- Enable tabbable tabs via JavaScript (each tab needs to be activated individually): -->
 JavaScriptを使用してタブ切替可能なタブを有効にします。（各タブは個別に有効にする必要あります。）：
 
 {% highlight js %}
@@ -655,12 +636,9 @@ $('#myTab li:last-child a').tab('show') // Select last tab
 $('#myTab li:nth-child(3) a').tab('show') // Select third tab
 {% endhighlight %}
 
-<!-- ### Fade effect
-
-To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible. -->
-
 ### Fade effect
-
+<!-- 
+To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible. -->
 タブパネルをフェードインさせるには、`.tab-pane` に `.fade` を追加します。最初のタブパネルには最初のコンテンツを表示させるために `.show` が必要です。
 
 

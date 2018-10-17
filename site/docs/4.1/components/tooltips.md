@@ -5,17 +5,18 @@ description: ツールチップを追加するためのドキュメントと例�
 group: components
 toc: true
 ---
-
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Tooltips
 description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.
 group: components
 toc: true
---- -->
+--- 
+-->
 
-<!-- ## Overview
-
+## Overview
+<!-- 
 Things to know when using the tooltip plugin:
 
 - Tooltips rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{ site.cdn.popper }}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for tooltips to work!
@@ -28,9 +29,8 @@ Things to know when using the tooltip plugin:
 - When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
 - Tooltips must be hidden before their corresponding elements have been removed from the DOM.
 
-Got all that? Great, let's see how they work with some examples. -->
-
-## 概要(Overview)
+Got all that? Great, let's see how they work with some examples. 
+-->
 
 ツールチップを使用するときに知っておくべきことは下記です。：
 
@@ -49,12 +49,8 @@ Got all that? Great, let's see how they work with some examples. -->
 
 下記の例をみてください。
 
-<!-- ## Example: Enable tooltips everywhere
-
-One way to initialize all tooltips on a page would be to select them by their `data-toggle` attribute: -->
-
-## 例:ツールチップを有効にする(Example: Enable tooltips everywhere)
-
+## Example: Enable tooltips everywhere
+<!-- One way to initialize all tooltips on a page would be to select them by their `data-toggle` attribute: -->
 ツールチップを初期化する方法の1つは `data-toggle` 属性で選択することです。
 
 
@@ -64,12 +60,8 @@ $(function () {
 })
 {% endhighlight %}
 
-<!-- ## Examples
-
-Hover over the links below to see tooltips: -->
-
-## 例(Examples)
-
+## Examples
+<!--Hover over the links below to see tooltips: -->
 ツールチップを表示するには、以下のリンクをホバーしてください。
 
 <div class="bd-example tooltip-demo">
@@ -112,15 +104,12 @@ And with custom HTML added:
   Tooltip with HTML
 </button>
 {% endhighlight %}
-
-<!-- ## Usage
-
+## Usage
+<!-- 
 The tooltip plugin generates content and markup on demand, and by default places tooltips after their trigger element.
 
-Trigger the tooltip via JavaScript: -->
-
-## 使い方(Usage)
-
+Trigger the tooltip via JavaScript: 
+-->
 ツールチップは、コンテンツとマークアップを生成します。デフォルトでは、ツールチップはトリガー要素の後に配置されます。
 
 
@@ -143,11 +132,10 @@ $('#example').tooltip({ boundary: 'window' })
 {% endcapture %}
 {% include callout.html content=callout type="warning" %}
 
-<!-- ### Markup
-
-The required markup for a tooltip is only a `data` attribute and `title` on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to `top` by the plugin). -->
-
-### マークアップ(Markup)
+### Markup
+<!-- 
+The required markup for a tooltip is only a `data` attribute and `title` on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to `top` by the plugin). 
+-->
 
 ツールチップに必要なマークアップは `data` 属性と HTML要素の `title` だけです。
 生成されたツールチップのマークアップは位置が必要です（デフォルトでは、プラグインによって `top` に設定されています）。
@@ -174,12 +162,10 @@ Additionally, do not rely solely on `hover` as the trigger for your tooltip, as 
 </div>
 {% endhighlight %}
 
-<!-- ### Disabled elements
-
-Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`, and override the `pointer-events` on the disabled element. -->
-
-### 非表示(Disabled elements)
-
+### Disabled elements
+<!-- 
+Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`, and override the `pointer-events` on the disabled element. 
+-->
 `disabled` 属性をもつ要素はインタラクティブではないので ユーザーがフォーカス , ホバー, クリックしてツールチップ（またはポップオーバー）を起動することはできません。 
 
  As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`, and override the `pointer-events` on the disabled element.
@@ -196,11 +182,13 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 {% include example.html content=example %}
 </div>
 
-<!-- ### Options
+### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`. -->
+<!-->
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`. 
+-->
 
-### オプション(Options)
+
 オプションは, データ属性またはJavaScriptを使用して渡すことができます。 データ属性の場合 `data-` にオプション名を適用します( `data-animation =" "` のように)  
 
 
@@ -404,7 +392,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {% highlight js %}$('#element').tooltip('update'){% endhighlight %}
 
 <!-- ### Events -->
-### イベント(Events)
+### Events
 
 
 <table class="table table-bordered table-striped">

@@ -6,20 +6,20 @@ group: components
 toc: true
 ---
 
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Cards
 description: Bootstrap's cards provide a flexible and extensible content container with multiple variants and options.
 group: components
 toc: true
---- -->
-
-<!-- ## About
-
-A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
- -->
+--- 
+-->
 
 ## About
+<!-- 
+A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+-->
 **card** は柔軟で拡張ができるコンテナです。headers や footers のオプション, 多様なコンテンツ, 背景色, 表示オプション が含まれています。  
 Bootstrap3の panels, wells, thumbnails は card に置きかわります。これらのコンポーネントの機能は card のクラスとして利用できます。
 
@@ -44,16 +44,17 @@ Flexboxで構築されているため、簡単に配置ができ、他のコン�
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Content types
-
-Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what's supported. -->
 ## Content types
+<!-- 
+Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what's supported. 
+-->
 画像やテキスト,リスト,リンクなどカードは多様なコンテントをサポートしています。下記は例になります。
 
-<!-- ### Body
 
-The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card. -->
-## Body
+### Body
+<!-- 
+The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card. 
+-->
 カードを構築するクラスは `.card-body` です。paddingが必要なsectionの時はいつでも利用できます。 
 
 {% capture example %}
@@ -65,12 +66,12 @@ The building block of a card is the `.card-body`. Use it whenever you need a pad
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Titles, text, and links
-
+### Titles, text, and links
+<!-- 
 Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to an `<a>` tag.
 
-Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely. -->
-### タイトル、テキスト、リンク（Titles, text, and links）
+Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely. 
+-->
 カードタイトルは、`<h*>` タグに `.card-title` を適用します。 `<a>` タグに `.card-link` を適用するとリンクが追加されます。
 サブタイトルは、`<h*>` タグに `.card-subtitle` を適用します。 `.card-title` と `.card-subtitle` のアイテムが `.card-body`に適用すると, 良い感じに配置されます。
 
@@ -88,12 +89,10 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Images
-
-`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags. -->
-
 ### Images
-
+<!-- 
+`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags. 
+-->
 `.card-img-top` は画像を上に持ってきます。  
 `.card-text` はテキストをカードに追加できます。(標準のHTMLタグでスタイルを設定可能)
 
@@ -107,11 +106,10 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### List groups
-
-Create lists of content in a card with a flush list group. -->
 ### List groups
-
+<!-- 
+Create lists of content in a card with a flush list group. 
+-->
 `.list-group-flush` を用いて、カードの中にリストを作成できます。
 
 
@@ -140,11 +138,10 @@ Create lists of content in a card with a flush list group. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Kitchen sink
-
-Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card. -->
-
 ### Kitchen sink
+<!-- 
+Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card. 
+-->
 複数のコンテンツをカードの中に入れても、横幅は固定になります。
 
 {% capture example %}
@@ -167,11 +164,10 @@ Mix and match multiple content types to create the card you need, or throw every
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Header and footer
-
-Add an optional header and/or footer within a card. -->
 ### Header and footer
-
+<!-- 
+Add an optional header and/or footer within a card. 
+-->
 ヘッダーやフッターをカードに入れるオプションがあります.
 
 {% capture example %}
@@ -235,25 +231,17 @@ Add an optional header and/or footer within a card. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Sizing
-
-Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities. -->
-
 ## Sizing
-
-Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated. 
-You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
-
-## Sizing  
+<!--
+Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities. 
+-->
 
 幅は100%になる。(CSS, グリッドクラス, Sass, mixin, utilities を使って変更可能です。)
 
-<!-- ### Using grid markup
-
-Using the grid, wrap cards in columns and rows as needed. -->
-
 ### Using grid markup
-
+<!-- 
+Using the grid, wrap cards in columns and rows as needed. 
+-->
 columns と rows の中にカードを使ってください。
 
 {% capture example %}
@@ -280,14 +268,11 @@ columns と rows の中にカードを使ってください。
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Using utilities
-
-Use our handful of [available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) to quickly set a card's width. -->
-
 ### Using utilities
-
+<!-- 
+Use our handful of [available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) to quickly set a card's width. 
+-->
 カードの幅は [available sizing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) を使います。
-
 
 
 {% capture example %}
@@ -309,12 +294,10 @@ Use our handful of [available sizing utilities]({{ site.baseurl }}/docs/{{ site.
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Using custom CSS
-
-Use custom CSS in your stylesheets or as inline styles to set a width. -->
-
 ### Using custom CSS
-
+<!-- 
+Use custom CSS in your stylesheets or as inline styles to set a width. 
+-->
 スタイルシートやインラインスタイルに幅を適用できます。
 
 {% capture example %}
@@ -328,11 +311,10 @@ Use custom CSS in your stylesheets or as inline styles to set a width. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Text alignment
-
-You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment). -->
-
 ## Text alignment
+<!-- 
+You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment). 
+-->
 テキストの配置は [text align classes]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/text/#text-alignment) で変更できます。
 
 
@@ -364,12 +346,10 @@ You can quickly change the text alignment of any card—in its entirety or speci
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Navigation
-
-Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/). -->
-
 ## Navigation
-
+<!-- 
+Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/). 
+-->
 [nav components]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/navs/) を適用するとカードのヘッダーにナビゲーションを適用できます。
 
 
@@ -421,19 +401,19 @@ Add some navigation to a card's header (or block) with Bootstrap's [nav componen
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Images
-
-Cards include a few options for working with images. Choose from appending "image caps" at either end of a card, overlaying images with card content, or simply embedding the image in a card.
-
-### Image caps
-
-Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card. -->
 
 ## Images
+<!--
+Cards include a few options for working with images. Choose from appending "image caps" at either end of a card, overlaying images with card content, or simply embedding the image in a card.
+-->
 画像を扱うためのオプションが存在します。カードの両端に "image caps" を追加したり、イメージにカードの内容を重ねたり、イメージをカードに埋め込んだりすることが可能です。
 
 ## Image caps
+<!-- 
+Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card. 
+-->
 ヘッダとフッタと同様に、カードには上部と下部に「イメージキャップ」（カードの上部または下部の画像）が表示される。
+
 
 {% capture example %}
 <div class="card mb-3">
@@ -455,12 +435,10 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Image overlays
-
-Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities. -->
-
 ### Image overlays
-
+<!-- 
+Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities. 
+-->
 画像をカードの背景にして、テキストを重ねることができます。
 
 
@@ -476,16 +454,14 @@ Turn an image into a card background and overlay your card's text. Depending on 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Card styles
-
+## Card styles
+<!-- 
 Cards include various options for customizing their backgrounds, borders, and color.
 
 ### Background and color
 
-Use [text and background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) to change the appearance of a card. -->
-
-## Card styles
-
+Use [text and background utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/colors/) to change the appearance of a card. 
+-->
 backgrounds, borders, color をカスタマイズするためのオプションがあります。  
 
 
@@ -634,12 +610,11 @@ Use card groups to render cards as a single, attached element with equal width a
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Card decks
-
-Need a set of equal width and height cards that aren't attached to one another? Use card decks. -->
 
 ### Card decks
-
+<!-- 
+Need a set of equal width and height cards that aren't attached to one another? Use card decks. 
+-->
 `.card-deck` を適用すると高さと幅が等しいが、隣同士のカードと接触しません。  
 
 {% capture example %}

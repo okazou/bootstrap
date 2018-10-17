@@ -13,14 +13,11 @@ group: components
 toc: true
 --- -->
 
-<!-- ## Overview
-
+## Overview
+<!-- 
 We use a large block of connected links for our pagination, making links hard to miss and easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping `<nav>` element to identify it as a navigation section to screen readers and other assistive technologies.
 
 In addition, as pages likely have more than one such navigation section, it's advisable to provide a descriptive `aria-label` for the `<nav>` to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be `aria-label="Search results pages"`. -->
-
-## Overview
-
 件数が多く、画面の多くの領域を締める場合はページネーションを活用できます。
 ページネーションはリストのHTML要素で構成され,スクリーンリーダーは利用可能なリンクの数を知らせることが可能です。
 `<nav>` 要素を使用して、それをリーダーやその他の支援技術を絞り込むためのナビゲーションセクションとして識別します。    
@@ -42,11 +39,10 @@ In addition, as pages likely have more than one such navigation section, it's ad
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Working with icons
-
-Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes and the `.sr-only` utility. -->
-
 ## Working with icons
+<!-- 
+Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes and the `.sr-only` utility. 
+-->
 ページネーションリンクのテキストの代わりにアイコンやシンボルを使用したい場合は,
 `aria` 属性と `.sr-only` ユーティリティを使用してスクリーンリーダーを適切にサポートするようにしてください。
 
@@ -73,13 +69,13 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Disabled and active states
-
-Pagination links are customizable for different circumstances. Use `.disabled` for links that appear un-clickable and `.active` to indicate the current page.
-
-While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality. -->
 
 ## Disabled and active states
+<!-- 
+Pagination links are customizable for different circumstances. Use `.disabled` for links that appear un-clickable and `.active` to indicate the current page.
+
+While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality. 
+-->
 ページリンクは、さまざまな状況に合わせてカスタマイズできます。 
 `.disabled` でクリックできないようにしたり, 現在のページを示すために `.active` 使用します。    
 
@@ -131,11 +127,10 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Sizing
-
-Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes. -->
-
 ## Sizing
+<!-- 
+Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes. 
+-->
 `.pagination-lg` や `.pagination-sm` でサイズの変更が可能です。
 
 {% capture example %}

@@ -13,16 +13,14 @@ group: components
 toc: true
 --- -->
 
-<!-- ## Overview
-
+## Overview
+<!-- 
 Bootstrap's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
 
 Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
 
-Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more. -->
-
-## Overview
-
+Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more. 
+-->
 フォームコントロールは [our Rebooted form styles]({{ site.baseurl }}/docs/{{ site.docs_version }}/content/reboot/#forms) で展開します。これらのクラスを使用してカスタマイズされた表示をオプトインし、ブラウザとデバイス間でより一貫性のあるレンダリングを実現します。  
 入力項目に `type` 属性を使用してください。(emailや数値情報など)  
 フォームスタイルのクラスやレイアウトのドキュメントをお読みください。
@@ -47,16 +45,13 @@ Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Form controls
-
+## Form controls
+<!--
 Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are styled with the `.form-control` class. Included are styles for general appearance, focus state, sizing, and more.
 
-Be sure to explore our [custom forms](#custom-forms) to further style `<select>`s. -->
-
-## Form controls
-
+Be sure to explore our [custom forms](#custom-forms) to further style `<select>`s. 
+-->
 `<input>`, `<select>`, `<textarea>` のようなテキスト形式のコントロールは `form-control` が付与されています。 
-
 
 <input>s、<select>s、sのようなテキスト形式のコントロール<textarea>は、その.form-controlクラスでスタイル付けされています。一般的な外観、フォーカス状態、サイジングなどのスタイルが含まれます。
 `<select>`のスタイルを変更するには、[custom forms]（＃custom-forms）を必ず調べてください。
@@ -134,11 +129,10 @@ Be sure to explore our [custom forms](#custom-forms) to further style `<select>`
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Readonly
-
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor. -->
-
 ### Readonly
+<!-- 
+Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor. 
+-->
 `readonly` boolean属性を適用して入力値の変更を不可能にします。読み取り専用入力は、（無効な入力と同じように）軽く表示されますが、標準カーソルは保持されます。
 
 
@@ -147,11 +141,12 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Readonly plain text
-
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding. -->
 
 ### Readonly plain text
+<!-- 
+
+If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding. 
+-->
 `<input readonly>` 要素をプレーンテキストのスタイルにしたい場合は,  `.form-control-plaintext` を使ってデフォルトのフォームフィールドスタイルを削除し、正しいマージンとパディングを保持してください。
 
 {% capture example %}
@@ -187,12 +182,10 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Range Inputs
-
-Set horizontally scrollable range inputs using `.form-control-range`. -->
-
 ## Range Inputs
-
+<!-- 
+Set horizontally scrollable range inputs using `.form-control-range`. 
+-->
 `.form-control-range` を使って水平方向にスクロール可能な範囲の入力設定をできます。
 
 {% capture example %}
@@ -205,16 +198,15 @@ Set horizontally scrollable range inputs using `.form-control-range`. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Checkboxes and radios
 
+ ## Checkboxes and radios
+<!--
 Default checkboxes and radios are improved upon with the help of `.form-check`, **a single class for both input types that improves the layout and behavior of their HTML elements**. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
 
 Disabled checkboxes and radios are supported, but to provide a `not-allowed` cursor on hover of the parent `<label>`, you'll need to add the `disabled` attribute to the `.form-check-input`. The disabled attribute will apply a lighter color to help indicate the input's state.
 
-Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. -->
-
-## Checkboxes and radios
-
+Checkboxes and radios use are built to support HTML-based form validation and provide concise, accessible labels. As such, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. 
+-->
 `.form-check` にてチェックボックス、ラジオは大幅に改善されています。レイアウトと動作を向上させ、両方の入力タイプのための単一のクラスで行えます。
 チェックボックスはリスト内の1以上のオプションを選択できます。ラジオは複数のオプションから1つを選択するためのものです。
 
@@ -223,11 +215,10 @@ Checkboxes and radios use are built to support HTML-based form validation and pr
 チェックボックスとラジオボタンは、HTMLベースのフォーム機能をサポートしています。`<input>` と `<label>` は親子要素ではなく、兄弟要素になります。
 少し冗長になるが `<input>` と `<label>` には、関連付けのため `id` と `for` を指定する必要があります。
 
-<!-- ### Default (stacked)
-
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`. -->
-
 ### Default (stacked)
+<!-- 
+By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`. 
+-->
 デフォルトでは、兄弟である任意の数のチェックボックスとラジオボタンが垂直方向に積み重ねられま。 `.form-check` で適切に配置されます。
 
 

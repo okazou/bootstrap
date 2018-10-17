@@ -4,14 +4,18 @@ title: Jumbotron
 description: ヒーローユニットスタイルのコンテンツの表示できます。
 group: components
 ---
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Jumbotron
 description: Lightweight, flexible component for showcasing hero unit style content.
 group: components
---- -->
+--- 
+-->
 
-<!-- A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site. -->
+<!-- 
+A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site. 
+-->
 オプションでビューポート全体を拡張して、サイトに主要なマーケティングメッセージを表示できます。
 
 {% capture example %}
@@ -25,7 +29,9 @@ group: components
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- To make the jumbotron full width, and without rounded corners, add the `.jumbotron-fluid` modifier class and add a `.container` or `.container-fluid` within. -->
+<!-- 
+To make the jumbotron full width, and without rounded corners, add the `.jumbotron-fluid` modifier class and add a `.container` or `.container-fluid` within. 
+-->
 
 jumbotronを全幅にし、角を丸くしないようにするには、 `.jumbotron-fluid` クラスを追加し、` .container` や `.container-fluid` を追加します。
 

@@ -5,40 +5,38 @@ description: ドロップダウンプラグインを使用して, リンクの�
 group: components
 toc: true
 ---
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Dropdowns
 description: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
 group: components
 toc: true
---- -->
+--- 
+-->
 
-<!-- ## Overview
 
+## Overview
+<!-- 
 Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Bootstrap dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision.](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/) 
 
 Dropdowns are built on a third party library, [Popper.js](https://popper.js.org/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{ site.cdn.popper }}) before Bootstrap's JavaScript or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js. Popper.js isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
 
 If you're building our JavaScript from source, it [requires `util.js`]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/javascript/#util).
-
 -->
-
-## Overview
-
 ドロップダウンはトグルが可能で、リンクのリストなどを表示するためのコンテキストオーバーレイです。 ドロップダウンJavaScriptプラグインとインタラクティブになっています。 ホバリングではなく、クリックすることでトグルされます。 [an intentional design decision.](http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/)  
 ドロップダウンはサードパーティのライブラリ ( [Popper.js](https://popper.js.org/) ) に構築され, 動的な位置決めとビューポートの検出が可能です。
 `bootstrap.min.js` や `bootstrap.js` などのブートストラップのJavascriptの前に [popper.min.js]({{ site.cdn.popper }}) を組み込むか, 代わりにPopper.jsを内部に含む `bootstrap.bundle.min.js` や `bootstrap.bundle.js` を使用する。 Popper.jsは、動的位置決めが必要ないので、ナビゲーションバーのドロップダウンの位置を決めるためには使用されません。
 
 
-<!-- ## Accessibility
-
+## Accessibility
+<!-- 
 The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
 
 Bootstrap's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
 
-However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key. -->
-
-## Accessibility
+However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key. 
+-->
 
 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 標準は実際の [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu) を定義しますが,アクションや機能をトリガするアプリケーションのようなメニューに特有のものです。<abbr title="Accessible Rich Internet Applications">ARIA</abbr> メニューには, チェックボックス, ラジオボタン, ラジオボタングループ, サブメニューしか含めることができません。
 
@@ -46,21 +44,17 @@ However, Bootstrap does add built-in support for most standard keyboard menu int
 
 しかし、Bootstrapは、カーソルキーを使用して個々の `.dropdown-item` 要素を移動し、<kbd> ESC </ kbd>キーを使用してメニューを閉じる機能など、ほとんどの標準的なキーボードメニューのやり取りの組み込みのサポートを追加します 。
 
-<!-- ## Examples
-
-Wrap the dropdown's toggle (your button or link) and the dropdown menu within `.dropdown`, or another element that declares `position: relative;`. Dropdowns can be triggered from `<a>` or `<button>` elements to better fit your potential needs. -->
 
 ## Examples
-
+<!-- 
+Wrap the dropdown's toggle (your button or link) and the dropdown menu within `.dropdown`, or another element that declares `position: relative;`. Dropdowns can be triggered from `<a>` or `<button>` elements to better fit your potential needs. 
+-->
 ドロップダウンのトグル（あなたのボタンまたはリンク）と `.dropdown` 内のドロップダウンメニュー、または ` position：relative; ` を宣言する別の要素を囲みます。 ドロップダウンは、潜在的なニーズに合わせて、`<a>` または `<button>` 要素からトリガーできます。
 
-
-<!-- ### Single button
-
-Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with either `<button>` elements: -->
-
 ### Single button
-
+<!-- 
+Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with either `<button>` elements: 
+-->
 `.btn` はマークアップの変更によってドロップダウントグルに変換できます。`<button>`要素を使ってそれらを動作させる方法は次のとおりです：
 
 
@@ -178,14 +172,12 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
 </div>
 {% endhighlight %}
 
-<!-- ### Split button
-
+### Split button
+<!-- 
 Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of `.dropdown-toggle-split` for proper spacing around the dropdown caret.
 
-We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button. -->
-
-### Split button
-
+We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button. 
+-->
 シングルボタンと同じマークアップでドロップダウンを作成できます。 ドロップダウンキャレットに適切なスペースを入れるためには `.dropdown-toggle-split` を適用します。 
 このクラスを使用してキャレットの両側にある水平の `padding` を25％減らし、通常のボタンのドロップダウンに追加された `margin-left` を削除します。 これらの余分な変更はキャレットをスプリットボタンの中央に保ち, メインボタンの隣に適切なサイズのヒット領域を提供します。
 
@@ -581,11 +573,10 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 </div>
 {% endhighlight %}
 
-<!-- ## Menu items
-
-Historically dropdown menu contents *had* to be links, but that's no longer the case with v4. Now you can optionally use `<button>` elements in your dropdowns instead of just `<a>`s. -->
-
-## メニューアイテム(Menu items)
+## Menu items
+<!-- 
+Historically dropdown menu contents *had* to be links, but that's no longer the case with v4. Now you can optionally use `<button>` elements in your dropdowns instead of just `<a>`s. 
+-->
 ドロップダウンメニューの内容はリンクになっていましたが、これはv4ではなくなりました。オプションで `<a>` の代わりに `<button>` 要素をドロップダウンで使うことができます。
 
 {% capture example %}
@@ -616,11 +607,11 @@ Historically dropdown menu contents *had* to be links, but that's no longer the 
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Active
-
-Add `.active` to items in the dropdown to **style them as active**. -->
 
 ### Active
+<!-- 
+Add `.active` to items in the dropdown to **style them as active**. 
+-->
 ドロップダウン内の項目に `.active` を適用するとかきのように,アクティブなものとしてスタイルを設定できます。
 
 {% capture example %}
@@ -632,12 +623,11 @@ Add `.active` to items in the dropdown to **style them as active**. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Disabled
-
-Add `.disabled` to items in the dropdown to **style them as disabled**. -->
 
 ### Disabled
-
+<!-- 
+Add `.disabled` to items in the dropdown to **style them as disabled**. 
+-->
 ドロップダウンリストの項目に `.disabled` を適用すると非アクティブなスタイルを設定できます。
 
 
@@ -677,16 +667,11 @@ By default, a dropdown menu is automatically positioned 100% from the top and al
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Menu content
-
-### Headers
-
-Add a header to label sections of actions in any dropdown menu. -->
-
 ## Menu content
-
 ### Headers
-
+<!-- 
+Add a header to label sections of actions in any dropdown menu. 
+-->
 `.dropdown-header` を適用するとヘッダーを作成する事ができます。
 
 {% capture example %}
@@ -713,11 +698,10 @@ Add a header to label sections of actions in any dropdown menu. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ### Text
-
-Place any freeform text within a dropdown menu with text and use [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). Note that you'll likely need additional sizing styles to constrain the menu width. -->
-
 ### Text
+<!-- 
+Place any freeform text within a dropdown menu with text and use [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). Note that you'll likely need additional sizing styles to constrain the menu width. 
+-->
 テキストをドロップダウンメニューに配置し[spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) を使用します。
 メニュー幅をカスタマイズするには、`sizing` スタイルを追加する必要があります。
 
@@ -823,12 +807,10 @@ Use `data-offset` or `data-reference` to change the location of the dropdown. --
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Usage
-
-Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the `.show` class on the parent list item. The `data-toggle="dropdown"` attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it. -->
-
 ## Usage
-
+<!-- 
+Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the `.show` class on the parent list item. The `data-toggle="dropdown"` attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it. 
+-->
 データ属性やJavaScript経由で,ドロップダウンプラグインは親リストアイテムの `.show` クラスをトグルすると、非表示のコンテンツ（ドロップダウン・メニュー）をトグルします。 `data-toggle =" dropdown "`属性は、アプリケーションレベルでドロップダウンメニューを閉じるために使用されるので、常に使用することをお勧めします。
 
 
@@ -843,12 +825,10 @@ Via data attributes or JavaScript, the dropdown plugin toggles hidden content (d
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-<!-- ### Via data attributes
-
-Add `data-toggle="dropdown"` to a link or button to toggle a dropdown. -->
-
 ### Via data attributes
-
+<!-- 
+Add `data-toggle="dropdown"` to a link or button to toggle a dropdown. 
+-->
 `data-toggle =" dropdown "`をリンクやボタンに追加してドロップダウンを切り替えます。
 
 
@@ -863,13 +843,10 @@ Add `data-toggle="dropdown"` to a link or button to toggle a dropdown. -->
 </div>
 {% endhighlight %}
 
-<!-- ### Via JavaScript -->
-
-<!-- Call the dropdowns via JavaScript: -->
-
 ### Via JavaScript
-
+<!-- Call the dropdowns via JavaScript: -->
 JavaScript経由でドロップダウンを呼びます。
+
 
 {% highlight js %}
 $('.dropdown-toggle').dropdown()
@@ -889,13 +866,11 @@ JavaScriptを使用してドロップダウンを呼び出すか、代わりにd
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-<!-- ### Options
-
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`. -->
-
 
 ### Options
-
+<!-- 
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-offset=""`. 
+-->
 オプションはデータ属性またはJavaScriptを使用して渡すことができます。 データ属性の場合、オプション名を `data-` に `data-offset =" "` のように付加します。
 
 <table class="table table-bordered table-striped">
@@ -953,13 +928,11 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 | `$().dropdown('update')` | Updates the position of an element's dropdown. |
 | `$().dropdown('dispose')` | Destroys an element's dropdown. |
 
-<!-- ### Events
-
-All dropdown events are fired at the `.dropdown-menu`'s parent element and have a `relatedTarget` property, whose value is the toggling anchor element.
-`hide.bs.dropdown` and `hidden.bs.dropdown` events have a `clickEvent` property (only when the original event type is `click`) that contains an Event Object for the click event. -->
-
 ### Events
-
+<!-- 
+All dropdown events are fired at the `.dropdown-menu`'s parent element and have a `relatedTarget` property, whose value is the toggling anchor element.
+`hide.bs.dropdown` and `hidden.bs.dropdown` events have a `clickEvent` property (only when the original event type is `click`) that contains an Event Object for the click event. 
+-->
 ドロップダウンイベントは `.dropdown-menu` の親要素で起動され、 `relatedTarget` プロパティを持ちます。その値はトグルアンカー要素です。
 `hide.bs.dropdown` と `hidden.bs.dropdown` イベントにはクリックのイベントオブジェクトを含む `clickEvent` プロパティ（元のイベントタイプが　`click` のときのみ）があります。
 

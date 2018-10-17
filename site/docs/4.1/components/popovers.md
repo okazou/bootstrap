@@ -13,8 +13,8 @@ group: components
 toc: true
 --- -->
 
-<!-- ## Overview
-
+## Overview
+<!-- 
 Things to know when using the popover plugin:
 
 - Popovers rely on the 3rd party library [Popper.js](https://popper.js.org/) for positioning. You must include [popper.min.js]({{ site.cdn.popper }}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper.js in order for popovers to work!
@@ -28,9 +28,9 @@ Things to know when using the popover plugin:
 - When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use `.text-nowrap` on your `<a>`s to avoid this behavior.
 - Popovers must be hidden before their corresponding elements have been removed from the DOM.
 
-Keep reading to see how popovers work with some examples. -->
+Keep reading to see how popovers work with some examples. 
+-->
 
-## Overview
 
 Popover Pluginを使用するときに知っておくべきこと：
 
@@ -149,13 +149,12 @@ $('.popover-dismiss').popover({
 })
 {% endhighlight %}
 
-<!-- ### Disabled elements
-
+### Disabled elements
+<!-- 
 Elements with the `disabled` attribute aren't interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you'll want to trigger the popover from a wrapper `<div>` or `<span>` and override the `pointer-events` on the disabled element.
 
-For disabled popover triggers, you may also prefer `data-trigger="hover"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element. -->
-
-### Disabled elements
+For disabled popover triggers, you may also prefer `data-trigger="hover"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element. 
+-->
 
 `disabled` 属性を持つ要素はインタラクティブではないため,ユーザーがカーソルを移動したりクリックしてポップオーバー（またはツールチップ）をトリガーすることはできません。
 ラッパーの `<div>` や `<span>` からポップオーバーを起動し, 無効化された要素の `pointer-events` を上書きする必要があります。    
@@ -170,21 +169,18 @@ For disabled popover triggers, you may also prefer `data-trigger="hover"` so tha
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Usage
-
-Enable popovers via JavaScript: -->
 
 ## Usage
-
+<!-- Enable popovers via JavaScript: -->
 JavaScriptでポップオーバーを有効にします：
 
 {% highlight js %}$('#example').popover(options){% endhighlight %}
 
-<!-- ### Options
-
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`. -->
-
 ### Options
+<!-- 
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-animation=""`. 
+-->
+
 オプションは、データ属性またはJavaScriptを使用して渡すことが可能です。データ属性の場合、`data-` にオプション名を追加できます。
 
 <table class="table table-bordered table-striped">
@@ -307,7 +303,6 @@ Options for individual popovers can alternatively be specified through the use o
 {% endcapture %}
 {% include callout.html content=callout type="info" %}
 
-<!-- ### Methods -->
 ### Methods
 
 {% include callout-danger-async-methods.md %}
