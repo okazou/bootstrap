@@ -5,13 +5,15 @@ description: clearfix を適用するとfloatの解除ができます。
 group: utilities
 toc: true
 ---
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Clearfix
 description: Quickly and easily clear floated content within a container by adding a clearfix utility.
 group: utilities
 toc: true
---- -->
+--- 
+-->
 
 <!-- Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin. -->
 親要素に `.clearfix` を適用することで `float` を解除することができます。mixinとしても使用できます  

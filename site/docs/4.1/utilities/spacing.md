@@ -14,22 +14,19 @@ group: utilities
 toc: true
 --- -->
 
-<!-- ## How it works
-
-Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`. -->
-
-## 使い方(How it works)
-
+## How it works
+<!-- 
+Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`. 
+-->
 `margin` や `padding` を要素に簡略なクラスで適用できます。クラスは、`.25rem` から `3rem` までのデフォルトのSassマップから構築されています。
 
-<!-- ## Notation
 
+## Notation
+<!-- 
 Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`. -->
-
-## 記法(Notation)
-
+The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`. 
+-->
 `xs `から `xl `までの全てのブレークポイントに適用される空白ユーティリティには、ブレークポイントの省略形がありません。  
 `min-width：0` 以上から適用され、メディアクエリにバインドされていないためです。  
 クラス名は、xsの場合は、`.{property}{sides}-{size}` の形式で指定し、`sm`, `md`, `lg`, `xl` の場合は、`{property}{sides}-{breakpoint}-{size}`の形式で指定します。
@@ -66,11 +63,12 @@ The classes are named using the format `{property}{sides}-{size}` for `xs` and `
 <!-- (You can add more sizes by adding entries to the `$spacers` Sass map variable.) -->
 `$spacer` の基準値は1rem=16px。`$spacers` Sassマップ変数にエントリを追加することで、さらにサイズの追加が可能です。
 
-<!-- ## Examples
 
-Here are some representative examples of these classes: -->
 
-## 例(Examples)
+## Examples
+<!-- 
+Here are some representative examples of these classes: 
+-->
 代表的な例を下記に表示します。  
 
 
@@ -93,12 +91,11 @@ Here are some representative examples of these classes: -->
 }
 {% endhighlight %}
 
-<!-- ### Horizontal centering
 
-Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`. -->
-
-### 中央揃え(Horizontal centering)
-
+### Horizontal centering
+<!-- 
+Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`. 
+-->
 固定幅のブロックレベルのコンテンツを水平にセンタリングするための  `.mx-auto` があります。　　
 
 <div class="bd-example">

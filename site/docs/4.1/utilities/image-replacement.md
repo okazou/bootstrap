@@ -15,10 +15,11 @@ toc: true
 --- -->
 
 {% capture callout %}
-<!-- ##### Warning
-The `text-hide()` class and mixin has been deprecated as of v4.1. It will be removed entirely in v5. -->
 
-##### 警告(Warning)
+##### Warning
+<!-- 
+The `text-hide()` class and mixin has been deprecated as of v4.1. It will be removed entirely in v5. 
+-->
 `text-hide()` クラスとmixinはv4.1から廃止されています。v5で完全に削除されます。  
 
 {% endcapture %}
