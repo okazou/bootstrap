@@ -13,11 +13,9 @@ group: layout
 toc: true
 --- -->
 
-<!-- ## How it works
-
+## How it works
+<!-- 
 Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth look at how the grid comes together. -->
-
-## 使い方
 
 グリッドシステムは containers, rows, columns でレイアウトと整列を行う。これは [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) で構築されている。  
 下記にグリッドの例をしめす。  
@@ -82,15 +80,11 @@ Be aware of the limitations and [bugs around flexbox](https://github.com/philipw
 - グリッドブレークポイントは、最小幅のメディアクエリに基づいています。(例 `.col-sm-4` は small, medium, large, extra large に適用されますが最初の `xs`ブレークポイントにはなりません)
 - 定義済みのグリッドクラス (例 `.col-4` )やSassのmixinも使用可能です。
 
-
-<!-- ## Grid options
-
-While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
-
-See how aspects of the Bootstrap grid system work across multiple devices with a handy table. -->
-
 ## Grid options
-
+<!-- 
+While Bootstrap uses `em`s or `rem`s for defining most sizes, `px`s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the [font size](https://drafts.csswg.org/mediaqueries-3/#units).
+See how aspects of the Bootstrap grid system work across multiple devices with a handy table. 
+-->
 Bootstrapではサイズの定義で `em` か `rem` 単位を使用していますが, グリッドのブレークポイントとコンテナ幅には `px` 単位を使用しています。  
 ビューポートの幅が `px` 単位なのと [font size](https://drafts.csswg.org/mediaqueries-3/#units) のよって変化しないためです。  
 
@@ -164,13 +158,10 @@ Utilize breakpoint-specific column classes for easy column sizing without an exp
 
 明示的に番号を付けられたクラス(例 `.col-sm-6` )がなければ、簡単な列サイズ設定のためにブレークポイント固有の列クラスを利用します。
 
-
-<!-- ### Equal-width
-
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width. -->
-
-### 等幅(Equal-width)
-
+### Equal-width
+<!-- 
+For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width. 
+-->
 例えば、`xs` から `xl` までのすべてのデバイスとビューポートに適用される2つのグリッドレイアウトがあった場合に　　
 ブレークポイントごとに任意の数のないクラスを追加し,すべての列が同じ幅になるようにします。
 
@@ -220,12 +211,10 @@ For example, here are two grid layouts that apply to every device and viewport, 
 {% include example.html content=example %}
 </div>
 
-<!-- ### Setting one column width
-
-Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column. -->
-
-### 1列の幅の設定(Setting one column widt)
-
+### Setting one column width
+<!-- 
+Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column. 
+-->
 任意の1列の幅を設定することができます。　　
 
 <div class="bd-example-row">
@@ -258,16 +247,11 @@ Auto-layout for flexbox grid columns also means you can set the width of one col
 {% include example.html content=example %}
 </div>
 
-<!-- ### Variable width content
-
-Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content. -->
-
-### 可変幅(Variable width content)
-
+### Variable width content
+<!-- 
+Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content. 
+-->
 下記のように `col-{breakpoint}-auto` を適用すると, コンテンツの自然な幅に基づいて列のサイズを設定できます。
-
-
-
 
 <div class="bd-example-row">
 {% capture example %}
@@ -303,7 +287,7 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 
 Create equal-width columns that span multiple rows by inserting a `.w-100` where you want the columns to break to a new line. Make the breaks responsive by mixing the `.w-100` with some [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/).
 
-### 複数行の等幅（Equal-width multi-row）
+### Equal-width multi-row
 
 下記のように `.w-100` を適用すると数の行にまたがる等幅の列が作成できます。  
 `.w-100` と [responsive display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/) を組み合わせてレスポンシブブレークポイントにもできます。
@@ -321,18 +305,17 @@ Create equal-width columns that span multiple rows by inserting a `.w-100` where
 {% include example.html content=example %}
 </div>
 
-<!-- ## Responsive classes
-
-Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit. -->
-
-## レスポンシブクラス(Responsive classes)
+## Responsive classes
+<!-- 
+Bootstrap's grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit. 
+-->
 レスポンシブ・レイアウトを構築するための5つの階層が定義されています。(extra small, small, medium, large, extra large)
 
-<!-- ### All breakpoints
-
-For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`. -->
 
 ### All breakpoints
+<!-- 
+For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`. 
+-->
 
 デバイスの最小サイズから最大サイズまで同じグリッドの場合は `.col` および `.col-* `クラスを使用します。  
 下記のように特定のサイズの列が必要な場合は番号付きクラスの指定します。   
@@ -353,11 +336,10 @@ For grids that are the same from the smallest of devices to the largest, use the
 {% include example.html content=example %}
 </div>
 
-<!-- ### Stacked to horizontal
-
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`). -->
-
-### 横に積み重ね（Stacked to horizontal）
+### Stacked to horizontal
+<!-- 
+Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`). 
+-->
 
 `.col-sm-*` を使用すると `sm` 以上のブレークポイントでは水平に表示できます。  
 `extra small` では積み重ねとなります。  
@@ -377,11 +359,10 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 {% include example.html content=example %}
 </div>
 
-<!-- ### Mix and match
 
+### Mix and match
+<!-- 
 Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works. -->
-
-### ミックス＆マッチ(Mix and match)
 
 各階層に異なるクラスの組み合わせを使用できます。下記を参考にしてください。  
 
@@ -410,14 +391,13 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
 {% include example.html content=example %}
 </div>
 
-<!-- ### Gutters
-
-Gutters can be responsively adjusted by breakpoint-specific padding and negative margin utility classes. To change the gutters in a given row, pair a negative margin utility on the `.row` and matching padding utilities on the `.col`s.
-
-Here's an example of customizing the Bootstrap grid at the large (`lg`) breakpoint and above. We've increased the `.col` padding with `.px-lg-5` and then counteracted that with `.mx-lg-n5` on the parent `.row`. -->
 
 ### Gutters
+<!-- 
+Gutters can be responsively adjusted by breakpoint-specific padding and negative margin utility classes. To change the gutters in a given row, pair a negative margin utility on the `.row` and matching padding utilities on the `.col`s.
 
+Here's an example of customizing the Bootstrap grid at the large (`lg`) breakpoint and above. We've increased the `.col` padding with `.px-lg-5` and then counteracted that with `.mx-lg-n5` on the parent `.row`. 
+-->
 ブレークポイント固有のパディングとマイナスのマージンによってレスポンシブに調整ができます。
 与えられた行の空白を変更するには `.row` にマイナスのマージンユーティリティを `.col ` にパディングユーティリティを組み合わせます。
 
@@ -438,9 +418,7 @@ Use flexbox alignment utilities to vertically and horizontally align columns. --
  ## 配置(Alignment)
 縦と横の列を整列できます。
 
-<!-- ### Vertical alignment -->
-### 垂直方向の配置（Vertical alignment）
-
+### Vertical alignment 
 <div class="bd-example-row bd-example-row-flex-cols">
 {% capture example %}
 <div class="container">
@@ -501,8 +479,7 @@ Use flexbox alignment utilities to vertically and horizontally align columns. --
 {% include example.html content=example %}
 </div>
 
-<!-- ### Horizontal alignment -->
-### 水平方向の配置(Horizontal alignment)
+### Horizontal alignment
 
 <div class="bd-example-row">
 {% capture example %}
@@ -552,15 +529,16 @@ Use flexbox alignment utilities to vertically and horizontally align columns. --
 {% include example.html content=example %}
 </div>
 
-<!-- ### No gutters
 
+### No gutters
+
+<!-- 
 The gutters between columns in our predefined grid classes can be removed with `.no-gutters`. This removes the negative `margin`s from `.row` and the horizontal `padding` from all immediate children columns.
 
 Here's the source code for creating these styles. Note that column overrides are scoped to only the first children columns and are targeted via [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors). While this generates a more specific selector, column padding can still be further customized with [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/).
 
-**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid`. -->
-
-### No gutters
+**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid`. 
+-->
 
 デフォルトのグリッドクラスの列間の空白は `.no-gutters` で消すことが可能です。  
 マイナスの `margin` が `.row` から削除され、水平方向の `padding` がすべての子列から削除されます。  
@@ -600,12 +578,10 @@ Here's the source code for creating these styles. Note that column overrides are
 {% include example.html content=example %}
 </div>
 
-<!-- ### Column wrapping
-
-If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line. -->
-
 ### Column wrapping
-
+<!-- 
+If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line. 
+-->
 1つの行に列の合計が12以上で配置されている場合、余分な列は新しい行に折り返されます。
 
 <div class="bd-example-row">
@@ -619,11 +595,11 @@ If more than 12 columns are placed within a single row, each group of extra colu
 {% include example.html content=example %}
 </div>
 
-<!-- ### Column breaks
-
-Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not every implementation method can account for this. -->
 
 ### Column breaks
+<!-- 
+Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not every implementation method can account for this. 
+-->
 
 Flexboxの新しい行に列を分割するには、ハックが必要です。新しい行で折り返したい場合は `width: 100%` の要素を追加する。これは複数の `.row` で実行されるが、全ての実装方法がこれを考慮するわけではありません。
 
@@ -663,15 +639,12 @@ Flexboxの新しい行に列を分割するには、ハックが必要です。�
 {% include example.html content=example %}
 </div>
 
-<!-- ## Reordering
 
+## Reordering
 ### Order classes
-
-Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `12` across all five grid tiers. -->
-
-## 並べ替え(Reordering)
-
-### オーダー(Order classes)
+<!-- 
+Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `12` across all five grid tiers. 
+-->
 
 `.order-` を使うと **視覚的に順序** を制御できます。これらのクラスはレスポンシブ対応なので、ブレークポイントで `order` を設定することが可能です。  
 5つのグリッド層の `0` から `12` のサポートがされています。
@@ -722,12 +695,10 @@ There are also responsive `.order-first` and `.order-last` classes that change t
 {% include example.html content=example %}
 </div>
 
-
-<!-- ### Offsetting columns
-
-You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable. -->
-
-### オフセットカラム(Offsetting columns)
+### Offsetting columns
+<!-- 
+You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable. 
+-->
 
 `.offset-` と [margin utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/) の2つの方法で空白を作成可能です。 
 Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
@@ -736,8 +707,6 @@ Grid classes are sized to match columns while margins are more useful for quick 
 #### Offset classes
 
 <!-- Move columns to the right using `.offset-md-*` classes. These classes increase the left margin of a column by `*` columns. For example, `.offset-md-4` moves `.col-md-4` over four columns. -->
-
-#### オフセットクラス(Offset classes)
 
 `.offset-md-*` を使用して列を右に移動できます。これらのクラスは、列の左余白を `*` 列だけ増加させます。
 例えば、.offset-md-4 は4列分 `.col-md-4` を移動します。
@@ -779,11 +748,10 @@ Grid classes are sized to match columns while margins are more useful for quick 
 {% include example.html content=example %}
 </div>
 
-<!-- #### Margin utilities
-
-With the move to flexbox in v4, you can use margin utilities like `.mr-auto` to force sibling columns away from one another. -->
-
 #### Margin utilities
+<!-- 
+With the move to flexbox in v4, you can use margin utilities like `.mr-auto` to force sibling columns away from one another. 
+-->
 
 `.mr-auto` のようなユーティリティを使用して下記のように間を作ることができます。
 
@@ -806,12 +774,11 @@ With the move to flexbox in v4, you can use margin utilities like `.mr-auto` to 
 {% include example.html content=example %}
 </div>
 
-<!-- ## Nesting
+## Nesting
+<!--
 
-To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns). -->
-
-## ネスト(Nesting)
-
+To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns). 
+-->
 グリッドでコンテンツをネストすることができます。 `.col-sm-*` の中に `.row` と `.col-sm-*` を追加します。  
 ネストされたに行には、最大12サイズ以内の列を含む必要があります。
 
@@ -834,21 +801,16 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 {% include example.html content=example %}
 </div>
 
-<!-- ## Sass mixins
-
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts. -->
-
 ## Sass mixins
-
+<!-- 
+When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts. 
+-->
 Sass変数とmixinを使用してカスタムでページレイアウトを作成できます。  
-デフォルトのクラスではレスポンシブ・レイアウトが簡単に行えます。
-
-<!-- ### Variables
-
-Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below. -->
+デフォルトのクラスではレスポンシブ・レイアウトが簡単に行えます。  
 
 ### Variables
-
+<!-- 
+Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below. -->
 変数とマップは、列の数, 空白の幅の移動を開始するメディアクエリポイントを決定します。
 下記の定義済みのグリッドクラスとカスタムmixinを生成します。
 
@@ -877,12 +839,11 @@ $container-max-widths: (
 );
 {% endhighlight %}
 
-<!-- ### Mixins
-
-Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns. -->
 
 ### Mixins
-
+<!-- 
+Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns. 
+-->
 グリッド変数と使用され、グリッド列に対してセマンティックなCSSを生成できます。
 
 {% highlight scss %}
@@ -897,12 +858,11 @@ Mixins are used in conjunction with the grid variables to generate semantic CSS 
 @include make-col-offset($size, $columns: $grid-columns);
 {% endhighlight %}
 
-<!-- ### Example usage
 
-You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between. -->
-
-### 例(Example usage)
-
+### Example usage
+<!-- 
+You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between. 
+-->
 Sass変数やマップを変更する場合は再コンパイルする必要があります。  
 
 {% highlight scss %}
@@ -948,20 +908,18 @@ Sass変数やマップを変更する場合は再コンパイルする必要が�
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Customizing the grid
-
-Using our built-in grid Sass variables and maps, it's possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile. -->
-
-## グリッドのカスタマイズ(Customizing the grid)
+## Customizing the grid
+<!-- 
+Using our built-in grid Sass variables and maps, it's possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile. 
+-->
 
 Sass変数とマップを使うと, グリッドクラスをカスタマイズできます。  
 `tiers` と `media query dimensions` の値を変更して, 再コンパイルします。  
 
-<!-- ### Columns and gutters
-
-The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters. -->
-
-### カラムと空白(Columns and gutters)
+### Columns and gutters
+<!-- 
+The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters. 
+-->
 
 Sass変数によってグリッドの数は修正されます。 `$grid-columns` は列の幅（パーセント）を生成するために使われます。
 `$ grid-gutter-width`は空白の幅を設定します。
@@ -972,11 +930,10 @@ $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
 {% endhighlight %}
 
-<!-- ### Grid tiers
-
-Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints` and `$container-max-widths` to something like this: -->
-
 ### Grid tiers
+<!-- 
+Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints` and `$container-max-widths` to something like this: 
+-->
 
 グリッドの数をカスタマイズすることもできます。 `$ grid-breakpoints`と`$ container-max-widths`を次のように更新します。
 

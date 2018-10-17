@@ -13,15 +13,18 @@ group: layout
 toc: true
 --- -->
 
-<!-- ## Example
+## Example
+<!-- 
 
 The [media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) helps build complex and repetitive components where some media is positioned alongside content that doesn't wrap around said media. Plus, it does this with only two required classes thanks to flexbox.
 
 Below is an example of a single media object. Only two classes are required—the wrapping `.media` and the `.media-body` around your content. Optional padding and margin can be controlled through [spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/). -->
 
-## 例(Example)
 
-[media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) 
+[media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) はコンテンツと並んで配置され、複雑や繰り返しのあるコンポーネントを構築することができます。
+flexboxにより2つの必要なクラスだけで構築可能です。
+
+以下に、単一のメディアオブジェクトの例を示します。`.media`, `.media-body` の周りには2つのクラスだけが必要です。オプションの埋め込みとマージンは、spacing utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/spacing/)を使用して制御できます。
 
 
 
@@ -37,6 +40,7 @@ Below is an example of a single media object. Only two classes are required—th
 {% include example.html content=example %}
 
 {% capture callout %}
+
 ##### Flexbug #12: Inline elements aren't treated as flex items
 
 Internet Explorer 10-11 do not render inline elements like links or images (or `::before` and `::after` pseudo-elements) as flex items. The only workaround is to set a non-inline `display` value (e.g., `block`, `inline-block`, or `flex`). We suggest using `.d-flex`, one of our [display utilities]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/display/), as an easy fix.
