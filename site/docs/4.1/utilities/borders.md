@@ -15,10 +15,9 @@ redirect_from: "/docs/4.1/utilities/"
 toc: true
 --- -->
 
-<!--
 ## Border
+<!--
  Use border utilities to add or remove an element's borders. Choose from all borders or one at a time. -->
-## ボーダー(Border)
 下記のように枠線を消したり、適用したりできます。  
 
 ### Additive
@@ -47,12 +46,10 @@ toc: true
 {% include example.html content=example %}
 </div>
 
-<!-- ## Border color
-
-Change the border color using utilities built on our theme colors. -->
-
-## ボーダーカラー(Border color)
-
+## Border color
+<!-- 
+Change the border color using utilities built on our theme colors. 
+-->
 下記のように枠線を用意されている色に変更することができます。  
 
 <div class="bd-example-border-utils">
@@ -64,13 +61,12 @@ Change the border color using utilities built on our theme colors. -->
 {% include example.html content=example %}
 </div>
 
-<!-- ## Border-radius
-
-Add classes to an element to easily round its corners. -->
-
 ## Border-radius
-
+<!--
+Add classes to an element to easily round its corners. 
+-->
 下記のように枠線に丸みを持たせることができます。
+
 
 <div class="bd-example bd-example-images">
   <img data-src="holder.js/75x75" class="rounded" alt="Example rounded image">

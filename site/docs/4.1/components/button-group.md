@@ -1,14 +1,28 @@
 ---
 layout: docs
 title: Button group
-description: Group a series of buttons together on a single line with the button group, and super-power them with JavaScript.
+description: 複数のボタンを1行にまとめます。
 group: components
 toc: true
 ---
 
-## Basic example
+<!-- 
+---
+layout: docs
+title: Button group
+description: Group a series of buttons together on a single line with the button group, and super-power them with JavaScript.
+group: components
+toc: true
+--- 
+-->
 
-Wrap a series of buttons with `.btn` in `.btn-group`. Add on optional JavaScript radio and checkbox style behavior with [our buttons plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#button-plugin).
+## Basic example
+<!-- 
+Wrap a series of buttons with `.btn` in `.btn-group`. Add on optional JavaScript radio and checkbox style behavior with [our buttons plugin]({{ site.baseurl }}/docs/{{ site.docs_version }}/components/buttons/#button-plugin). 
+-->
+`.btn-group` で `.btn` を含む一連のボタンを囲みます。
+オプションとしてJavaScriptのラジオボタンとチェックボックスのスタイルの動作をプラグインで追加します。
+
 
 {% capture example %}
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -29,8 +43,10 @@ In addition, groups and toolbars should be given an explicit label, as most assi
 {% include callout.html content=callout type="warning" %}
 
 ## Button toolbar
-
-Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
+<!-- 
+Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more. 
+-->
+ボタングループのセットをツールバーに組み合わせて、複雑なコンポーネントを作成できます。ユーティリティクラスで、グループ、ボタンなどを配置します。
 
 {% capture example %}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -52,7 +68,11 @@ Combine sets of button groups into button toolbars for more complex components. 
 {% endcapture %}
 {% include example.html content=example %}
 
-Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly.
+<!-- 
+Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly. 
+-->
+入力グループとツールバーのボタングループを自由に組み合わせてください。
+適切に配置するにはユーティリティが必要です。
 
 {% capture example %}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
@@ -89,7 +109,12 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 
 ## Sizing
 
-Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
+<!-- 
+Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups. 
+-->
+ボタンのサイジングクラスをグループ内のボタンに適用するのではなく、グループに `.btn-group` と `.btn-group-*` を適用します。
+
+
 
 <div class="bd-example">
   <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
@@ -119,7 +144,9 @@ Instead of applying button sizing classes to every button in a group, just add `
 
 ## Nesting
 
-Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
+<!-- Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons. -->
+ドロップダウンとボタングループを組み合わせる場合は `.btn-group` を別の `.btn-group` 内に配置します。
+
 
 {% capture example %}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -140,8 +167,10 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
 {% include example.html content=example %}
 
 ## Vertical variation
-
-Make a set of buttons appear vertically stacked rather than horizontally. **Split button dropdowns are not supported here.**
+<!-- 
+Make a set of buttons appear vertically stacked rather than horizontally. **Split button dropdowns are not supported here.** 
+-->
+ボタンを水平ではなく縦に積み重ねて表示させます。スプリットボタンのドロップダウンはここではサポートされていません。
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

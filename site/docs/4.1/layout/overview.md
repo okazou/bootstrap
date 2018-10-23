@@ -18,14 +18,12 @@ toc: true
 ---
 -->
 
-<!--
 ## Containers
-
+<!--
 Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Choose from a responsive, fixed-width container (meaning its `max-width` changes at each breakpoint) or fluid-width (meaning it's `100%` wide all the time).
 
 While containers *can* be nested, most layouts do not require a nested container.
 -->
-## コンテナ
 コンテナは基本のレイアウトで、**グリッドシステム**を使用する場合に必要です。  
 ・固定幅のコンテナ(ブレークポイントで `max-width` が変わる)  
 ・全幅のコンテナ(常に100%の幅)  
@@ -66,14 +64,12 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 </div>
 {% endhighlight %}
 
-<!--
 ## Responsive breakpoints
-
+<!--
 Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
 Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 -->
-## (レスポンシブ ブレークポイント)Responsive breakpoints
 Bootstrapはモバイルファーストで開発していて, レイアウトやインターフェースのブレークポイントは [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) を使用している。  
 これらのブレークポイント最小のビューポートに基づいていてビューポートの変更に合わせて要素を拡大します。  
 

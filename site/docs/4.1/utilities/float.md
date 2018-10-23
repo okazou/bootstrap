@@ -5,28 +5,29 @@ description: レスポンシブな float ユーティティを使用して, ブ�
 group: utilities
 toc: true
 ---
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Float
 description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
 group: utilities
 toc: true
---- -->
+--- 
+-->
 
-<!-- ## Overview
-
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no affect on flex items. -->
 
 ## Overview
+<!-- 
+These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no affect on flex items. 
+-->
 [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float) を使用して viewportサイズに基づいて水平方向の配置を無効にします。  
 グリッドシステムと同じブレークポイントを使用しています。
 
 
-
-<!-- ## Classes 
-Toggle a float with a class: -->
-
-## クラス(Classes)
+## Classes
+<!--  
+Toggle a float with a class: 
+-->
 クラスで配置を変更できます。
 
 {% capture example %}
@@ -52,12 +53,11 @@ Sass mixinを使用することもできます。
 }
 {% endhighlight %}
 
-<!-- ## Responsive
 
-Responsive variations also exist for each `float` value. -->
-
-## レスポンシブ(Responsive)
-
+## Responsive
+<!-- 
+Responsive variations also exist for each `float` value. 
+-->
 `float` はレスポンシブにも対応しています。  
 
 

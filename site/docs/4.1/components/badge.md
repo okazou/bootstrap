@@ -15,7 +15,7 @@ toc: true
 --- 
 -->
 
-## 例(Example)
+## Example
 親要素のサイズに一致するように相対的なフォントサイズ `em` を使用しています。
 
 <!--
@@ -75,7 +75,7 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 Add any of the below mentioned modifier classes to change the appearance of a badge.
 -->
 
-## バッジの色(Contextual variations)
+## Contextual variations
 バッジの色を下記のように変更することができます。
 
 {% capture example %}
@@ -91,7 +91,7 @@ Add any of the below mentioned modifier classes to change the appearance of a ba
 
 Use the `.badge-pill` modifier class to make badges more rounded (with a larger `border-radius` and additional horizontal `padding`). Useful if you miss the badges from v3.
 -->
-## ピルバッジ(Pill badges)
+## Pill badges
 `.badge-pill` を適用すると, 丸みをおびたバッジを作成できます。
 
 {% capture example %}
@@ -106,7 +106,7 @@ Use the `.badge-pill` modifier class to make badges more rounded (with a larger 
 Using the contextual `.badge-*` classes on an `<a>` element quickly provide _actionable_ badges with hover and focus states.
 -->
 
-## リンク(Links)
+## Links
 `.badge-*` クラスを `<a>` 要素に適用するとホバー時にでフォーカスすることができます。
 
 {% capture example %}

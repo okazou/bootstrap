@@ -38,10 +38,11 @@ toc: true
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Background color
 
-Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities. -->
-## 背景色（Background Color） 
+## Background color
+<!-- 
+Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities. 
+-->
 `.bg-` で背景色の適用ができます。背景色の色によっては `.text-` も設定する必要があります。
 
 
@@ -53,11 +54,10 @@ Similar to the contextual text color classes, easily set the background of an el
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Background gradient
-
-When `$enable-gradients` is set to true, you'll be able to use `.bg-gradient-` utility classes. **By default, `$enable-gradients` is disabled and the example below is intentionally broken.** This is done for easier customization from the moment you start using Bootstrap. [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options) to enable these classes and more. -->
-
-## 背景色のグラデーション化（Background gradient)
+## Background gradient
+<!-- 
+When `$enable-gradients` is set to true, you'll be able to use `.bg-gradient-` utility classes. **By default, `$enable-gradients` is disabled and the example below is intentionally broken.** This is done for easier customization from the moment you start using Bootstrap. [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options) to enable these classes and more. 
+-->
 
 `$enable-gradients` が true（デフォルト : false）に設定されている場合は `.bg-gradient-` が使用可能です。  
 [Learn about our Sass options]({{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/theming/#sass-options)

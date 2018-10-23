@@ -1,13 +1,21 @@
 ---
 layout: docs
 title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+description: プログレスバーを使用するためのドキュメントと例を示します。
 group: components
 toc: true
 ---
 
-## How it works
+<!-- ---
+layout: docs
+title: Progress
+description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+group: components
+toc: true
+--- -->
 
+## How it works
+<!-- 
 Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
 
 - We use the `.progress` as a wrapper to indicate the max value of the progress bar.
@@ -15,7 +23,16 @@ Progress components are built with two HTML elements, some CSS to set the width,
 - The `.progress-bar` requires an inline style, utility class, or custom CSS to set their width.
 - The `.progress-bar` also requires some `role` and `aria` attributes to make it accessible.
 
-Put that all together, and you have the following examples.
+Put that all together, and you have the following examples. 
+-->
+[the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) は、2つのHTML要素, 幅を設定するCSS, いくつかの属性で構築されています。  
+
+- `.progress` は最大値を示すラッパーとして使用します。
+- `.progress-bar` はこれまで進捗状況を示すために使用します。
+- `.progress-bar` の幅を設定するには, インラインスタイル, ユーティリティクラス, カスタムCSSが必要です。
+- `.progress-bar` は `role` 属性, `aria` 属性が必要です。
+
+下記をご覧ください。
 
 {% capture example %}
 <div class="progress">
@@ -36,7 +53,11 @@ Put that all together, and you have the following examples.
 {% endcapture %}
 {% include example.html content=example %}
 
-Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress.
+<!-- Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/). Depending on your needs, these may help with quickly configuring progress. -->
+
+[utilities for setting width]({{ site.baseurl }}/docs/{{ site.docs_version }}/utilities/sizing/) を提供しています。
+
+
 
 {% capture example %}
 <div class="progress">
@@ -46,8 +67,11 @@ Bootstrap provides a handful of [utilities for setting width]({{ site.baseurl }}
 {% include example.html content=example %}
 
 ## Labels
+<!-- 
+Add labels to your progress bars by placing text within the `.progress-bar`. 
+-->
+`.progress-bar` 内にテキストを配置して、プログレスバーにラベルを追加します。
 
-Add labels to your progress bars by placing text within the `.progress-bar`.
 
 {% capture example %}
 <div class="progress">
@@ -57,8 +81,11 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 {% include example.html content=example %}
 
 ## Height
+<!-- 
+We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly. 
+-->
+`.progress` にのみ `height` の値を設定します。値を変更すると、`.progress-bar` はそれに応じて自動的にサイズが変更します。
 
-We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
 
 {% capture example %}
 <div class="progress" style="height: 1px;">
@@ -71,8 +98,10 @@ We only set a `height` value on the `.progress`, so if you change that value the
 {% include example.html content=example %}
 
 ## Backgrounds
-
-Use background utility classes to change the appearance of individual progress bars.
+<!-- 
+Use background utility classes to change the appearance of individual progress bars. 
+-->
+下記のように色を設定できます。
 
 {% capture example %}
 <div class="progress">
@@ -91,8 +120,11 @@ Use background utility classes to change the appearance of individual progress b
 {% include example.html content=example %}
 
 ## Multiple bars
+<!-- 
+Include multiple progress bars in a progress component if you need. 
+-->
+プログレスバーに複数のプログレスバーを含めることができます。  
 
-Include multiple progress bars in a progress component if you need.
 
 {% capture example %}
 <div class="progress">
@@ -103,9 +135,12 @@ Include multiple progress bars in a progress component if you need.
 {% endcapture %}
 {% include example.html content=example %}
 
-## Striped
 
-Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
+## Striped
+<!-- 
+Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color. -->
+`.progress-bar-striped` に `.progress-bar` を追加してストライプを適用できます。  
+
 
 {% capture example %}
 <div class="progress">
@@ -127,8 +162,11 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 {% include example.html content=example %}
 
 ## Animated stripes
+<!-- 
+The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations. 
+-->
+CSS3アニメーションを使用して右から左にストライプをアニメーション化するには、`.progress-bar-animated` を `.progress-bar` に適用します。
 
-The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
 <div class="bd-example">
   <div class="progress">

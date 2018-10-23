@@ -5,29 +5,30 @@ description: コンポーネントの display の値をすばやくレスポン�
 group: utilities
 toc: true
 ---
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Display property
 description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
 group: utilities
 toc: true
---- -->
+--- 
+-->
 
-<!-- ## How it works
-
-Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need. -->
-
-## 使い方(How it works)
+ ## How it works
+<!--
+Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need. 
+-->
 
 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) の値を変更することができます。  
 クラスは、必要に応じてさまざまなエフェクトが組み合わせ可能です。  
 
-
-<!-- ## Notation
-
+## Notation
+<!-- 
 Display utility classes that apply to all [breakpoints]({{ site.baseurl }}/docs/{{ site.docs_version }}/layout/overview/#responsive-breakpoints), from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-As such, the classes are named using the format: -->
+As such, the classes are named using the format: 
+-->
 
 `xs`から` xl`にはブレークポイントの省略形がありません。  これらのクラスが `min-width：0;`から適用され、メディアクエリにバインドされていないためです。 ただし、残りのブレークポイントにはブレークポイントの省略形が含まれます。  
 
@@ -54,9 +55,7 @@ As such, the classes are named using the format: -->
 例えば  `.d-lg-none` はlgとxlの両方に `display: none;` が適用されます。
 
 
-<!-- ## Examples -->
-## 例(Examples)
-
+## Examples
 {% capture example %}
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
 <div class="d-inline p-2 bg-dark text-white">d-inline</div>
@@ -69,14 +68,15 @@ As such, the classes are named using the format: -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Hiding elements 
+## Hiding elements 
+<!-- 
 For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide element responsively for each screen size.
 
 To hide elements simply use the `.d-none` class or one of the `.d-{sm,md,lg,xl}-none` classes for any responsive screen variation.
 
-To show an element only on a given interval of screen sizes you can combine one `.d-*-none` class with a `.d-*-*` class, for example `.d-none .d-md-block .d-xl-none` will hide the element for all screen sizes except on medium and large devices. -->
+To show an element only on a given interval of screen sizes you can combine one `.d-*-none` class with a `.d-*-*` class, for example `.d-none .d-md-block .d-xl-none` will hide the element for all screen sizes except on medium and large devices. 
+-->
 
-## 要素の非表示(Hiding elements)
 mobile-friendly の開発を行うために, 要素の表示/非表示はデバイスごとに適用します。
 同じサイトを違うバージョンとして作成するのではなく、スクリーンサイズによって要素の表示/非表示を行います。  
   
@@ -108,11 +108,11 @@ mobile-friendly の開発を行うために, 要素の表示/非表示はデバ�
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Display in print
+## Display in print
+<!-- 
+Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our responsive `.d-*` utilities. 
+-->
 
-Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our responsive `.d-*` utilities. -->
-
-## プリント(Display in print)
 プリントするときは `display` を変更してください。 
 
 - `.d-print-none`

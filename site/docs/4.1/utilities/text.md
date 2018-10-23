@@ -5,20 +5,20 @@ description: 文字を簡単に配置できます。
 group: utilities
 toc: true
 ---
-<!-- ---
+<!-- 
+---
 layout: docs
 title: Text
 description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 group: utilities
 toc: true
---- -->
+--- 
+-->
 
-
-<!-- ## Text alignment
-
-Easily realign text to components with text alignment classes. -->
-
-## 配置(Text alignment)
+## Text alignment
+<!-- 
+Easily realign text to components with text alignment classes. 
+-->
 `alignment` で簡単にテキストを配置できます。
 
 
@@ -42,12 +42,10 @@ Easily realign text to components with text alignment classes. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Text wrapping and overflow
-
-Prevent text from wrapping with a `.text-nowrap` class. -->
-
-## 折り返しとオーバーフロー(Text wrapping and overflow)
-
+## Text wrapping and overflow
+<!-- 
+Prevent text from wrapping with a `.text-nowrap` class. 
+-->
 `.text-nowrap` クラスで、テキストが折り返されないようにできます。
 
 
@@ -76,12 +74,11 @@ Prevent text from wrapping with a `.text-nowrap` class. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Text transform
 
-Transform text in components with text capitalization classes. -->
-
-## 変換(Text transform)
-
+## Text transform
+<!-- 
+Transform text in components with text capitalization classes. 
+-->
 文字の大文字や小文字の変換ができます。
 
 
@@ -92,18 +89,17 @@ Transform text in components with text capitalization classes. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected. -->
+<!-- 
+Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected. 
+-->
 `.text-capitalize` が各単語の最初の文字だけをどのように変更するかに注意が必要です。
 
 
-<!-- ## Font weight and italics
-
-Quickly change the weight (boldness) of text or italicize text. -->
-
-## 太さとイタリック体(Font weight and italics)
-
+## Font weight and italics
+<!-- 
+Quickly change the weight (boldness) of text or italicize text. 
+-->
 太さ（太字）やテキストをイタリック体に変更できます。  
-
 
 {% capture example %}
 <p class="font-weight-bold">Bold text.</p>
@@ -113,12 +109,10 @@ Quickly change the weight (boldness) of text or italicize text. -->
 {% endcapture %}
 {% include example.html content=example %}
 
-<!-- ## Monospace
-
-Change a selection to our monospace font stack with `.text-monospace`. -->
-
-## 等幅フォント(Monospace)
-
+## Monospace
+<!-- 
+Change a selection to our monospace font stack with `.text-monospace`. 
+-->
 `.text-monospace` を使って等幅フォントスタックが選択可能です.
 
 {% capture example %}

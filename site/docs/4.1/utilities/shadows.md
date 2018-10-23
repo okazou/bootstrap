@@ -13,12 +13,10 @@ group: utilities
 toc: false
 --- -->
 
-<!-- ## Examples
-
-While shadows on components are disabled by default in Bootstrap and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match). -->
-
-## 例(Examples)
-
+## Examples
+<!-- 
+While shadows on components are disabled by default in Bootstrap and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match). 
+-->
 コンポーネントの影はデフォルトでは無効になっています。( `$enable-shadows` で有功にすることもできます。)  
 `box-shadow` を使うと影の追加や削除ができます。 例のように `shadow-none` では影を削除します。 
 
